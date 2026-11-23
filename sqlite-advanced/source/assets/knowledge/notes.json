@@ -1,0 +1,347 @@
+[
+  {
+    "id": 1,
+    "title": "SQLite 类型亲和性速查",
+    "category": "SQL基础",
+    "tags": [
+      "sqlite",
+      "类型"
+    ],
+    "updated_at": "2026-09-02",
+    "content": "INTEGER、REAL、TEXT、BLOB、NUMERIC 五种亲和性，决定插入值如何转换。STRICT 表可以关闭隐式转换。"
+  },
+  {
+    "id": 2,
+    "title": "索引优化的三个检查点",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "索引",
+      "查询计划"
+    ],
+    "updated_at": "2026-09-05",
+    "content": "先看查询计划是否 SCAN，再看索引列顺序是否匹配，最后确认查询列能否被索引覆盖。索引优化要基于真实查询，而不是凭感觉加索引。"
+  },
+  {
+    "id": 3,
+    "title": "复合索引的列顺序",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "复合索引"
+    ],
+    "updated_at": "2026-09-08",
+    "content": "等值条件放左边，范围条件放右边。只有最左列出现在条件里，复合索引才能直接定位。"
+  },
+  {
+    "id": 4,
+    "title": "覆盖索引实践",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "覆盖索引"
+    ],
+    "updated_at": "2026-09-11",
+    "content": "把列表页需要的几个列放进复合索引，查询计划出现 COVERING INDEX，回表次数降为零。"
+  },
+  {
+    "id": 5,
+    "title": "事务回滚与余额一致性",
+    "category": "事务",
+    "tags": [
+      "sqlite",
+      "事务"
+    ],
+    "updated_at": "2026-09-13",
+    "content": "转账要在同一个事务里完成扣款和入账，异常时回滚。应用层捕获异常后必须显式 rollback 或让上下文管理器处理。"
+  },
+  {
+    "id": 6,
+    "title": "WAL 模式排查锁等待",
+    "category": "事务",
+    "tags": [
+      "sqlite",
+      "wal",
+      "并发"
+    ],
+    "updated_at": "2026-09-15",
+    "content": "WAL 下读写可以并发，写写仍然互斥。设置 busy_timeout，写事务用 BEGIN IMMEDIATE 提前拿锁，减少半路升级锁失败。"
+  },
+  {
+    "id": 7,
+    "title": "事务隔离与快照读",
+    "category": "事务",
+    "tags": [
+      "sqlite",
+      "事务",
+      "隔离"
+    ],
+    "updated_at": "2026-09-18",
+    "content": "一个连接开启写事务后，另一个连接还能读到旧快照。提交之后新连接才能看到新值，这就是快照读的表现。"
+  },
+  {
+    "id": 8,
+    "title": "在线备份的推荐做法",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "备份"
+    ],
+    "updated_at": "2026-09-20",
+    "content": "使用 sqlite3 的 backup API 把源库复制到目标连接，完成后执行 integrity_check 并核对行数。备份文件不要和源库放在同一个目录。"
+  },
+  {
+    "id": 9,
+    "title": "迁移版本表与 user_version",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "迁移"
+    ],
+    "updated_at": "2026-09-22",
+    "content": "每次迁移递增 user_version，迁移脚本按版本号判断是否需要执行。结构变更放在事务里，失败时回滚。"
+  },
+  {
+    "id": 10,
+    "title": "重建表补齐 CHECK 约束",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "迁移",
+      "约束"
+    ],
+    "updated_at": "2026-09-24",
+    "content": "SQLite 不能直接给已有列加 CHECK，需要新建表、复制数据、删除旧表、重命名。迁移前后都要核对行数和完整性。"
+  },
+  {
+    "id": 11,
+    "title": "JSON1 常用函数清单",
+    "category": "JSON",
+    "tags": [
+      "sqlite",
+      "json1"
+    ],
+    "updated_at": "2026-09-26",
+    "content": "json_extract 取路径，json_type 看类型，json_each 展开数组，json_group_array 聚合，json_valid 做校验。"
+  },
+  {
+    "id": 12,
+    "title": "生成列存储方式的选择",
+    "category": "JSON",
+    "tags": [
+      "sqlite",
+      "生成列"
+    ],
+    "updated_at": "2026-09-27",
+    "content": "virtual 生成列读取时计算，不占磁盘；stored 生成列写入时计算，适合频繁查询。给生成列建索引可以加速等值查询。"
+  },
+  {
+    "id": 13,
+    "title": "JSON 字段的索引方案",
+    "category": "JSON",
+    "tags": [
+      "sqlite",
+      "json1",
+      "索引"
+    ],
+    "updated_at": "2026-09-28",
+    "content": "先用生成列把 json_extract 的结果物化，再在生成列上建索引。直接对 json_extract 表达式建索引只适合固定路径的简单场景。"
+  },
+  {
+    "id": 14,
+    "title": "FTS5 建表与查询",
+    "category": "全文检索",
+    "tags": [
+      "sqlite",
+      "fts5"
+    ],
+    "updated_at": "2026-09-29",
+    "content": "CREATE VIRTUAL TABLE 使用 fts5，MATCH 做检索，rank 使用 bm25 排序，snippet 返回命中上下文。"
+  },
+  {
+    "id": 15,
+    "title": "中文检索为什么选 trigram",
+    "category": "全文检索",
+    "tags": [
+      "sqlite",
+      "fts5",
+      "中文"
+    ],
+    "updated_at": "2026-09-30",
+    "content": "unicode61 会把整段中文当成一个词，trigram 按三个字符切分，支持中文子串。查询词少于三个字符时 trigram 无法命中。"
+  },
+  {
+    "id": 16,
+    "title": "FTS5 与普通表的同步",
+    "category": "全文检索",
+    "tags": [
+      "sqlite",
+      "fts5",
+      "触发器"
+    ],
+    "updated_at": "2026-10-01",
+    "content": "用插入、更新、删除三个触发器维护 FTS 表，或者使用 external content 表。同步失败会导致搜索结果和正文不一致。"
+  },
+  {
+    "id": 17,
+    "title": "bm25 排序结果解读",
+    "category": "全文检索",
+    "tags": [
+      "sqlite",
+      "fts5",
+      "排序"
+    ],
+    "updated_at": "2026-10-02",
+    "content": "bm25 分数越小越相关，通常配合 ORDER BY rank LIMIT 使用。不要把这个分数直接当概率解释。"
+  },
+  {
+    "id": 18,
+    "title": "批量导入先开事务",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "批量导入"
+    ],
+    "updated_at": "2026-10-03",
+    "content": "executemany 放进一个事务，比逐条提交快很多。导入完成后执行 ANALYZE，让优化器拿到新的统计信息。"
+  },
+  {
+    "id": 19,
+    "title": "索引太多拖慢写入",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "索引",
+      "性能"
+    ],
+    "updated_at": "2026-10-04",
+    "content": "每个索引都要随写入维护，写多读少的表要控制索引数量。定期检查没有被使用的索引。"
+  },
+  {
+    "id": 20,
+    "title": "EXPLAIN QUERY PLAN 常用读法",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "查询计划"
+    ],
+    "updated_at": "2026-10-05",
+    "content": "SEARCH 表示定位，SCAN 表示遍历，USING INDEX 表示走索引，USING COVERING INDEX 表示只读索引。子查询和连接会显示多行计划。"
+  },
+  {
+    "id": 21,
+    "title": "约束让坏数据进不来",
+    "category": "SQL基础",
+    "tags": [
+      "sqlite",
+      "约束"
+    ],
+    "updated_at": "2026-10-06",
+    "content": "NOT NULL、UNIQUE、CHECK、外键各有分工。约束报错时先修数据，不要用忽略错误的方式绕过。"
+  },
+  {
+    "id": 22,
+    "title": "STRICT 表迁移注意事项",
+    "category": "SQL基础",
+    "tags": [
+      "sqlite",
+      "strict"
+    ],
+    "updated_at": "2026-10-07",
+    "content": "迁移到 STRICT 表前先检查每列的实际类型，历史数据里的空字符串和数字字符串都可能触发类型错误。"
+  },
+  {
+    "id": 23,
+    "title": "备份文件的恢复演练",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "备份",
+      "恢复"
+    ],
+    "updated_at": "2026-10-08",
+    "content": "定期从备份恢复一份临时库，执行 integrity_check 和关键查询。只有恢复成功的备份才算有效备份。"
+  },
+  {
+    "id": 24,
+    "title": "WAL 文件与检查点",
+    "category": "事务",
+    "tags": [
+      "sqlite",
+      "wal"
+    ],
+    "updated_at": "2026-10-09",
+    "content": "WAL 文件会随着写入增长，检查点把日志合并回主库。长期运行的连接要关注 wal 文件大小和 checkpoint 频率。"
+  },
+  {
+    "id": 25,
+    "title": "查询统计从慢日志开始",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "查询计划",
+      "统计"
+    ],
+    "updated_at": "2026-10-10",
+    "content": "先记录慢查询和耗时，再用 EXPLAIN QUERY PLAN 对照执行计划。优化后复测同一批查询，确认收益真实存在。"
+  },
+  {
+    "id": 26,
+    "title": "知识库搜索的过滤顺序",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "知识库"
+    ],
+    "updated_at": "2026-10-12",
+    "content": "先用 MATCH 缩小候选集，再按分类和更新时间过滤，最后排序截断。把过滤条件放进 FTS 查询反而可能变慢。"
+  },
+  {
+    "id": 27,
+    "title": "全文索引的更新成本",
+    "category": "全文检索",
+    "tags": [
+      "sqlite",
+      "fts5",
+      "性能"
+    ],
+    "updated_at": "2026-10-14",
+    "content": "每次写入都要更新倒排索引，批量导入时可以先写普通表，再统一重建 FTS 表。"
+  },
+  {
+    "id": 28,
+    "title": "本地知识库的表设计",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "知识库",
+      "设计"
+    ],
+    "updated_at": "2026-10-16",
+    "content": "笔记表保存结构化字段，FTS 表保存标题和正文，标签用 JSON 数组存储并用 json_each 展开。更新时间建索引便于按时间排序。"
+  },
+  {
+    "id": 29,
+    "title": "数据库完整性与外键检查",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "备份",
+      "约束"
+    ],
+    "updated_at": "2026-10-18",
+    "content": "integrity_check 检查页结构，foreign_key_check 检查悬空引用。外键约束需要每个连接显式开启。"
+  },
+  {
+    "id": 30,
+    "title": "从慢查询到索引优化",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "索引",
+      "查询计划"
+    ],
+    "updated_at": "2026-10-20",
+    "content": "记录慢查询，读查询计划，设计复合索引，复测耗时。索引优化是一个闭环，不是一次性动作。"
+  }
+]

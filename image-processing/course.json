@@ -1,0 +1,136 @@
+{
+  "id": "image-processing",
+  "title": "Python 图像处理入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/image-processing-source.zip",
+  "backendPackage": "backend/uploads/packages/image-processing.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节 Python 图像处理入门，用本地示例图讲像素、滤镜、直方图、轮廓、几何变换和批量白底处理，全程不联网。",
+  "fileSize": 1466081,
+  "includePaths": [
+    "assets/images/*"
+  ],
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 图像基础：像素、通道、颜色",
+      "chapter": "第一章 像素与色彩",
+      "summary": "打开示例图，看清尺寸、通道和像素值",
+      "durationMinutes": 14,
+      "objectives": [
+        "理解图像是数字矩阵",
+        "分清宽高与数组形状",
+        "用 NumPy 拆分 RGB 通道"
+      ],
+      "notebook": "lessons/01-pixels.ipynb",
+      "source": "lesson01_pixels/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 PIL 打开、保存、裁剪、缩放",
+      "chapter": "第一章 像素与色彩",
+      "summary": "完成打开、裁剪、缩放、旋转和保存",
+      "durationMinutes": 16,
+      "objectives": [
+        "掌握 crop 和 resize",
+        "用 rotate 生成新图",
+        "按格式选择保存参数"
+      ],
+      "notebook": "lessons/02-pil-basic.ipynb",
+      "source": "lesson02_pil_basic/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 颜色转换与滤镜",
+      "chapter": "第一章 像素与色彩",
+      "summary": "在灰度、RGB、HSV 间转换并应用滤镜",
+      "durationMinutes": 16,
+      "objectives": [
+        "转换灰度、RGB 和 HSV",
+        "使用高斯模糊和锐化",
+        "编写自定义卷积核"
+      ],
+      "notebook": "lessons/03-filters.ipynb",
+      "source": "lesson03_filters/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 直方图与阈值",
+      "chapter": "第二章 分析与变换",
+      "summary": "观察亮度分布，对比固定阈值和 Otsu",
+      "durationMinutes": 14,
+      "objectives": [
+        "绘制灰度直方图",
+        "用固定阈值二值化",
+        "用 Otsu 自动取阈值"
+      ],
+      "notebook": "lessons/04-histogram.ipynb",
+      "source": "lesson04_histogram/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 边缘与轮廓",
+      "chapter": "第二章 分析与变换",
+      "summary": "用 Canny 找边缘，用 findContours 数轮廓",
+      "durationMinutes": 16,
+      "objectives": [
+        "设置 Canny 双阈值",
+        "提取外轮廓并计数",
+        "计算轮廓面积和边界框"
+      ],
+      "notebook": "lessons/05-edges.ipynb",
+      "source": "lesson05_edges/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 几何变换",
+      "chapter": "第二章 分析与变换",
+      "summary": "仿射旋转、透视校正和翻转缩放",
+      "durationMinutes": 16,
+      "objectives": [
+        "构造仿射旋转矩阵",
+        "用四点做透视映射",
+        "保存变换后的结果"
+      ],
+      "notebook": "lessons/06-transform.ipynb",
+      "source": "lesson06_transform/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 批量处理与加水印",
+      "chapter": "第三章 批量与项目",
+      "summary": "批量裁剪缩放、加水印并生成拼版",
+      "durationMinutes": 18,
+      "objectives": [
+        "遍历目录批量处理",
+        "在透明图层上画水印",
+        "生成缩略图拼版"
+      ],
+      "notebook": "lessons/07-batch.ipynb",
+      "source": "lesson07_batch/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 商品图处理项目",
+      "chapter": "第三章 批量与项目",
+      "summary": "批量白底、统一尺寸、水印和报告",
+      "durationMinutes": 20,
+      "objectives": [
+        "清理浅色背景",
+        "统一 600×600 画布",
+        "生成处理报告和对比图"
+      ],
+      "notebook": "lessons/08-project.ipynb",
+      "source": "lesson08_project/main.py"
+    }
+  ]
+}

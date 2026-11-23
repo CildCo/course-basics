@@ -1,0 +1,29 @@
+body { margin: 0; font-family: "Segoe UI", "Microsoft YaHei", sans-serif; color: #26332f; background: #f7faf8; }
+.site-header { display: flex; justify-content: space-between; padding: 16px 32px; background: #2f6f5e; color: #fff; }
+.site-header a { color: #fff; text-decoration: none; }
+.logo { font-size: 20px; font-weight: 700; }
+.top-nav a { margin-left: 18px; }
+main { max-width: 960px; margin: 0 auto; padding: 28px 24px 48px; }
+.course-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.course-card, .mini-card { background: #fff; border: 1px solid #dce7e2; border-radius: 10px; padding: 18px; }
+.course-card .title { margin: 0 0 8px; font-size: 19px; }
+.course-card .title a { color: #20483d; text-decoration: none; }
+.course-card .meta { display: flex; gap: 12px; color: #5e6f69; font-size: 14px; }
+.course-card .price { margin: 10px 0 6px; color: #b65f24; font-size: 20px; font-weight: 700; }
+.tags { display: flex; gap: 8px; padding: 0; list-style: none; flex-wrap: wrap; }
+.tags li, .tag { background: #e4f1ec; color: #2f6f5e; border-radius: 999px; padding: 3px 10px; font-size: 13px; }
+.pagination { display: flex; gap: 10px; margin-top: 22px; }
+.pagination a, .pagination span { padding: 6px 12px; border: 1px solid #c9dad3; border-radius: 6px; text-decoration: none; color: #2f6f5e; }
+.recommend { margin-top: 20px; padding: 16px; background: #fff; border-left: 4px solid #2f6f5e; }
+.recommend a { display: block; margin: 6px 0; color: #356b5d; }
+.course-meta { display: flex; flex-wrap: wrap; gap: 14px; color: #5e6f69; }
+.price-line { margin: 18px 0; font-size: 18px; }
+.price-line .price { color: #b65f24; font-size: 26px; font-weight: 700; }
+.syllabus { width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff; }
+.syllabus th, .syllabus td { border: 1px solid #dce7e2; padding: 8px 10px; text-align: left; }
+#price-table { width: 100%; border-collapse: collapse; background: #fff; }
+#price-table th, #price-table td { border: 1px solid #dce7e2; padding: 8px 10px; text-align: left; }
+#price-table .note td { background: #fff6e8; color: #8a5a25; }
+#irregular-cards { margin-top: 30px; }
+.mini-card { margin-bottom: 12px; }
+.site-footer { text-align: center; color: #7a8a84; padding: 20px; }

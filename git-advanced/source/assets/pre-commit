@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# 提交前检查暂存区是否包含行尾空白。
+if git diff --cached --check; then
+  exit 0
+fi
+echo "发现行尾空白，请清理后再提交" >&2
+exit 1

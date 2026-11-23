@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  background: #f7f6f2;
+  color: #2c2b28;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  line-height: 1.7;
+}
+
+.site-header {
+  padding: 28px 40px;
+  background: #eef1ec;
+  border-bottom: 1px solid #d8ddd5;
+}
+
+.brand {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  margin: 4px 0 0;
+  color: #6b7068;
+  font-size: 13px;
+}
+
+main {
+  width: 860px;
+  max-width: calc(100% - 48px);
+  margin: 32px auto 56px;
+}
+
+h1, h2 {
+  font-weight: 600;
+  color: #333a33;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 28px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dde1da;
+}
+
+.intro p {
+  margin: 0;
+  color: #666a63;
+}
+
+.rank-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 14px;
+}
+
+.rank-table th,
+.rank-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e6e8e2;
+  text-align: left;
+}
+
+.rank-table th {
+  color: #6b7068;
+  font-weight: 500;
+  background: #f1f3ee;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.book-list h2 {
+  grid-column: 1 / -1;
+}
+
+.book-card {
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #e3e5df;
+  border-radius: 6px;
+}
+
+.book-title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.book-title a {
+  color: #2f4a3a;
+  text-decoration: none;
+}
+
+.book-title a:hover {
+  text-decoration: underline;
+}
+
+.book-author,
+.book-price,
+.book-rating,
+.book-summary {
+  margin: 2px 0;
+  font-size: 13px;
+}
+
+.book-author {
+  color: #777b74;
+}
+
+.book-price {
+  color: #a2543c;
+}
+
+.book-rating {
+  color: #5f7a5a;
+}
+
+.book-summary {
+  color: #5e625b;
+}
+
+.recommend {
+  margin: 20px 0;
+  padding: 14px 18px;
+  background: #f1f3ee;
+  border-left: 3px solid #9aab93;
+}
+
+.recommend p {
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.pagination a,
+.pagination .current {
+  padding: 4px 10px;
+  border: 1px solid #d5dad1;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #3d4a3e;
+}
+
+.pagination .current {
+  background: #e6ebe2;
+  border-color: #cbd3c6;
+}
+
+.breadcrumb {
+  font-size: 13px;
+}
+
+.breadcrumb a {
+  color: #5f7a5a;
+  text-decoration: none;
+}
+
+.detail {
+  background: #fff;
+  border: 1px solid #e3e5df;
+  border-radius: 6px;
+  padding: 26px 32px;
+}
+
+.detail .book-title {
+  font-size: 26px;
+}
+
+.detail .book-price {
+  font-size: 18px;
+}
+
+.book-meta {
+  margin: 18px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid #eceee8;
+  list-style: none;
+  color: #5e625b;
+  font-size: 13px;
+}
+
+.book-meta li {
+  margin: 3px 0;
+}
+
+footer {
+  padding: 18px 40px 32px;
+  color: #8a8e87;
+  font-size: 12px;
+}

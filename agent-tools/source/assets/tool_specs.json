@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "tools": [
+    {
+      "name": "calc",
+      "description": "计算只包含数字、括号和四则运算符的表达式",
+      "permission": "safe",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "expression": {
+            "type": "string",
+            "pattern": "^[0-9+\\-*/().\\s]+$",
+            "description": "四则运算表达式"
+          }
+        },
+        "required": ["expression"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "query_orders",
+      "description": "按地区和状态筛选订单，按金额从高到低返回",
+      "permission": "read",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "region": {
+            "type": "string",
+            "enum": ["华东", "华北", "华南", "西南"],
+            "description": "订单所属地区"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["paid", "pending", "refunded"],
+            "default": "paid",
+            "description": "订单状态"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "default": 5,
+            "description": "最多返回多少条"
+          }
+        },
+        "required": ["region"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "summarize_orders",
+      "description": "汇总订单总额、订单数和客单价",
+      "permission": "compute",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "orders": {
+            "type": "array",
+            "items": {"type": "object"},
+            "description": "订单列表"
+          }
+        },
+        "required": ["orders"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "top_orders",
+      "description": "按金额取前 N 笔订单",
+      "permission": "compute",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "orders": {
+            "type": "array",
+            "items": {"type": "object"},
+            "description": "订单列表"
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "default": 3,
+            "description": "返回条数"
+          }
+        },
+        "required": ["orders"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "write_report",
+      "description": "把文本写入 output/ 目录",
+      "permission": "write",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]+\\.(md|txt)$",
+            "description": "相对 output/ 的文件名"
+          },
+          "content": {
+            "type": "string",
+            "maxLength": 8192,
+            "description": "要写入的正文"
+          }
+        },
+        "required": ["path", "content"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_file",
+      "description": "删除文件，默认不允许调用",
+      "permission": "dangerous",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "description": "目标文件"}
+        },
+        "required": ["path"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "http_request",
+      "description": "发起网络请求，本课程禁止调用",
+      "permission": "dangerous",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {"type": "string", "description": "目标地址"}
+        },
+        "required": ["url"],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "patterns": [
+    {
+      "signal": "数组有序，找一对或一个边界",
+      "pattern": "双指针 / 二分",
+      "target": "O(n) 或 O(log n)"
+    },
+    {
+      "signal": "需要快速判断出现过没有",
+      "pattern": "哈希表 / 集合",
+      "target": "O(1) 平均查找"
+    },
+    {
+      "signal": "括号、嵌套、最近一次未匹配",
+      "pattern": "栈",
+      "target": "O(n)"
+    },
+    {
+      "signal": "滑动窗口里的最值",
+      "pattern": "单调队列",
+      "target": "O(n)"
+    },
+    {
+      "signal": "答案有单调性，直接找很难",
+      "pattern": "二分答案",
+      "target": "O(n log 范围)"
+    },
+    {
+      "signal": "树上的路径或子树",
+      "pattern": "递归 / DFS",
+      "target": "O(n)"
+    },
+    {
+      "signal": "无权图最短步数",
+      "pattern": "BFS",
+      "target": "O(V + E)"
+    },
+    {
+      "signal": "前一步影响后一步，且有重复子问题",
+      "pattern": "动态规划",
+      "target": "状态数 × 转移"
+    }
+  ]
+}

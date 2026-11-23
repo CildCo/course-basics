@@ -1,0 +1,133 @@
+{
+  "id": "clean-code",
+  "title": "代码整洁与重构",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "engineering",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/clean-code-source.zip",
+  "backendPackage": "backend/uploads/packages/clean-code.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节整洁代码课：每课先写一段能跑但难维护的代码，再按命名、去重、卫语句、纯函数、异常、提取、表驱动的顺序重构，最后用评审清单完整重做一个小模块。纯标准库，不联网。",
+  "fileSize": 8552,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 命名与函数长度",
+      "chapter": "第一章 可读性",
+      "summary": "把 calc 和一堆单字母变量改成能读的业务代码",
+      "durationMinutes": 14,
+      "objectives": [
+        "用业务词命名变量和函数",
+        "拆分长函数的职责",
+        "用早返回减少嵌套"
+      ],
+      "notebook": "lessons/01-naming.ipynb",
+      "source": "lesson01_naming/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 重复代码与抽象边界",
+      "chapter": "第一章 可读性",
+      "summary": "合并三处模板代码，同时避免万能函数",
+      "durationMinutes": 14,
+      "objectives": [
+        "识别稳定部分和变化点",
+        "提取共享的行格式与合计",
+        "判断抽象是否过度"
+      ],
+      "notebook": "lessons/02-duplication.ipynb",
+      "source": "lesson02_duplication/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 条件分支与早返回",
+      "chapter": "第一章 可读性",
+      "summary": "把退款判断从四层嵌套改成卫语句",
+      "durationMinutes": 14,
+      "objectives": [
+        "用卫语句处理边界",
+        "用命名布尔变量表达条件",
+        "返回结果和原因"
+      ],
+      "notebook": "lessons/03-branches.ipynb",
+      "source": "lesson03_branches/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 数据结构与副作用",
+      "chapter": "第二章 副作用与错误",
+      "summary": "看见可变默认参数和原地修改造成的共享状态",
+      "durationMinutes": 16,
+      "objectives": [
+        "区分纯函数和副作用",
+        "修复可变默认参数",
+        "用返回新对象代替原地修改"
+      ],
+      "notebook": "lessons/04-side-effects.ipynb",
+      "source": "lesson04_side_effects/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 异常与错误信息",
+      "chapter": "第二章 副作用与错误",
+      "summary": "把静默返回 None 改成带上下文的异常",
+      "durationMinutes": 16,
+      "objectives": [
+        "定义业务异常类型",
+        "写出包含字段和期望值的错误信息",
+        "用异常链保留底层原因"
+      ],
+      "notebook": "lessons/05-errors.ipynb",
+      "source": "lesson05_errors/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 重构：提取函数与类",
+      "chapter": "第三章 重构与评审",
+      "summary": "拆开报表函数，用数据类承载中间结果",
+      "durationMinutes": 16,
+      "objectives": [
+        "按职责提取小函数",
+        "用数据类表达中间结果",
+        "比较重构前后的完整输出"
+      ],
+      "notebook": "lessons/06-extract.ipynb",
+      "source": "lesson06_extract/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 重构：替换条件逻辑",
+      "chapter": "第三章 重构与评审",
+      "summary": "用规则表替换运费分支，并逐个验证用例",
+      "durationMinutes": 16,
+      "objectives": [
+        "把分支抽成规则函数",
+        "用字典做表驱动分发",
+        "用同一批用例验证结果"
+      ],
+      "notebook": "lessons/07-policy.ipynb",
+      "source": "lesson07_policy/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 代码评审清单与综合练习",
+      "chapter": "第三章 重构与评审",
+      "summary": "按清单完整重构结算模块，并对比新旧结果",
+      "durationMinutes": 20,
+      "objectives": [
+        "按清单逐项检查代码",
+        "拆分优惠和运费规则",
+        "验证正常与错误两类用例"
+      ],
+      "notebook": "lessons/08-review.ipynb",
+      "source": "lesson08_review/main.py"
+    }
+  ]
+}

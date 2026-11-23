@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1,
+    "title": "索引原理：从 B 树到查询计划",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "索引",
+      "查询计划"
+    ],
+    "body": "SQLite 的表默认按 rowid 存放，索引是一棵独立的 B 树，键是索引列，值是 rowid。查询优化器会比较走索引和全表扫描的成本，最后把选择写进查询计划。用 EXPLAIN QUERY PLAN 能看到 SEARCH 还是 SCAN。"
+  },
+  {
+    "id": 2,
+    "title": "复合索引与最左前缀",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "复合索引",
+      "最左前缀"
+    ],
+    "body": "复合索引按列顺序逐层排序。查询条件里只有带上最左边的列，索引才能直接定位。等值条件放在前面，范围条件放在后面，通常能获得更稳定的索引优化效果。"
+  },
+  {
+    "id": 3,
+    "title": "覆盖索引减少回表",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "覆盖索引"
+    ],
+    "body": "如果查询需要的列都包含在索引里，SQLite 可以只读索引就返回结果，计划里会出现 COVERING INDEX。覆盖索引省掉了按 rowid 回表取数据的步骤，但索引列太多会增加写入和存储成本。"
+  },
+  {
+    "id": 4,
+    "title": "事务的原子性与回滚",
+    "category": "事务",
+    "tags": [
+      "sqlite",
+      "事务",
+      "回滚"
+    ],
+    "body": "BEGIN 之后的修改要么全部提交，要么全部撤销。转账这类操作必须放在同一个事务里，中途出错时执行 ROLLBACK，账户余额不会停在只扣不加的中间状态。"
+  },
+  {
+    "id": 5,
+    "title": "WAL 模式下的读写并发",
+    "category": "事务",
+    "tags": [
+      "sqlite",
+      "wal",
+      "并发"
+    ],
+    "body": "WAL 把新页面先写入预写日志，读连接继续读旧快照，写连接负责追加日志。读写不再互相阻塞，但写写仍然互斥，需要 busy_timeout 和 BEGIN IMMEDIATE 处理锁冲突。"
+  },
+  {
+    "id": 6,
+    "title": "数据库备份的三种方式",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "备份"
+    ],
+    "body": "文件复制适合停机维护，backup API 可以在线复制，VACUUM INTO 会生成一份紧凑的副本。备份完成后要执行 integrity_check，并核对关键表的行数。"
+  },
+  {
+    "id": 7,
+    "title": "迁移时如何重建表",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "迁移"
+    ],
+    "body": "SQLite 的 ALTER TABLE 能力有限，加约束通常要新建表、复制数据、删除旧表再改名。整个过程放在事务里，并用 PRAGMA user_version 记录版本，失败时可以回滚到迁移前。"
+  },
+  {
+    "id": 8,
+    "title": "JSON1 查询嵌套字段",
+    "category": "JSON",
+    "tags": [
+      "sqlite",
+      "json1"
+    ],
+    "body": "json_extract 负责取单个路径，json_each 把数组展开成多行，json_group_array 再把结果聚合回去。给 json_valid 加 CHECK 约束，可以拦住格式错误的文档。"
+  },
+  {
+    "id": 9,
+    "title": "生成列与索引",
+    "category": "JSON",
+    "tags": [
+      "sqlite",
+      "生成列",
+      "索引"
+    ],
+    "body": "生成列由其他列自动计算，virtual 不占存储，stored 会在写入时算好。把 json_extract 的结果放进生成列并建索引，查询就能像普通列一样走索引。"
+  },
+  {
+    "id": 10,
+    "title": "FTS5 全文检索入门",
+    "category": "全文检索",
+    "tags": [
+      "sqlite",
+      "fts5"
+    ],
+    "body": "FTS5 用倒排索引保存词项和文档的对应关系，MATCH 负责检索，bm25 给结果打分，snippet 返回命中片段。它适合搜索正文，不适合替代精确的条件过滤。"
+  },
+  {
+    "id": 11,
+    "title": "trigram 分词与中文检索",
+    "category": "全文检索",
+    "tags": [
+      "sqlite",
+      "fts5",
+      "中文"
+    ],
+    "body": "unicode61 会把连续的中文当成一个词，trigram 则按三个字符切分，能支持中文子串查询。trigram 要求查询至少三个字符，更短的关键词需要换分词方案或加前缀条件。"
+  },
+  {
+    "id": 12,
+    "title": "读懂查询计划里的统计信息",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "查询计划",
+      "统计"
+    ],
+    "body": "EXPLAIN QUERY PLAN 的 detail 列会说明 SEARCH、SCAN、USING INDEX 和 USING COVERING INDEX。ANALYZE 收集的统计信息会影响优化器的选择，数据分布变化后要重新收集。"
+  },
+  {
+    "id": 13,
+    "title": "约束是数据质量的第一道门",
+    "category": "SQL基础",
+    "tags": [
+      "sqlite",
+      "约束"
+    ],
+    "body": "NOT NULL、UNIQUE、CHECK 和外键把业务规则写进表结构。约束越早拦住坏数据，后面的查询和统计就越省心。应用层校验不能替代数据库约束。"
+  },
+  {
+    "id": 14,
+    "title": "类型亲和性并不等于强类型",
+    "category": "SQL基础",
+    "tags": [
+      "sqlite",
+      "类型"
+    ],
+    "body": "SQLite 的列类型更像一种转换偏好，INTEGER 列收到字符串数字时会尝试转成整数，转不了就原样保存。需要严格类型时使用 STRICT 表，让类型错误直接失败。"
+  },
+  {
+    "id": 15,
+    "title": "STRICT 表的取舍",
+    "category": "SQL基础",
+    "tags": [
+      "sqlite",
+      "strict"
+    ],
+    "body": "STRICT 表只允许 INTEGER、REAL、TEXT、BLOB 和 ANY 几种类型，写入前会严格检查。新项目可以优先使用，旧库迁移时要注意历史数据里可能藏着不符合类型的内容。"
+  },
+  {
+    "id": 16,
+    "title": "索引维护与写入成本",
+    "category": "索引",
+    "tags": [
+      "sqlite",
+      "索引",
+      "性能"
+    ],
+    "body": "每个索引都要在插入、更新和删除时同步维护。索引不是越多越好，先找出真正慢的查询，再为它设计索引。长期不用的索引应该清理。"
+  },
+  {
+    "id": 17,
+    "title": "批量导入与事务",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "批量导入",
+      "事务"
+    ],
+    "body": "逐条提交会让每次写入都落盘，批量导入应该把 executemany 放进一个事务。导入前关闭不必要的索引或触发器，导入后再重建，可以进一步缩短时间。"
+  },
+  {
+    "id": 18,
+    "title": "本地知识库的表结构",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "知识库",
+      "设计"
+    ],
+    "body": "知识库通常需要笔记表、标签、全文索引和更新时间。标题和正文进 FTS5，结构化字段留在普通表，搜索时先用 MATCH 缩小范围，再用普通条件过滤。"
+  },
+  {
+    "id": 19,
+    "title": "搜索结果的排序与截断",
+    "category": "全文检索",
+    "tags": [
+      "sqlite",
+      "fts5",
+      "排序"
+    ],
+    "body": "bm25 返回的分数越小越相关，排序时配合 LIMIT 只取前几条。snippet 可以控制命中片段长度，避免把整篇正文返回给调用方。"
+  },
+  {
+    "id": 20,
+    "title": "完整性检查与恢复演练",
+    "category": "工程实践",
+    "tags": [
+      "sqlite",
+      "备份",
+      "恢复"
+    ],
+    "body": "integrity_check 能发现页结构和索引损坏，foreign_key_check 能发现悬空引用。备份文件要定期做恢复演练，确认它真的能打开、能查询、行数对得上。"
+  }
+]

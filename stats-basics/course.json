@@ -1,0 +1,136 @@
+{
+  "id": "stats-basics",
+  "title": "数据统计入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/stats-basics-source.zip",
+  "backendPackage": "backend/uploads/packages/stats-basics.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节用销售数据和 A/B 测试明细讲描述统计、抽样、假设检验和统计报告，全部输出可复现。",
+  "fileSize": 23017,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 描述统计：均值、中位数与分位数",
+      "chapter": "第一章 描述数据",
+      "summary": "用真实销售数据比较均值、中位数和分位数",
+      "durationMinutes": 16,
+      "objectives": [
+        "计算均值、中位数和分位数",
+        "解释右偏分布下的均值偏差",
+        "用分位数描述大多数订单"
+      ],
+      "notebook": "lessons/01-descriptive.ipynb",
+      "source": "lesson01_descriptive/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 方差、标准差与分布",
+      "chapter": "第一章 描述数据",
+      "summary": "量化数据波动，读懂直方图和变异系数",
+      "durationMinutes": 16,
+      "objectives": [
+        "计算方差和标准差",
+        "区分标准差与标准误",
+        "用变异系数比较不同分组"
+      ],
+      "notebook": "lessons/02-spread.ipynb",
+      "source": "lesson02_spread/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 相关性与因果",
+      "chapter": "第二章 关系与抽样",
+      "summary": "计算相关系数，识别混杂因素",
+      "durationMinutes": 16,
+      "objectives": [
+        "用 pearsonr 计算相关系数",
+        "按分组检查伪相关",
+        "区分相关与因果"
+      ],
+      "notebook": "lessons/03-correlation.ipynb",
+      "source": "lesson03_correlation/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 抽样与置信区间",
+      "chapter": "第二章 关系与抽样",
+      "summary": "从样本估计总体，理解区间覆盖率",
+      "durationMinutes": 18,
+      "objectives": [
+        "理解样本均值的波动",
+        "构造 95% 置信区间",
+        "正确解释置信区间的含义"
+      ],
+      "notebook": "lessons/04-sampling.ipynb",
+      "source": "lesson04_sampling/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 假设检验与 p 值",
+      "chapter": "第三章 检验",
+      "summary": "用置换检验理解原假设和 p 值",
+      "durationMinutes": 18,
+      "objectives": [
+        "写出原假设和备择假设",
+        "用置换检验计算 p 值",
+        "避免常见的 p 值误读"
+      ],
+      "notebook": "lessons/05-hypothesis.ipynb",
+      "source": "lesson05_hypothesis/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 A/B 测试",
+      "chapter": "第三章 检验",
+      "summary": "从实验数据算转化率、lift 和业务结论",
+      "durationMinutes": 20,
+      "objectives": [
+        "计算转化率和相对提升",
+        "做卡方检验和区间估计",
+        "把统计结果翻译成上线建议"
+      ],
+      "notebook": "lessons/06-ab-test.ipynb",
+      "source": "lesson06_ab_test/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 用 scipy 做检验",
+      "chapter": "第三章 检验",
+      "summary": "集中练习 t 检验、卡方、相关和正态分布",
+      "durationMinutes": 18,
+      "objectives": [
+        "按数据类型选择检验方法",
+        "读懂统计量和 p 值",
+        "用 norm 做区间和样本量估算"
+      ],
+      "notebook": "lessons/07-scipy.ipynb",
+      "source": "lesson07_scipy/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 统计结论写作",
+      "chapter": "第四章 结论",
+      "summary": "输出一份带图表和局限性的统计报告",
+      "durationMinutes": 20,
+      "objectives": [
+        "整理指标和检验结果",
+        "写清效应量和置信区间",
+        "说明局限性和下一步动作"
+      ],
+      "notebook": "lessons/08-report.ipynb",
+      "source": "lesson08_report/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}

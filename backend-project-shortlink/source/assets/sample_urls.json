@@ -1,0 +1,10 @@
+{
+  "default_ttl_seconds": 604800,
+  "cache_max_age_seconds": 300,
+  "reserved_aliases": ["admin", "api", "health", "links", "stats", "static"],
+  "sample_urls": [
+    "https://example.com/docs/getting-started?from=course",
+    "https://example.com/blog/2026/fastapi-short-link-service",
+    "https://example.com/webinar/register?id=1024"
+  ]
+}

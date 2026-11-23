@@ -1,0 +1,136 @@
+{
+  "id": "pandas-advanced",
+  "title": "pandas 进阶：多表、分组与性能",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/pandas-advanced-source.zip",
+  "backendPackage": "backend/uploads/packages/pandas-advanced.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节从多表连接、MultiIndex、分组、透视、时间重采样讲到类型与性能，最后用四张表完成一份可复现的销售报表；数据全部离线，随机种子固定。",
+  "fileSize": 15494,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 多表连接：merge 的四种方式",
+      "chapter": "第一章 多表与索引",
+      "summary": "用订单、客户、商品三张表理解四种连接，检查键重复和行数膨胀",
+      "durationMinutes": 18,
+      "objectives": [
+        "区分 inner、left、right、outer 的结果差异",
+        "用 indicator 找出未匹配行",
+        "用 validate 拦住键重复导致的行数膨胀"
+      ],
+      "notebook": "lessons/01-merge.ipynb",
+      "source": "lesson01_merge/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 索引与 MultiIndex",
+      "chapter": "第一章 多表与索引",
+      "summary": "把渠道和品类放进索引，用 loc、xs 和层级聚合取数",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 set_index 建立多层级索引",
+        "用 loc 和 xs 按层级取数",
+        "用 swaplevel、unstack 切换长宽表"
+      ],
+      "notebook": "lessons/02-multiindex.ipynb",
+      "source": "lesson02_multiindex/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 groupby 进阶：agg、transform 与 apply",
+      "chapter": "第二章 分组与形状",
+      "summary": "用同一个分组任务对比三种写法各自产出什么形状",
+      "durationMinutes": 20,
+      "objectives": [
+        "用命名聚合一次算多个指标",
+        "用 transform 按原行数回填分组结果",
+        "判断何时该用 apply 以及它的代价"
+      ],
+      "notebook": "lessons/03-groupby.ipynb",
+      "source": "lesson03_groupby/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 透视表与逆透视",
+      "chapter": "第二章 分组与形状",
+      "summary": "做城市与品类的交叉表，再用 melt 和 crosstab 换视角",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 pivot_table 做交叉汇总",
+        "用 melt 把宽表还原成长表",
+        "用 crosstab 统计频数和占比"
+      ],
+      "notebook": "lessons/04-pivot-melt.ipynb",
+      "source": "lesson04_pivot_melt/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 时间序列重采样",
+      "chapter": "第二章 分组与形状",
+      "summary": "按周、月聚合日销售数据，用滚动窗口和同比环比看趋势",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 resample 按周、月聚合",
+        "用 rolling 计算移动平均",
+        "计算环比和同比并解释差异"
+      ],
+      "notebook": "lessons/05-resample.ipynb",
+      "source": "lesson05_resample/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 字符串、类别与缺失值",
+      "chapter": "第三章 类型与性能",
+      "summary": "批量处理文本，用 category 压缩重复值，用可空类型保留缺失",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 str 访问器批量处理文本",
+        "用 category 压缩重复取值",
+        "用可空 dtype 保留缺失"
+      ],
+      "notebook": "lessons/06-dtypes-strings.ipynb",
+      "source": "lesson06_dtypes_strings/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 性能：dtype、向量化与分块读取",
+      "chapter": "第三章 类型与性能",
+      "summary": "用一份五万行模拟订单测量内存、向量化和分块读取",
+      "durationMinutes": 20,
+      "objectives": [
+        "用合适 dtype 降低内存占用",
+        "用向量化写法替代逐行 apply",
+        "用 chunksize 分块读取大文件"
+      ],
+      "notebook": "lessons/07-performance.ipynb",
+      "source": "lesson07_performance/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 项目：多表销售数据报表",
+      "chapter": "第四章 项目",
+      "summary": "清洗四张表，计算净收入，输出月度、城市报表和结论",
+      "durationMinutes": 24,
+      "objectives": [
+        "清洗多表销售数据并核对行数",
+        "计算退款后的净收入",
+        "输出可复现的报表文件和结论"
+      ],
+      "notebook": "lessons/08-project.ipynb",
+      "source": "lesson08_project/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}

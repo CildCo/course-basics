@@ -1,0 +1,11 @@
+# 青柠课堂示例站点
+User-agent: *
+Disallow: /admin/
+Disallow: /detail/draft-
+Crawl-delay: 2
+
+User-agent: CourseReader
+Disallow: /admin/
+Disallow: /detail/draft-
+Allow: /
+Crawl-delay: 1

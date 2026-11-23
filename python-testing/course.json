@@ -1,0 +1,105 @@
+{
+  "id": "python-testing",
+  "title": "调试、日志与 pytest",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "engineering",
+  "difficulty": "中级",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/python-testing-source.zip",
+  "backendPackage": "backend/uploads/packages/python-testing.zip",
+  "verifiedAt": "2026-10-24",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节调试与测试课，使用 pytest 和标准库 logging。",
+  "fileSize": 4267,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 读 traceback",
+      "chapter": "第一章 定位问题",
+      "summary": "从报错最后一行往前找到真正原因",
+      "durationMinutes": 14,
+      "objectives": [
+        "异常类型与消息",
+        "调用栈",
+        "最小复现"
+      ],
+      "notebook": "lessons/01-traceback.ipynb",
+      "source": "lesson01_traceback/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 print、assert 与 logging",
+      "chapter": "第一章 定位问题",
+      "summary": "用日志和断言代替到处 print",
+      "durationMinutes": 14,
+      "objectives": [
+        "logging 级别",
+        "assert",
+        "日志格式"
+      ],
+      "notebook": "lessons/02-logging.ipynb",
+      "source": "lesson02_logging/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 pytest 基础",
+      "chapter": "第二章 pytest",
+      "summary": "写第一个测试文件并运行",
+      "durationMinutes": 16,
+      "objectives": [
+        "test_ 函数",
+        "assert",
+        "pytest -q"
+      ],
+      "notebook": "lessons/03-pytest.ipynb",
+      "source": "lesson03_pytest/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 fixture 与参数化",
+      "chapter": "第二章 pytest",
+      "summary": "复用测试准备，一次测多组数据",
+      "durationMinutes": 16,
+      "objectives": [
+        "fixture",
+        "parametrize",
+        "conftest"
+      ],
+      "notebook": "lessons/04-fixtures.ipynb",
+      "source": "lesson04_fixtures/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 异常测试与 mock",
+      "chapter": "第二章 pytest",
+      "summary": "测异常分支，替换外部依赖",
+      "durationMinutes": 18,
+      "objectives": [
+        "pytest.raises",
+        "monkeypatch",
+        "mock 思路"
+      ],
+      "notebook": "lessons/05-raises-mock.ipynb",
+      "source": "lesson05_raises_mock/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 给工具加测试",
+      "chapter": "第三章 项目",
+      "summary": "给一个小工具补上完整测试",
+      "durationMinutes": 20,
+      "objectives": [
+        "拆分函数",
+        "正常/异常/边界",
+        "运行全部测试"
+      ],
+      "notebook": "lessons/06-test-tool.ipynb",
+      "source": "lesson06_test_tool/main.py"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# 校验提交信息是否为 Conventional Commits 格式。
+MSG=$(head -1 "$1")
+case "$MSG" in
+  feat:*|fix:*|docs:*|refactor:*|test:*|chore:*) exit 0 ;;
+  *)
+    echo "提交信息不符合规范：$MSG" >&2
+    echo "示例：feat: 支持导出 CSV" >&2
+    exit 1
+    ;;
+esac

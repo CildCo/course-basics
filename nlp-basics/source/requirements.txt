@@ -1,0 +1,4 @@
+jieba>=0.42
+scikit-learn>=1.4
+pandas>=2.1
+matplotlib>=3.8

@@ -1,0 +1,136 @@
+{
+  "id": "python-concurrency",
+  "title": "并发与异步实战",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "python-lang",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/python-concurrency-source.zip",
+  "backendPackage": "backend/uploads/packages/python-concurrency.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节并发课：从线程、进程、队列到 asyncio，最后完成一个带限流和重试的批量任务。所有 I/O 用 sleep 模拟，不联网。",
+  "fileSize": 7174,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 并发、并行与异步",
+      "chapter": "第一章 线程与进程",
+      "summary": "用四种方式处理同一批任务，先建立直觉",
+      "durationMinutes": 16,
+      "objectives": [
+        "区分并发、并行和异步",
+        "比较顺序、线程、进程、协程的耗时",
+        "理解 GIL 对 CPU 和 I/O 任务的影响"
+      ],
+      "notebook": "lessons/01-concepts.ipynb",
+      "source": "lesson01_concepts/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 threading 与锁",
+      "chapter": "第一章 线程与进程",
+      "summary": "看见共享变量的竞争，再用锁保护它",
+      "durationMinutes": 16,
+      "objectives": [
+        "复现无锁计数的丢失更新",
+        "用 Lock 保护临界区",
+        "理解锁的代价和死锁风险"
+      ],
+      "notebook": "lessons/02-threading.ipynb",
+      "source": "lesson02_threading/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 queue 与生产者消费者",
+      "chapter": "第一章 线程与进程",
+      "summary": "用队列解耦生产者和消费者",
+      "durationMinutes": 16,
+      "objectives": [
+        "用 queue.Queue 传递任务",
+        "用 sentinel 通知消费者结束",
+        "统计处理数量并避免忙等"
+      ],
+      "notebook": "lessons/03-queue.ipynb",
+      "source": "lesson03_queue/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 multiprocessing",
+      "chapter": "第一章 线程与进程",
+      "summary": "把 CPU 密集任务分给多个进程",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 ProcessPoolExecutor 并行计算",
+        "把 worker 放进可导入模块",
+        "理解 Windows spawn 和主模块保护"
+      ],
+      "notebook": "lessons/04-multiprocessing.ipynb",
+      "source": "lesson04_multiprocessing/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 asyncio 事件循环",
+      "chapter": "第二章 异步与项目",
+      "summary": "从协程、事件循环到 Task",
+      "durationMinutes": 16,
+      "objectives": [
+        "理解协程和事件循环的分工",
+        "用 asyncio.run 启动异步程序",
+        "用 create_task 并发调度协程"
+      ],
+      "notebook": "lessons/05-asyncio.ipynb",
+      "source": "lesson05_asyncio/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 async/await 与并发请求",
+      "chapter": "第二章 异步与项目",
+      "summary": "用 gather 把逐个等待变成同时等待",
+      "durationMinutes": 16,
+      "objectives": [
+        "比较顺序 await 与 gather 的耗时",
+        "理解并发请求的适用场景",
+        "避免在协程里写阻塞调用"
+      ],
+      "notebook": "lessons/06-async-io.ipynb",
+      "source": "lesson06_async_io/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 超时、取消与错误处理",
+      "chapter": "第二章 异步与项目",
+      "summary": "让异步任务可控地结束和失败",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 wait_for 设置超时",
+        "用 cancel 取消任务并处理异常",
+        "用 return_exceptions 隔离单个失败"
+      ],
+      "notebook": "lessons/07-timeout.ipynb",
+      "source": "lesson07_timeout/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 批量任务小项目",
+      "chapter": "第二章 异步与项目",
+      "summary": "把限流、重试和结果汇总组装成可运行作品",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 Semaphore 控制并发数",
+        "给失败任务写重试逻辑",
+        "汇总成功、失败和重试次数"
+      ],
+      "notebook": "lessons/08-batch.ipynb",
+      "source": "lesson08_batch/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}

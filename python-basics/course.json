@@ -1,0 +1,189 @@
+{
+  "id": "python-basics",
+  "title": "Python 入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "python-lang",
+  "difficulty": "入门",
+  "lessonCount": 12,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/python-basics-source.zip",
+  "backendPackage": "backend/uploads/packages/python-basics.zip",
+  "verifiedAt": "2026-10-24",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "12 节 Python 入门课，前 12 节均由 Notebook 生成正文和真实输出；源码全部使用标准库。",
+  "fileSize": 5717,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 第一个程序",
+      "chapter": "第一章 开始",
+      "summary": "安装 Python，写出第一行 print",
+      "durationMinutes": 10,
+      "objectives": [
+        "确认 Python 能运行",
+        "写第一个 .py 文件",
+        "看懂 print 的输出"
+      ],
+      "notebook": "lessons/01-first-program.ipynb",
+      "source": "lesson01_hello/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 变量与类型",
+      "chapter": "第一章 开始",
+      "summary": "用变量保存数据，认识四种常用类型",
+      "durationMinutes": 12,
+      "objectives": [
+        "创建变量并重新赋值",
+        "区分 int/float/str/bool",
+        "用 type 和 f-string"
+      ],
+      "notebook": "lessons/02-variables.ipynb",
+      "source": "lesson02_variables/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 条件与循环",
+      "chapter": "第一章 开始",
+      "summary": "让程序做判断，重复执行一段代码",
+      "durationMinutes": 14,
+      "objectives": [
+        "写 if/elif/else",
+        "用 for 和 range",
+        "用 while 和 break"
+      ],
+      "notebook": "lessons/03-control.ipynb",
+      "source": "lesson03_control/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 函数",
+      "chapter": "第二章 数据结构与函数",
+      "summary": "把重复逻辑收进函数，用 return 拿结果",
+      "durationMinutes": 14,
+      "objectives": [
+        "定义和调用函数",
+        "使用参数和默认值",
+        "返回多个值并解包"
+      ],
+      "notebook": "lessons/04-functions.ipynb",
+      "source": "lesson04_functions/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 列表与字典",
+      "chapter": "第二章 数据结构与函数",
+      "summary": "用列表保存一组数据，用字典按名字查数据",
+      "durationMinutes": 14,
+      "objectives": [
+        "列表增删改查和切片",
+        "字典 get/items",
+        "遍历列表和字典"
+      ],
+      "notebook": "lessons/05-collections.ipynb",
+      "source": "lesson05_collections/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 错误处理",
+      "chapter": "第二章 数据结构与函数",
+      "summary": "捕获预期内的错误，让程序给出提示",
+      "durationMinutes": 14,
+      "objectives": [
+        "识别常见异常",
+        "写 try/except",
+        "用 else/finally 收尾"
+      ],
+      "notebook": "lessons/06-errors.ipynb",
+      "source": "lesson06_errors/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 模块与标准库",
+      "chapter": "第三章 常用工具",
+      "summary": "用 import 复用标准库，不再重复造轮子",
+      "durationMinutes": 12,
+      "objectives": [
+        "import 和 from 导入",
+        "math/datetime 常用函数",
+        "random 固定种子复现结果"
+      ],
+      "notebook": "lessons/07-modules.ipynb",
+      "source": "lesson07_modules/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 文件读写",
+      "chapter": "第三章 常用工具",
+      "summary": "读写文本文件，保存程序的结果",
+      "durationMinutes": 14,
+      "objectives": [
+        "用 pathlib 操作路径",
+        "with open 读写文件",
+        "用 JSON 保存结构化数据"
+      ],
+      "notebook": "lessons/08-files.ipynb",
+      "source": "lesson08_files/main.py"
+    },
+    {
+      "id": "09",
+      "title": "第9课 字符串处理",
+      "chapter": "第三章 常用工具",
+      "summary": "清洗和拆分文本，拼出想要的格式",
+      "durationMinutes": 12,
+      "objectives": [
+        "f-string 格式化",
+        "strip/split/join",
+        "replace/startswith/切片"
+      ],
+      "notebook": "lessons/09-strings.ipynb",
+      "source": "lesson09_strings/main.py"
+    },
+    {
+      "id": "10",
+      "title": "第10课 类与对象",
+      "chapter": "第四章 对象与项目",
+      "summary": "用类把数据和操作放在一起",
+      "durationMinutes": 16,
+      "objectives": [
+        "定义类和 __init__",
+        "实例方法和属性",
+        "简单继承和 __str__"
+      ],
+      "notebook": "lessons/10-classes.ipynb",
+      "source": "lesson10_classes/main.py"
+    },
+    {
+      "id": "11",
+      "title": "第11课 小项目：词频统计",
+      "chapter": "第四章 对象与项目",
+      "summary": "把列表、字典、排序组合成一个小工具",
+      "durationMinutes": 18,
+      "objectives": [
+        "清洗文本并拆分单词",
+        "用字典计数",
+        "排序输出前几名"
+      ],
+      "notebook": "lessons/11-wordcount.ipynb",
+      "source": "lesson11_wordcount/main.py"
+    },
+    {
+      "id": "12",
+      "title": "第12课 综合练习：命令行记账",
+      "chapter": "第四章 对象与项目",
+      "summary": "用函数、列表、字典和 JSON 完成一个小项目",
+      "durationMinutes": 20,
+      "objectives": [
+        "设计记录结构",
+        "拆分统计和展示",
+        "保存和读取 JSON"
+      ],
+      "notebook": "lessons/12-project.ipynb",
+      "source": "lesson12_project/main.py"
+    }
+  ]
+}

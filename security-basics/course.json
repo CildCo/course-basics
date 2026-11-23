@@ -1,0 +1,133 @@
+{
+  "id": "security-basics",
+  "title": "安全与数据保护基础",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "engineering",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/security-basics-source.zip",
+  "backendPackage": "backend/uploads/packages/security-basics.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节防御性安全基础：密码哈希、密钥管理、SQL 注入防护、本地 HTTPS 演示、依赖检查、日志脱敏、数据库备份恢复和个人信息边界，全部离线运行。",
+  "fileSize": 8668,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 密码与哈希",
+      "chapter": "第一章 账号与输入",
+      "summary": "用 PBKDF2 和随机盐存密码，理解为什么不能用 MD5",
+      "durationMinutes": 16,
+      "objectives": [
+        "理解慢哈希和随机盐的作用",
+        "用 pbkdf2_hmac 生成并校验密码哈希",
+        "用 hmac.compare_digest 做安全比较"
+      ],
+      "notebook": "lessons/01-password.ipynb",
+      "source": "lesson01_password/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 密钥与环境变量",
+      "chapter": "第一章 账号与输入",
+      "summary": "生成随机密钥，从环境变量读取并在输出中打码",
+      "durationMinutes": 14,
+      "objectives": [
+        "用 secrets.token_urlsafe 生成密钥",
+        "用环境变量代替硬编码配置",
+        "实现可复用的打码输出"
+      ],
+      "notebook": "lessons/02-secrets.ipynb",
+      "source": "lesson02_secrets/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 SQL 注入与输入校验",
+      "chapter": "第一章 账号与输入",
+      "summary": "在内存库里复现拼接查询的绕过，再用参数化和校验拦住",
+      "durationMinutes": 18,
+      "objectives": [
+        "看懂字符串拼接 SQL 的风险",
+        "用参数化查询隔离数据与语法",
+        "在查询前校验输入格式"
+      ],
+      "notebook": "lessons/03-injection.ipynb",
+      "source": "lesson03_injection/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 HTTPS 与传输安全",
+      "chapter": "第二章 传输、依赖与日志",
+      "summary": "本地生成自签名证书，演示 TLS 验证成功和失败",
+      "durationMinutes": 20,
+      "objectives": [
+        "查看 OpenSSL 版本和默认 TLS 设置",
+        "生成带 SAN 的自签名证书",
+        "理解证书不受信任时握手失败"
+      ],
+      "notebook": "lessons/04-https.ipynb",
+      "source": "lesson04_https/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 依赖与供应链",
+      "chapter": "第二章 传输、依赖与日志",
+      "summary": "清点依赖版本、锁定文件哈希、识别仿冒包名",
+      "durationMinutes": 14,
+      "objectives": [
+        "用 importlib.metadata 查看已安装依赖",
+        "计算 requirements 文件哈希",
+        "用名称相似度发现可疑包"
+      ],
+      "notebook": "lessons/05-dependencies.ipynb",
+      "source": "lesson05_dependencies/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 日志与敏感信息",
+      "chapter": "第二章 传输、依赖与日志",
+      "summary": "用 Filter 统一给手机号、邮箱、身份证打码，输出结构化日志",
+      "durationMinutes": 16,
+      "objectives": [
+        "用正则实现字段级脱敏",
+        "在 logging Filter 中统一处理",
+        "输出 JSON 日志并对比脱敏前后"
+      ],
+      "notebook": "lessons/06-logging.ipynb",
+      "source": "lesson06_logging/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 备份与恢复",
+      "chapter": "第三章 数据保护",
+      "summary": "用 SQLite backup API 备份、zipfile 打包、恢复并核对",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 backup API 生成一致快照",
+        "把备份和清单打包成 zip",
+        "恢复后核对行数和校验和"
+      ],
+      "notebook": "lessons/07-backup.ipynb",
+      "source": "lesson07_backup/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 个人信息与合规边界",
+      "chapter": "第三章 数据保护",
+      "summary": "用代码演示数据最小化、假名化、保留期限和删除请求",
+      "durationMinutes": 18,
+      "objectives": [
+        "只导出业务需要的字段",
+        "用 HMAC 对用户标识假名化",
+        "按保留期限清理并处理删除请求"
+      ],
+      "notebook": "lessons/08-privacy.ipynb",
+      "source": "lesson08_privacy/main.py"
+    }
+  ]
+}

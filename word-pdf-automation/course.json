@@ -1,0 +1,108 @@
+{
+  "id": "word-pdf-automation",
+  "title": "Word / PDF 自动化",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "tools",
+  "difficulty": "中级",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/word-pdf-automation-source.zip",
+  "backendPackage": "backend/uploads/packages/word-pdf-automation.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节从 docx 结构到模板批量生成，再用 pdfplumber 抽文本表格、PyPDF2 合并拆分加水印，最后批量处理合同文件夹。",
+  "fileSize": 147307,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 docx 结构：文档、段落、表格",
+      "chapter": "第一章 Word",
+      "summary": "打开模板，看清文档、段落和表格的关系",
+      "durationMinutes": 12,
+      "objectives": [
+        "用 python-docx 打开 docx 文件",
+        "统计段落数、表格数和表格单元格",
+        "打印段落样式名和数据表内容"
+      ],
+      "notebook": "lessons/01-docx-structure.ipynb",
+      "source": "lesson01_docx_structure/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 python-docx 读写段落与表格",
+      "chapter": "第一章 Word",
+      "summary": "把文档读成列表，再新建一份带标题、段落和表格的 docx",
+      "durationMinutes": 16,
+      "objectives": [
+        "把段落和表格读成 Python 列表",
+        "用 add_heading、add_paragraph、add_table 写文档",
+        "保存后重新打开验证写入结果"
+      ],
+      "notebook": "lessons/02-docx-read-write.ipynb",
+      "source": "lesson02_docx_read_write/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 模板替换与批量生成",
+      "chapter": "第一章 Word",
+      "summary": "替换段落和表格里的占位符，批量生成 3 份月报",
+      "durationMinutes": 18,
+      "objectives": [
+        "用正则找出 {{占位符}}",
+        "同时替换段落和表格单元格",
+        "按数据列表批量生成并回读检查"
+      ],
+      "notebook": "lessons/03-template.ipynb",
+      "source": "lesson03_template/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 PDF 文本与表格抽取",
+      "chapter": "第二章 PDF 与批量",
+      "summary": "用 pdfplumber 逐页抽文本，把表格转成字典列表",
+      "durationMinutes": 18,
+      "objectives": [
+        "查看 PDF 页数和每页字符数",
+        "抽取每页文本并找到首行",
+        "抽取表格并计算列合计"
+      ],
+      "notebook": "lessons/04-pdf-extract.ipynb",
+      "source": "lesson04_pdf_extract/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 合并、拆分与加水印",
+      "chapter": "第二章 PDF 与批量",
+      "summary": "PyPDF2 搬运页面，reportlab 画水印并叠加",
+      "durationMinutes": 20,
+      "objectives": [
+        "合并多个 PDF 并按页拆分",
+        "用 reportlab 生成一页旋转水印",
+        "把水印叠加到每一页并保存"
+      ],
+      "notebook": "lessons/05-pdf-merge.ipynb",
+      "source": "lesson05_pdf_merge/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 批量处理文件夹",
+      "chapter": "第二章 PDF 与批量",
+      "summary": "遍历合同文件夹，抽取字段、写 CSV、合并成一份 PDF",
+      "durationMinutes": 22,
+      "objectives": [
+        "遍历文件夹并读取全部 docx 合同",
+        "用正则抽取合同号、日期和金额",
+        "生成 summary.csv 和合并后的合同 PDF"
+      ],
+      "notebook": "lessons/06-batch.ipynb",
+      "source": "lesson06_batch/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}

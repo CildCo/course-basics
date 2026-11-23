@@ -1,0 +1,133 @@
+{
+  "id": "operating-system-basics",
+  "title": "操作系统入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "computer-basics",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/operating-system-basics-source.zip",
+  "backendPackage": "backend/uploads/packages/operating-system-basics.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节操作系统入门课，用标准库模拟进程调度、内存布局、分页、文件系统、并发锁与死锁，最后完成一个迷你任务调度器，全部离线可复现。",
+  "fileSize": 16203,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 程序、进程与线程：到底差在哪",
+      "chapter": "第一章 进程与调度",
+      "summary": "从 PID、内存空间和执行流三个角度分清程序、进程与线程",
+      "durationMinutes": 16,
+      "objectives": [
+        "说清程序、进程、线程三者的区别",
+        "观察当前进程的 PID 与线程信息",
+        "用状态机描述进程的生命周期"
+      ],
+      "notebook": "lessons/01-process-thread.ipynb",
+      "source": "lesson01_process_thread/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 调度算法：FCFS、SJF 与时间片轮转",
+      "chapter": "第一章 进程与调度",
+      "summary": "用同一组作业模拟三种调度算法，对比等待时间并画出甘特图",
+      "durationMinutes": 20,
+      "objectives": [
+        "读懂到达时间、运行时间与服务指标",
+        "模拟 FCFS、SJF 和时间片轮转",
+        "用甘特图比较调度顺序"
+      ],
+      "notebook": "lessons/02-scheduling.ipynb",
+      "source": "lesson02_scheduling/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 地址空间与内存布局：栈、堆、代码段",
+      "chapter": "第二章 内存",
+      "summary": "画出代码段、数据段、堆和栈，理解地址空间的划分",
+      "durationMinutes": 18,
+      "objectives": [
+        "说出代码段、数据段、堆、栈各自的职责",
+        "模拟一次堆分配与栈帧增长",
+        "看懂内存布局图"
+      ],
+      "notebook": "lessons/03-address-space.ipynb",
+      "source": "lesson03_address_space/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 虚拟内存与分页：页表、缺页与局部性",
+      "chapter": "第二章 内存",
+      "summary": "用页表和地址翻译模拟缺页，观察局部性对命中率的影响",
+      "durationMinutes": 20,
+      "objectives": [
+        "把虚拟地址拆成页号和页内偏移",
+        "模拟页表查找与缺页处理",
+        "用访问轨迹理解局部性"
+      ],
+      "notebook": "lessons/04-paging.ipynb",
+      "source": "lesson04_paging/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 文件系统：inode、目录、路径与权限",
+      "chapter": "第三章 文件与并发",
+      "summary": "在内存里搭一个迷你文件系统，走通路径解析、硬链接与权限检查",
+      "durationMinutes": 18,
+      "objectives": [
+        "理解 inode 与目录项的分工",
+        "模拟路径解析和硬链接",
+        "读懂 rwx 权限位"
+      ],
+      "notebook": "lessons/05-filesystem.ipynb",
+      "source": "lesson05_filesystem/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 并发与锁：竞态条件、互斥、条件变量",
+      "chapter": "第三章 文件与并发",
+      "summary": "复现计数器丢更新，用锁修正，再用条件变量完成生产者消费者",
+      "durationMinutes": 20,
+      "objectives": [
+        "说明竞态条件是怎么产生的",
+        "用 Lock 保护临界区",
+        "用 Condition 协调生产者与消费者"
+      ],
+      "notebook": "lessons/06-concurrency.ipynb",
+      "source": "lesson06_concurrency/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 死锁：四个必要条件与避免策略",
+      "chapter": "第三章 文件与并发",
+      "summary": "复现两把锁的循环等待，用锁顺序和银行家算法避免死锁",
+      "durationMinutes": 18,
+      "objectives": [
+        "说出死锁的四个必要条件",
+        "复现并检测循环等待",
+        "用锁顺序和安全性检查避免死锁"
+      ],
+      "notebook": "lessons/07-deadlock.ipynb",
+      "source": "lesson07_deadlock/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 项目：用 Python 模拟一个迷你任务调度器",
+      "chapter": "第四章 项目",
+      "summary": "完成一个可比较策略、可导出报表的迷你调度器",
+      "durationMinutes": 24,
+      "objectives": [
+        "组织进程、就绪队列和调度循环",
+        "实现时间片轮转并记录时间线",
+        "对比指标并导出运行报告"
+      ],
+      "notebook": "lessons/08-project.ipynb",
+      "source": "lesson08_project/main.py"
+    }
+  ]
+}

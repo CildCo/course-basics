@@ -1,0 +1,161 @@
+{
+  "id": "backend-project-shortlink",
+  "title": "后端项目实战：短链接服务",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "backend",
+  "difficulty": "高级",
+  "lessonCount": 10,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/backend-project-shortlink-source.zip",
+  "backendPackage": "backend/uploads/packages/backend-project-shortlink.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "10 节完整走一遍短链接服务：从需求、数据模型和 FastAPI 项目骨架，到创建、跳转、自定义别名、过期清理、访问统计、错误处理与限流，最后用 TestClient 和 pytest 完成可测试交付，全部离线运行在 SQLite 临时库上。",
+  "fileSize": 30608,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 需求、边界与数据模型",
+      "chapter": "第1章 需求与骨架",
+      "summary": "先定输入输出、字段约束和错误码，再落成可验证的数据模型",
+      "durationMinutes": 20,
+      "objectives": [
+        "写清短链接服务的输入、输出和边界",
+        "设计 links 表的字段与唯一约束",
+        "用 SQLAlchemy 和 Pydantic 验证模型并定好错误码"
+      ],
+      "notebook": "lessons/01-requirements.ipynb",
+      "source": "lesson01_requirements/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 项目骨架、配置与数据库",
+      "chapter": "第1章 需求与骨架",
+      "summary": "用应用工厂组织配置、数据库会话和健康检查",
+      "durationMinutes": 22,
+      "objectives": [
+        "把配置集中到一个可从环境变量覆盖的对象",
+        "封装引擎和会话工厂",
+        "用应用工厂创建可测试的 FastAPI 实例"
+      ],
+      "notebook": "lessons/02-skeleton.ipynb",
+      "source": "lesson02_skeleton/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 创建短链接",
+      "chapter": "第2章 核心功能",
+      "summary": "用自增编号和 Base62 生成短码，完成创建接口",
+      "durationMinutes": 22,
+      "objectives": [
+        "理解 Base62 编码与自增编号的关系",
+        "实现 POST /links 并返回短链接",
+        "处理非法目标地址和过期时间校验"
+      ],
+      "notebook": "lessons/03-create-link.ipynb",
+      "source": "lesson03_create_link/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 跳转与缓存头",
+      "chapter": "第2章 核心功能",
+      "summary": "返回 302 跳转，并为短链接加上 Cache-Control 和 ETag",
+      "durationMinutes": 20,
+      "objectives": [
+        "实现 GET /{code} 的 302 跳转",
+        "根据剩余有效期计算缓存时间",
+        "验证响应头且不真正访问目标地址"
+      ],
+      "notebook": "lessons/04-redirect-cache.ipynb",
+      "source": "lesson04_redirect_cache/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 自定义别名与冲突",
+      "chapter": "第2章 核心功能",
+      "summary": "校验别名、拒绝保留路径，并处理自动编号撞车",
+      "durationMinutes": 24,
+      "objectives": [
+        "用正则和保留词校验自定义别名",
+        "把唯一约束冲突转成 409 响应",
+        "在自动编号冲突时回退到带后缀的短码"
+      ],
+      "notebook": "lessons/05-custom-alias.ipynb",
+      "source": "lesson05_custom_alias/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 过期与清理",
+      "chapter": "第2章 核心功能",
+      "summary": "让过期链接返回 410，并安全清理过期数据",
+      "durationMinutes": 22,
+      "objectives": [
+        "区分不存在与已过期两种状态",
+        "实现按时间删除过期链接和访问记录",
+        "在清理前后验证数据变化"
+      ],
+      "notebook": "lessons/06-expiry-cleanup.ipynb",
+      "source": "lesson06_expiry_cleanup/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 访问统计",
+      "chapter": "第3章 统计与稳定性",
+      "summary": "记录每次跳转，按天聚合并画出访问趋势",
+      "durationMinutes": 24,
+      "objectives": [
+        "为跳转写入访问记录并累加计数",
+        "按天聚合统计数据",
+        "用图表展示最近 7 天访问趋势"
+      ],
+      "notebook": "lessons/07-visit-stats.ipynb",
+      "source": "lesson07_visit_stats/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 错误处理与限流",
+      "chapter": "第3章 统计与稳定性",
+      "summary": "统一错误响应结构，用滑动窗口限制创建频率",
+      "durationMinutes": 24,
+      "objectives": [
+        "用异常处理器统一错误响应",
+        "实现基于滑动窗口的内存限流",
+        "在依赖中返回带 Retry-After 的 429"
+      ],
+      "notebook": "lessons/08-errors-ratelimit.ipynb",
+      "source": "lesson08_errors_ratelimit/main.py"
+    },
+    {
+      "id": "09",
+      "title": "第9课 测试：TestClient + 临时库",
+      "chapter": "第4章 测试与交付",
+      "summary": "为每个测试准备独立数据库，覆盖核心接口和边界",
+      "durationMinutes": 26,
+      "objectives": [
+        "用 tmp_path 为每个测试建独立 SQLite 库",
+        "用依赖覆盖替换数据库会话",
+        "覆盖跳转、别名冲突、过期、统计和限流"
+      ],
+      "notebook": "lessons/09-testing.ipynb",
+      "source": "lesson09_testing/main.py"
+    },
+    {
+      "id": "10",
+      "title": "第10课 项目收尾：文档、部署清单与演练",
+      "chapter": "第4章 测试与交付",
+      "summary": "组装完整服务，补齐文档和部署清单，并做一次全流程演练",
+      "durationMinutes": 30,
+      "objectives": [
+        "把各节能力组装成一个完整服务",
+        "补齐 README、依赖和上线检查清单",
+        "用 TestClient 和 pytest 完成交付演练"
+      ],
+      "notebook": "lessons/10-project.ipynb",
+      "source": "lesson10_project/main.py"
+    }
+  ]
+}

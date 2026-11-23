@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    {
+      "name": "text_stats",
+      "enabled": true,
+      "config": {}
+    },
+    {
+      "name": "keyword_scan",
+      "enabled": true,
+      "config": {
+        "keywords": ["元编程", "描述符", "注册表", "插件"]
+      }
+    },
+    {
+      "name": "line_stats",
+      "enabled": true,
+      "config": {
+        "limit": 40
+      }
+    },
+    {
+      "name": "word_cloud",
+      "enabled": false,
+      "config": {}
+    }
+  ]
+}

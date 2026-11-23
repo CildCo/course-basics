@@ -1,0 +1,105 @@
+{
+  "id": "pytest-advanced",
+  "title": "pytest 进阶：夹具、参数化与隔离",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "engineering",
+  "difficulty": "中级",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/pytest-advanced-source.zip",
+  "backendPackage": "backend/uploads/packages/pytest-advanced.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节从 fixture 生命周期讲到完整数据管道测试，覆盖作用域、依赖注入、tmp_path、参数化、monkeypatch、mock、标记分层和测试报告，全部离线运行。",
+  "fileSize": 10545,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 fixture 生命周期与作用域",
+      "chapter": "第一章 夹具",
+      "summary": "观察 setup 与 teardown 的调用顺序，理解 function、module、session 三种作用域",
+      "durationMinutes": 18,
+      "objectives": [
+        "说出 fixture 的 setup 与 teardown 顺序",
+        "区分 function、module、session 作用域",
+        "根据资源是否可变选择作用域"
+      ],
+      "notebook": "lessons/01.ipynb",
+      "source": "lesson01_fixture_scope/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 依赖注入、临时目录与清理",
+      "chapter": "第一章 夹具",
+      "summary": "用 fixture 注入配置和客户端，用 tmp_path 隔离文件，在 yield 之后清理",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 fixture 注入配置和依赖",
+        "用 tmp_path 隔离文件测试",
+        "在 yield 之后完成清理"
+      ],
+      "notebook": "lessons/02.ipynb",
+      "source": "lesson02_injection_tmp/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 参数化与数据驱动测试",
+      "chapter": "第二章 数据与隔离",
+      "summary": "用 parametrize 覆盖多组输入，给用例起可读 id，从 JSON 文件加载测试数据",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 parametrize 写多组数据用例",
+        "用 ids 和 pytest.param 标注用例",
+        "从 JSON 文件加载测试数据"
+      ],
+      "notebook": "lessons/03.ipynb",
+      "source": "lesson03_parametrize/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 monkeypatch 与 mock 外部依赖",
+      "chapter": "第二章 数据与隔离",
+      "summary": "临时替换环境变量和函数，用 patch 与 MagicMock 隔离网络和第三方服务",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 monkeypatch 替换环境变量和函数",
+        "用 patch 与 MagicMock 隔离外部服务",
+        "确认测试结束后自动还原"
+      ],
+      "notebook": "lessons/04.ipynb",
+      "source": "lesson04_monkeypatch_mock/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 标记、跳过、失败重跑与测试分层",
+      "chapter": "第三章 组织",
+      "summary": "用 marker 筛选测试，处理 skip 与 xfail，给不稳定调用加有限次重试",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 marker 给测试分层并筛选",
+        "用 skip、skipif、xfail 表达状态",
+        "给不稳定调用加有限次重试"
+      ],
+      "notebook": "lessons/05.ipynb",
+      "source": "lesson05_marks_layers/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 项目：给数据管道补一套测试",
+      "chapter": "第三章 组织",
+      "summary": "为订单数据管道补齐单元、集成和报告测试，运行全量套件并输出 JSON 报告",
+      "durationMinutes": 26,
+      "objectives": [
+        "拆分数据管道的可测环节",
+        "组合 fixture、参数化、mock 和临时目录",
+        "运行全量测试并输出报告"
+      ],
+      "notebook": "lessons/06.ipynb",
+      "source": "lesson06_project/main.py"
+    }
+  ]
+}

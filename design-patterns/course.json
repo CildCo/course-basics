@@ -1,0 +1,133 @@
+{
+  "id": "design-patterns",
+  "title": "Python 设计模式",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "python-lang",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/design-patterns-source.zip",
+  "backendPackage": "backend/uploads/packages/design-patterns.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节从一段折扣 if/else 出发，讲策略、工厂与注册表、适配器、观察者、装饰器、仓储与依赖注入，最后组合成可运行的订单系统。",
+  "fileSize": 11016,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 为什么需要设计模式",
+      "chapter": "第一章 创建与选择",
+      "summary": "从一段会不断加分支的折扣代码看维护痛点",
+      "durationMinutes": 14,
+      "objectives": [
+        "识别规则增长带来的维护问题",
+        "说清 if/else 在什么情况下会失控",
+        "知道后面每节课解决哪类变化"
+      ],
+      "notebook": "lessons/01-why.ipynb",
+      "source": "lesson01_why/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 策略模式",
+      "chapter": "第一章 创建与选择",
+      "summary": "用策略对象替换折扣分支，运行时切换算法",
+      "durationMinutes": 16,
+      "objectives": [
+        "把折扣算法封装成独立策略类",
+        "让下单流程只依赖统一接口",
+        "新增策略时不修改调用方"
+      ],
+      "notebook": "lessons/02-strategy.ipynb",
+      "source": "lesson02_strategy/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 工厂与注册表",
+      "chapter": "第一章 创建与选择",
+      "summary": "用工厂和注册表管理支付、通知渠道的创建",
+      "durationMinutes": 18,
+      "objectives": [
+        "用工厂收口对象创建",
+        "用注册表自动发现新实现",
+        "新增渠道时调用方保持不变"
+      ],
+      "notebook": "lessons/03-factory.ipynb",
+      "source": "lesson03_factory/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 适配器",
+      "chapter": "第二章 解耦与扩展",
+      "summary": "包装第三方日志和支付接口，统一业务侧协议",
+      "durationMinutes": 16,
+      "objectives": [
+        "识别接口不兼容的场景",
+        "用适配器转换参数、单位和返回值",
+        "替换底层实现时不碰业务代码"
+      ],
+      "notebook": "lessons/04-adapter.ipynb",
+      "source": "lesson04_adapter/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 观察者",
+      "chapter": "第二章 解耦与扩展",
+      "summary": "用事件订阅把订单创建和通知逻辑解耦",
+      "durationMinutes": 16,
+      "objectives": [
+        "实现订阅、取消订阅和发布",
+        "控制订阅者的执行顺序",
+        "隔离单个订阅者的失败"
+      ],
+      "notebook": "lessons/05-observer.ipynb",
+      "source": "lesson05_observer/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 装饰器模式",
+      "chapter": "第二章 解耦与扩展",
+      "summary": "对比类装饰器和函数装饰器，叠加日志与重试",
+      "durationMinutes": 18,
+      "objectives": [
+        "用类装饰器包装同一接口",
+        "用函数装饰器包装函数调用",
+        "分清包装对象与 Python 语法糖"
+      ],
+      "notebook": "lessons/06-decorator.ipynb",
+      "source": "lesson06_decorator/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 仓储与依赖注入",
+      "chapter": "第三章 架构与重构",
+      "summary": "用仓储隔离存储，用依赖注入替换内存和 SQLite 实现",
+      "durationMinutes": 18,
+      "objectives": [
+        "定义仓储接口和订单服务",
+        "实现内存与 SQLite 两种仓储",
+        "在运行时注入不同实现"
+      ],
+      "notebook": "lessons/07-repository.ipynb",
+      "source": "lesson07_repository/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 重构一个小系统",
+      "chapter": "第三章 架构与重构",
+      "summary": "组合策略、工厂、观察者和仓储，跑通完整下单流程",
+      "durationMinutes": 22,
+      "objectives": [
+        "把多个模式组合成订单系统",
+        "跑通下单、折扣、通知和持久化",
+        "验证新增规则不修改调用方"
+      ],
+      "notebook": "lessons/08-refactor.ipynb",
+      "source": "lesson08_refactor/main.py"
+    }
+  ]
+}

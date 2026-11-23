@@ -1,0 +1,108 @@
+{
+  "id": "regex-text",
+  "title": "正则表达式与文本处理",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "python-lang",
+  "difficulty": "中级",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/regex-text-source.zip",
+  "backendPackage": "backend/uploads/packages/regex-text.zip",
+  "verifiedAt": "2026-10-24",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节正则与文本处理课，标准库 re，配套应用日志和发票文本。",
+  "fileSize": 9062,
+  "includePaths": [
+    "assets/*"
+  ],
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 正则是什么：字符、量词、锚点",
+      "chapter": "第一章 语法与模式",
+      "summary": "用字符类、量词和锚点描述文本形状",
+      "durationMinutes": 15,
+      "objectives": [
+        "使用字符类和量词",
+        "理解锚点与匹配起点",
+        "区分 search 与 fullmatch"
+      ],
+      "notebook": "lessons/01-basics.ipynb",
+      "source": "lesson01_basics/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 分组、捕获与命名分组",
+      "chapter": "第一章 语法与模式",
+      "summary": "用分组提取子串，用命名分组提高可读性",
+      "durationMinutes": 15,
+      "objectives": [
+        "使用捕获分组",
+        "使用命名分组",
+        "区分非捕获分组和反向引用"
+      ],
+      "notebook": "lessons/02-groups.ipynb",
+      "source": "lesson02_groups/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 常用模式：邮箱、日期、手机号、URL",
+      "chapter": "第一章 语法与模式",
+      "summary": "写出四个常用模式，并看清它们的边界",
+      "durationMinutes": 18,
+      "objectives": [
+        "写出邮箱、日期、手机号、URL 模式",
+        "用正反例验证边界",
+        "理解正则只校验形状"
+      ],
+      "notebook": "lessons/03-patterns.ipynb",
+      "source": "lesson03_patterns/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 re 模块：search/match/findall/sub/split",
+      "chapter": "第二章 实战",
+      "summary": "逐个掌握 re 模块常用的查找、替换和切分函数",
+      "durationMinutes": 16,
+      "objectives": [
+        "分清 search、match、fullmatch",
+        "用 findall 和 finditer 批量提取",
+        "用 sub 和 split 处理文本"
+      ],
+      "notebook": "lessons/04-re.ipynb",
+      "source": "lesson04_re/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 贪婪、非贪婪与回溯",
+      "chapter": "第二章 实战",
+      "summary": "控制量词的匹配长度，避开灾难性回溯",
+      "durationMinutes": 16,
+      "objectives": [
+        "理解贪婪与非贪婪",
+        "用否定字符类限定边界",
+        "识别并规避回溯风险"
+      ],
+      "notebook": "lessons/05-performance.ipynb",
+      "source": "lesson05_performance/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 实战：日志与发票字段抽取",
+      "chapter": "第二章 实战",
+      "summary": "从日志和发票文本中抽取字段并输出 CSV",
+      "durationMinutes": 24,
+      "objectives": [
+        "解析应用日志并统计",
+        "抽取格式不统一的发票字段",
+        "把结果导出为 CSV"
+      ],
+      "notebook": "lessons/06-extract.ipynb",
+      "source": "lesson06_extract/main.py"
+    }
+  ]
+}

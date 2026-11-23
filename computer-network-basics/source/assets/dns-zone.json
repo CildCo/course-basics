@@ -1,0 +1,18 @@
+{
+  "www.example.local": {
+    "type": "CNAME",
+    "value": "shop.example.local"
+  },
+  "shop.example.local": {
+    "type": "A",
+    "value": "192.0.2.20"
+  },
+  "api.example.local": {
+    "type": "A",
+    "value": "192.0.2.21"
+  },
+  "mail.example.local": {
+    "type": "A",
+    "value": "192.0.2.22"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "http-api",
+  "title": "HTTP / API / JSON",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "backend",
+  "difficulty": "入门",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/http-api-source.zip",
+  "backendPackage": "backend/uploads/packages/http-api.zip",
+  "verifiedAt": "2026-10-24",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节 HTTP 与 API 课，全部使用标准库，本地离线运行。",
+  "fileSize": 6161,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 HTTP 请求与响应",
+      "chapter": "第一章 HTTP",
+      "summary": "看懂一次请求和响应",
+      "durationMinutes": 12,
+      "objectives": [
+        "请求方法/路径",
+        "请求头",
+        "响应状态与正文"
+      ],
+      "notebook": "lessons/01-http.ipynb",
+      "source": "lesson01_http/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 状态码与 JSON",
+      "chapter": "第一章 HTTP",
+      "summary": "用状态码表达结果，用 JSON 传数据",
+      "durationMinutes": 14,
+      "objectives": [
+        "200/404/500",
+        "JSON 序列化",
+        "错误结构"
+      ],
+      "notebook": "lessons/02-status-json.ipynb",
+      "source": "lesson02_status_json/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 用 urllib 调 API",
+      "chapter": "第二章 API",
+      "summary": "用标准库发 GET/POST 请求",
+      "durationMinutes": 14,
+      "objectives": [
+        "urllib.request",
+        "GET/POST",
+        "解析响应"
+      ],
+      "notebook": "lessons/03-urllib.ipynb",
+      "source": "lesson03_urllib/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 REST 与接口设计",
+      "chapter": "第二章 API",
+      "summary": "把资源、路径和方法设计清楚",
+      "durationMinutes": 16,
+      "objectives": [
+        "资源命名",
+        "GET/POST/PUT/DELETE",
+        "错误码"
+      ],
+      "notebook": "lessons/04-rest.ipynb",
+      "source": "lesson04_rest/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 鉴权与错误处理",
+      "chapter": "第二章 API",
+      "summary": "用 token 保护接口，统一错误返回",
+      "durationMinutes": 16,
+      "objectives": [
+        "Authorization 头",
+        "401/403",
+        "错误处理"
+      ],
+      "notebook": "lessons/05-auth.ipynb",
+      "source": "lesson05_auth/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 本地待办 API",
+      "chapter": "第三章 项目",
+      "summary": "做一个可增查改删的本地 API",
+      "durationMinutes": 20,
+      "objectives": [
+        "内存数据",
+        "GET/POST",
+        "客户端调用"
+      ],
+      "notebook": "lessons/06-todo-api.ipynb",
+      "source": "lesson06_todo_api/main.py"
+    }
+  ]
+}

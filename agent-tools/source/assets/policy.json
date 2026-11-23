@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "dangerous": ["delete_file", "run_shell", "http_request"],
+  "budget": {
+    "max_steps": 12,
+    "max_tool_calls": 8,
+    "max_write_bytes": 4096,
+    "max_seconds": 10.0
+  },
+  "retry": {
+    "max_attempts": 3,
+    "base_delay": 0.5,
+    "factor": 2.0,
+    "deadline": 2.0
+  },
+  "allowed_write_suffixes": [".md", ".txt", ".json", ".jsonl"]
+}

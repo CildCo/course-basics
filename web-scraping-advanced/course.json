@@ -1,0 +1,136 @@
+{
+  "id": "web-scraping-advanced",
+  "title": "网络采集进阶：分页、容错与增量",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/web-scraping-advanced-source.zip",
+  "backendPackage": "backend/uploads/packages/web-scraping-advanced.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节用本地青柠课堂站点讲采集边界、会话请求、分页详情、不规则 HTML、重试续跑、缓存去重和 SQLite 增量落库，最后完成一条可复跑的采集管道，全程不访问外网。",
+  "fileSize": 36348,
+  "includePaths": [
+    "assets/*"
+  ],
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 采集边界：robots、频率、身份与合规",
+      "chapter": "第一章 边界与请求",
+      "summary": "读取 robots.txt，按站点规则决定能采什么，并用限速请求访问本地站点",
+      "durationMinutes": 18,
+      "objectives": [
+        "读懂 robots.txt 的允许与禁止规则",
+        "按站点要求控制请求频率和身份",
+        "说清公开数据采集的合规边界"
+      ],
+      "notebook": "lessons/01.ipynb",
+      "source": "lesson01_boundary/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 会话、Cookie、请求头与超时",
+      "chapter": "第一章 边界与请求",
+      "summary": "用 Session 保存 Cookie，带上稳定身份，给连接和读取分别设置超时",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 Session 复用连接并保存 Cookie",
+        "设置稳定的 User-Agent 和请求头",
+        "区分连接超时与读取超时并捕获异常"
+      ],
+      "notebook": "lessons/02.ipynb",
+      "source": "lesson02_session/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 列表页、分页与详情页",
+      "chapter": "第二章 页面与流程",
+      "summary": "顺着下一页链接翻完两页，再进入 8 个详情页补齐字段",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 rel=next 找到下一页并避免循环",
+        "从列表卡片抽取详情页地址",
+        "合并列表字段和详情字段后保存"
+      ],
+      "notebook": "lessons/03.ipynb",
+      "source": "lesson03_pagination/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 表格与不规则 HTML 解析",
+      "chapter": "第二章 页面与流程",
+      "summary": "对比 pandas 读表与手工解析，处理合并单元格、活动价和缺失字段",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 read_html 快速查看表格结构",
+        "手工处理 colspan、待定价格和备注行",
+        "把缺失字段统一成可分析的空值"
+      ],
+      "notebook": "lessons/04.ipynb",
+      "source": "lesson04_irregular_html/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 失败重试、断点续跑与幂等",
+      "chapter": "第三章 稳定性",
+      "summary": "给 503 响应加退避重试，用检查点文件从中断处继续",
+      "durationMinutes": 22,
+      "objectives": [
+        "区分可重试错误与不可重试错误",
+        "用指数退避和固定种子控制重试节奏",
+        "用检查点恢复中断任务并统计重试"
+      ],
+      "notebook": "lessons/05.ipynb",
+      "source": "lesson05_retry_checkpoint/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 缓存与去重",
+      "chapter": "第三章 稳定性",
+      "summary": "规范化 URL 去掉重复链接，用文件缓存避免重复请求，再用内容哈希校验",
+      "durationMinutes": 20,
+      "objectives": [
+        "规范化 URL 并识别重复链接",
+        "用文件缓存复用已经下载的页面",
+        "用内容哈希检查重复记录"
+      ],
+      "notebook": "lessons/06.ipynb",
+      "source": "lesson06_cache_dedupe/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 增量采集与 SQLite 落库",
+      "chapter": "第三章 稳定性",
+      "summary": "把课程写入 SQLite，对比两次运行的新增、更新和未变化数量",
+      "durationMinutes": 24,
+      "objectives": [
+        "设计带内容哈希的 SQLite 表",
+        "用 upsert 区分新增、更新和未变化",
+        "用第二次采集验证增量逻辑"
+      ],
+      "notebook": "lessons/07.ipynb",
+      "source": "lesson07_incremental_sqlite/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 项目：本地站点采集管道",
+      "chapter": "第四章 项目",
+      "summary": "串起规则检查、限速、重试、缓存、去重和增量落库，复跑一次验证幂等",
+      "durationMinutes": 28,
+      "objectives": [
+        "把前面各课的模块组合成一条管道",
+        "输出 CSV、SQLite 和运行报告",
+        "复跑管道验证缓存命中和结果不变"
+      ],
+      "notebook": "lessons/08.ipynb",
+      "source": "lesson08_project/main.py"
+    }
+  ]
+}

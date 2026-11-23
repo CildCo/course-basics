@@ -1,0 +1,161 @@
+{
+  "id": "fastapi-basics",
+  "title": "FastAPI 后端入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "backend",
+  "difficulty": "中级",
+  "lessonCount": 10,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/fastapi-basics-source.zip",
+  "backendPackage": "backend/uploads/packages/fastapi-basics.zip",
+  "verifiedAt": "2026-10-24",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "10 节 FastAPI 入门课，用 TestClient 在 Notebook 内完成路由、校验、数据库、鉴权和测试。",
+  "fileSize": 12347,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 从脚本到服务：路由与请求",
+      "chapter": "第一章 接口基础",
+      "summary": "写第一个接口，并用 TestClient 发出请求",
+      "durationMinutes": 14,
+      "objectives": [
+        "FastAPI 应用与路由",
+        "TestClient 调用",
+        "JSON 响应"
+      ],
+      "notebook": "lessons/01-routes.ipynb",
+      "source": "lesson01_routes/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 Pydantic 模型与校验",
+      "chapter": "第一章 接口基础",
+      "summary": "用模型定义数据结构，让非法输入被自动拦住",
+      "durationMinutes": 16,
+      "objectives": [
+        "BaseModel 字段定义",
+        "Field 约束",
+        "422 校验错误"
+      ],
+      "notebook": "lessons/02-models.ipynb",
+      "source": "lesson02_models/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 路径、查询、请求体参数",
+      "chapter": "第一章 接口基础",
+      "summary": "分清三类参数，并在一个接口里组合使用",
+      "durationMinutes": 16,
+      "objectives": [
+        "路径参数",
+        "查询参数",
+        "请求体参数"
+      ],
+      "notebook": "lessons/03-params.ipynb",
+      "source": "lesson03_params/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 状态码、错误处理与响应模型",
+      "chapter": "第一章 接口基础",
+      "summary": "用正确的状态码和结构返回成功与失败",
+      "durationMinutes": 16,
+      "objectives": [
+        "201/404/204",
+        "HTTPException",
+        "response_model"
+      ],
+      "notebook": "lessons/04-errors.ipynb",
+      "source": "lesson04_errors/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 依赖注入",
+      "chapter": "第一章 接口基础",
+      "summary": "把重复的参数解析和资源准备抽成依赖",
+      "durationMinutes": 16,
+      "objectives": [
+        "Depends 函数",
+        "类依赖",
+        "yield 依赖"
+      ],
+      "notebook": "lessons/05-dependencies.ipynb",
+      "source": "lesson05_dependencies/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 SQLite 与 SQLModel CRUD",
+      "chapter": "第二章 数据与安全",
+      "summary": "把数据存进数据库，完成增删改查接口",
+      "durationMinutes": 20,
+      "objectives": [
+        "SQLModel 建表",
+        "Session 操作",
+        "CRUD 接口"
+      ],
+      "notebook": "lessons/06-database.ipynb",
+      "source": "lesson06_database/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 分页、筛选、排序",
+      "chapter": "第二章 数据与安全",
+      "summary": "让列表接口支持分页、条件筛选和排序",
+      "durationMinutes": 16,
+      "objectives": [
+        "skip/limit 分页",
+        "条件筛选",
+        "白名单排序"
+      ],
+      "notebook": "lessons/07-pagination.ipynb",
+      "source": "lesson07_pagination/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 Token 鉴权",
+      "chapter": "第二章 数据与安全",
+      "summary": "用 Bearer Token 和依赖注入保护接口",
+      "durationMinutes": 18,
+      "objectives": [
+        "登录换 Token",
+        "Authorization 头",
+        "401 与权限"
+      ],
+      "notebook": "lessons/08-auth.ipynb",
+      "source": "lesson08_auth/main.py"
+    },
+    {
+      "id": "09",
+      "title": "第9课 用 pytest 与 TestClient 测试",
+      "chapter": "第三章 测试与项目",
+      "summary": "把接口调用写成可重复运行的自动化测试",
+      "durationMinutes": 18,
+      "objectives": [
+        "pytest 测试文件",
+        "TestClient fixture",
+        "断言状态码与响应"
+      ],
+      "notebook": "lessons/09-testing.ipynb",
+      "source": "lesson09_testing/main.py"
+    },
+    {
+      "id": "10",
+      "title": "第10课 待办 API 项目",
+      "chapter": "第三章 测试与项目",
+      "summary": "完成带鉴权、分页和测试的待办接口",
+      "durationMinutes": 24,
+      "objectives": [
+        "完整接口设计",
+        "鉴权与数据归属",
+        "TestClient 全流程"
+      ],
+      "notebook": "lessons/10-project.ipynb",
+      "source": "lesson10_project/main.py"
+    }
+  ]
+}

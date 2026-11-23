@@ -1,0 +1,161 @@
+{
+  "id": "ml-advanced",
+  "title": "机器学习进阶：集成、调参与解释",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "ai",
+  "difficulty": "高级",
+  "lessonCount": 10,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/ml-advanced-source.zip",
+  "backendPackage": "backend/uploads/packages/ml-advanced.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "10 节用 sklearn 内置数据集与自造数据讲基线、树模型、LightGBM、类别编码泄漏、不平衡处理、概率校准、模型解释、集成、超参数搜索和端到端项目，全部离线可复现。",
+  "fileSize": 30940,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 建立可信基线：Dummy、简单模型与业务指标",
+      "chapter": "第一章 从基线到强模型",
+      "summary": "用乳腺癌数据建立 Dummy 与逻辑回归基线，把指标换算成业务成本",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 DummyClassifier 建立分类基线",
+        "认识准确率在业务问题中的误导性",
+        "把混淆矩阵换算成可比较的业务成本"
+      ],
+      "notebook": "lessons/01.ipynb",
+      "source": "lesson01_baseline/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 决策树与随机森林：偏差、方差与袋外误差",
+      "chapter": "第一章 从基线到强模型",
+      "summary": "对比不同深度的决策树，用袋外误差观察随机森林的收敛",
+      "durationMinutes": 22,
+      "objectives": [
+        "看懂树深对偏差和方差的影响",
+        "用袋外误差估计泛化能力",
+        "比较单棵树与随机森林的稳定性"
+      ],
+      "notebook": "lessons/02.ipynb",
+      "source": "lesson02_forest/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 梯度提升与 LightGBM：残差学习与早停",
+      "chapter": "第一章 从基线到强模型",
+      "summary": "训练 LightGBM，用验证集早停，并与随机森林比较",
+      "durationMinutes": 25,
+      "objectives": [
+        "理解梯度提升逐轮修正残差的过程",
+        "用验证集早停控制提升轮数",
+        "比较 LightGBM 与随机森林的效果和成本"
+      ],
+      "notebook": "lessons/03.ipynb",
+      "source": "lesson03_boosting/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 特征工程与类别编码：目标泄漏的边界",
+      "chapter": "第二章 特征与数据",
+      "summary": "用客户流失数据对比独热编码与目标编码，识别折内泄漏",
+      "durationMinutes": 25,
+      "objectives": [
+        "区分独热编码与目标编码的适用场景",
+        "识别目标编码在交叉验证中的泄漏",
+        "用折内编码得到可信的评估"
+      ],
+      "notebook": "lessons/04.ipynb",
+      "source": "lesson04_encoding/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 不平衡数据：重采样、class_weight 与阈值",
+      "chapter": "第二章 特征与数据",
+      "summary": "在不平衡分类中比较类别权重、随机过采样与阈值调整",
+      "durationMinutes": 25,
+      "objectives": [
+        "看清不平衡数据下准确率的陷阱",
+        "比较重采样与 class_weight 的差异",
+        "用 PR 曲线在验证集上选择阈值"
+      ],
+      "notebook": "lessons/05.ipynb",
+      "source": "lesson05_imbalance/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 概率校准：predict_proba 为什么不可信",
+      "chapter": "第三章 可信度",
+      "summary": "用可靠性图和 Brier 分数诊断朴素贝叶斯的概率，并用校准器修正",
+      "durationMinutes": 22,
+      "objectives": [
+        "理解概率校准与排序能力的区别",
+        "用可靠性图和 Brier 分数诊断概率",
+        "用 CalibratedClassifierCV 修正概率"
+      ],
+      "notebook": "lessons/06.ipynb",
+      "source": "lesson06_calibration/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 模型解释：特征重要性、置换重要性与部分依赖",
+      "chapter": "第三章 可信度",
+      "summary": "比较不纯度重要性与置换重要性，用部分依赖观察特征方向",
+      "durationMinutes": 25,
+      "objectives": [
+        "区分不纯度重要性与置换重要性",
+        "用置换重要性在测试集上评估特征贡献",
+        "用部分依赖观察特征与预测的关系"
+      ],
+      "notebook": "lessons/07.ipynb",
+      "source": "lesson07_explain/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 集成策略：投票、堆叠与融合的收益边界",
+      "chapter": "第三章 可信度",
+      "summary": "用交叉验证比较单模型、软投票与堆叠，判断集成是否值得",
+      "durationMinutes": 24,
+      "objectives": [
+        "比较投票与堆叠的组合方式",
+        "用交叉验证衡量集成收益",
+        "判断集成是否值得额外成本"
+      ],
+      "notebook": "lessons/08.ipynb",
+      "source": "lesson08_ensemble/main.py"
+    },
+    {
+      "id": "09",
+      "title": "第9课 超参数搜索与实验记录：从 GridSearch 到随机搜索",
+      "chapter": "第四章 工程与项目",
+      "summary": "比较网格搜索与随机搜索的预算分配，并把每次实验记录成表",
+      "durationMinutes": 25,
+      "objectives": [
+        "用 GridSearchCV 与 RandomizedSearchCV 搜索参数",
+        "记录交叉验证分数、耗时和参数组合",
+        "避免让测试集参与调参"
+      ],
+      "notebook": "lessons/09.ipynb",
+      "source": "lesson09_search/main.py"
+    },
+    {
+      "id": "10",
+      "title": "第10课 项目：端到端建模、解释与报告",
+      "chapter": "第四章 工程与项目",
+      "summary": "从基线到解释，完成一次可复现的乳腺癌分类建模并输出报告",
+      "durationMinutes": 30,
+      "objectives": [
+        "组织一次可复现的端到端建模",
+        "用验证集选择模型和决策阈值",
+        "输出指标、解释与适用边界的报告"
+      ],
+      "notebook": "lessons/10.ipynb",
+      "source": "lesson10_project/main.py"
+    }
+  ]
+}

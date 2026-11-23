@@ -1,0 +1,108 @@
+{
+  "id": "dataviz-advanced",
+  "title": "数据可视化进阶",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/dataviz-advanced-source.zip",
+  "backendPackage": "backend/uploads/packages/dataviz-advanced.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节用 12 个月、4 个地区、3 个分类的销售汇总讲选图、配色标注、小倍数、分布关系、时间序列和一页报告，图表全部真实生成。",
+  "fileSize": 15897,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 选图：问题决定图表",
+      "chapter": "第一章 表达",
+      "summary": "用同一份销售数据对比折线、柱状、散点和直方图",
+      "durationMinutes": 14,
+      "objectives": [
+        "说清四种常用图各回答什么问题",
+        "根据问题选择图表类型",
+        "避免用错图造成误读"
+      ],
+      "notebook": "lessons/01-chart-choice.ipynb",
+      "source": "lesson01_chart_choice/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 颜色、标注与标题",
+      "chapter": "第一章 表达",
+      "summary": "用配色、直接标注和标题来源把图从能看变成好读",
+      "durationMinutes": 16,
+      "objectives": [
+        "建立背景、普通、重点三种颜色角色",
+        "用直接标注替代坐标轴查找",
+        "补齐标题、副标题和数据来源"
+      ],
+      "notebook": "lessons/02-style.ipynb",
+      "source": "lesson02_style/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 小倍数与布局",
+      "chapter": "第二章 多图与统计",
+      "summary": "用分面和小图网格比较地区与分类，避免面条图",
+      "durationMinutes": 16,
+      "objectives": [
+        "识别面条图的问题",
+        "用 relplot 做按地区分面的小倍数",
+        "用 subplots 控制共享坐标轴和布局"
+      ],
+      "notebook": "lessons/03-small-multiples.ipynb",
+      "source": "lesson03_small_multiples/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 分布与关系进阶",
+      "chapter": "第二章 多图与统计",
+      "summary": "用箱线图、小提琴图和相关性热力图看分布与异常值",
+      "durationMinutes": 18,
+      "objectives": [
+        "用箱线图比较分组分布并识别异常值",
+        "用小提琴图观察分类内部形状",
+        "用热力图筛选数值列相关性"
+      ],
+      "notebook": "lessons/04-distribution.ipynb",
+      "source": "lesson04_distribution/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 时间序列与对比",
+      "chapter": "第三章 报告",
+      "summary": "画趋势和滚动平均，标注环比同比，用指数比较地区增速",
+      "durationMinutes": 18,
+      "objectives": [
+        "用滚动平均识别趋势",
+        "计算并标注环比和同比",
+        "用指数化曲线比较不同基数的地区"
+      ],
+      "notebook": "lessons/05-time-series.ipynb",
+      "source": "lesson05_time_series/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 一页报告排版",
+      "chapter": "第三章 报告",
+      "summary": "用 GridSpec 排出标题、三张图和结论，导出一页 PNG",
+      "durationMinutes": 20,
+      "objectives": [
+        "从数据里提炼关键数字",
+        "用 GridSpec 安排标题、图表和结论",
+        "导出一张可直接汇报的一页报告"
+      ],
+      "notebook": "lessons/06-report.ipynb",
+      "source": "lesson06_report/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}

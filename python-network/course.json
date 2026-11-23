@@ -1,0 +1,105 @@
+{
+  "id": "python-network",
+  "title": "Python 网络编程入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "engineering",
+  "difficulty": "中级",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/python-network-source.zip",
+  "backendPackage": "backend/uploads/packages/python-network.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节 Python 网络编程入门，用本机随机端口讲 socket、TCP、UDP、HTTP 和 requests，服务都会在课后关闭，全程不访问外网。",
+  "fileSize": 6070,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 网络基础与 socket",
+      "chapter": "第一章 socket 与传输",
+      "summary": "认识 IP、端口和套接字，绑定随机端口",
+      "durationMinutes": 14,
+      "objectives": [
+        "分清 IP、端口、TCP 和 UDP",
+        "创建并关闭套接字",
+        "让系统分配空闲端口"
+      ],
+      "notebook": "lessons/01-socket.ipynb",
+      "source": "lesson01_socket/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 TCP 客户端与服务端",
+      "chapter": "第一章 socket 与传输",
+      "summary": "线程启动 TCP 回声服务端并收发消息",
+      "durationMinutes": 18,
+      "objectives": [
+        "用线程运行 TCP 服务端",
+        "客户端发送并接收数据",
+        "用 try/finally 关闭连接"
+      ],
+      "notebook": "lessons/02-tcp.ipynb",
+      "source": "lesson02_tcp/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 UDP 与端口",
+      "chapter": "第一章 socket 与传输",
+      "summary": "用 UDP 收发数据报，理解无连接",
+      "durationMinutes": 16,
+      "objectives": [
+        "用 sendto 和 recvfrom 收发",
+        "理解 UDP 不保证送达",
+        "用事件控制服务线程退出"
+      ],
+      "notebook": "lessons/03-udp.ipynb",
+      "source": "lesson03_udp/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 HTTP 协议与本地服务",
+      "chapter": "第二章 HTTP 与工具",
+      "summary": "用 http.server 和 http.client 观察请求响应",
+      "durationMinutes": 16,
+      "objectives": [
+        "启动本地 HTTP 服务",
+        "用 http.client 发请求",
+        "读懂状态码和响应头"
+      ],
+      "notebook": "lessons/04-http.ipynb",
+      "source": "lesson04_http/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 用 requests 调本地 API",
+      "chapter": "第二章 HTTP 与工具",
+      "summary": "GET、POST、错误状态和超时处理",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 requests 请求 JSON 接口",
+        "用 POST 提交数据",
+        "处理 404 和超时"
+      ],
+      "notebook": "lessons/05-requests.ipynb",
+      "source": "lesson05_requests/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 网络小工具",
+      "chapter": "第二章 HTTP 与工具",
+      "summary": "端口检查、本地下载器和结果报告",
+      "durationMinutes": 18,
+      "objectives": [
+        "检查本机端口状态",
+        "从本地服务下载文件",
+        "生成并保存工具报告"
+      ],
+      "notebook": "lessons/06-tool.ipynb",
+      "source": "lesson06_tool/main.py"
+    }
+  ]
+}

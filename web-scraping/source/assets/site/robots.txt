@@ -1,0 +1,6 @@
+User-agent: *
+# 先写禁止，再写允许：Python 的 robotparser 按行顺序取第一条命中规则
+Disallow: /admin/
+Allow: /
+
+# 示例站点：只提供公开的图书列表和详情页

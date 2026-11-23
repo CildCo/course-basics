@@ -1,0 +1,105 @@
+{
+  "id": "git-team",
+  "title": "Git 团队协作与远程仓库",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "engineering",
+  "difficulty": "中级",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/git-team-source.zip",
+  "backendPackage": "backend/uploads/packages/git-team.zip",
+  "verifiedAt": "2026-10-24",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节 Git 团队协作课，用临时 bare 仓库模拟远程，不访问网络。",
+  "fileSize": 10141,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 远程仓库：clone / fetch / pull / push",
+      "chapter": "第一章 远程协作",
+      "summary": "用本地 bare 仓库模拟远程，跑通克隆、提交、推送、拉取",
+      "durationMinutes": 16,
+      "objectives": [
+        "理解本地仓库与远程仓库的关系",
+        "用 clone、push、fetch、pull 同步代码",
+        "区分 fetch 和 pull 的行为"
+      ],
+      "notebook": "lessons/01-remote.ipynb",
+      "source": "lesson01_remote/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 分支模型：main / feature / release",
+      "chapter": "第一章 远程协作",
+      "summary": "按 main、feature、release 三类分支组织团队开发",
+      "durationMinutes": 18,
+      "objectives": [
+        "用分支隔离功能开发",
+        "用 --no-ff 合并保留历史",
+        "维护可发布的 main 分支"
+      ],
+      "notebook": "lessons/02-branches.ipynb",
+      "source": "lesson02_branches/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 Pull Request 与代码评审",
+      "chapter": "第一章 远程协作",
+      "summary": "在本地模拟一次完整的 PR：推送、查看差异、评审、合并",
+      "durationMinutes": 18,
+      "objectives": [
+        "准备可评审的 feature 分支",
+        "用 log、diff、request-pull 展示改动",
+        "理解 GitHub PR 的完整流程"
+      ],
+      "notebook": "lessons/03-pr.ipynb",
+      "source": "lesson03_pr/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 rebase 与 merge：整理提交历史",
+      "chapter": "第二章 历史与发布",
+      "summary": "对比 merge 与 rebase 后的提交图，选对整理历史的方式",
+      "durationMinutes": 18,
+      "objectives": [
+        "读懂提交图的分叉与合并",
+        "用 rebase 把提交接到最新 main",
+        "判断什么时候不该 rebase"
+      ],
+      "notebook": "lessons/04-rebase.ipynb",
+      "source": "lesson04_rebase/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 冲突解决与回滚",
+      "chapter": "第二章 历史与发布",
+      "summary": "解决同一文件的合并冲突，用 revert 和 reflog 安全回滚",
+      "durationMinutes": 18,
+      "objectives": [
+        "读懂冲突标记并手动解决",
+        "用 revert 撤销已提交的改动",
+        "用 reflog 找回误删的提交"
+      ],
+      "notebook": "lessons/05-conflict.ipynb",
+      "source": "lesson05_conflict/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 标签、发布与 GitHub Actions 入门",
+      "chapter": "第二章 历史与发布",
+      "summary": "给版本打标签、生成发布包，并读懂一个最小发布流水线",
+      "durationMinutes": 18,
+      "objectives": [
+        "创建和查看版本标签",
+        "用 git archive 生成发布包",
+        "读懂 GitHub Actions 发布工作流"
+      ],
+      "notebook": "lessons/06-release.ipynb",
+      "source": "lesson06_release/main.py"
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+[
+  {
+    "customer_id": "C001",
+    "name": "客户001",
+    "city": "上海",
+    "segment": "个人",
+    "signup_date": "2025-01-01"
+  },
+  {
+    "customer_id": "C002",
+    "name": "客户002",
+    "city": "北京",
+    "segment": "会员",
+    "signup_date": "2025-02-02"
+  },
+  {
+    "customer_id": "C003",
+    "name": "客户003",
+    "city": "广州",
+    "segment": "企业",
+    "signup_date": "2025-03-03"
+  },
+  {
+    "customer_id": "C004",
+    "name": "客户004",
+    "city": "深圳",
+    "segment": "个人",
+    "signup_date": "2025-04-04"
+  },
+  {
+    "customer_id": "C005",
+    "name": "客户005",
+    "city": "杭州",
+    "segment": "会员",
+    "signup_date": "2025-05-05"
+  },
+  {
+    "customer_id": "C006",
+    "name": "客户006",
+    "city": "成都",
+    "segment": "企业",
+    "signup_date": "2025-06-06"
+  },
+  {
+    "customer_id": "C007",
+    "name": "客户007",
+    "city": "上海",
+    "segment": "个人",
+    "signup_date": "2025-07-07"
+  },
+  {
+    "customer_id": "C008",
+    "name": "客户008",
+    "city": "北京",
+    "segment": "会员",
+    "signup_date": "2025-08-08"
+  },
+  {
+    "customer_id": "C009",
+    "name": "客户009",
+    "city": "广州",
+    "segment": "企业",
+    "signup_date": "2025-09-09"
+  },
+  {
+    "customer_id": "C010",
+    "name": "客户010",
+    "city": "深圳",
+    "segment": "个人",
+    "signup_date": "2025-10-10"
+  },
+  {
+    "customer_id": "C011",
+    "name": "客户011",
+    "city": "杭州",
+    "segment": "会员",
+    "signup_date": "2025-11-11"
+  },
+  {
+    "customer_id": "C012",
+    "name": "客户012",
+    "city": "成都",
+    "segment": "企业",
+    "signup_date": "2025-12-12"
+  },
+  {
+    "customer_id": "C013",
+    "name": "客户013",
+    "city": "上海",
+    "segment": "个人",
+    "signup_date": "2025-01-13"
+  },
+  {
+    "customer_id": "C014",
+    "name": "客户014",
+    "city": "北京",
+    "segment": "会员",
+    "signup_date": "2025-02-14"
+  },
+  {
+    "customer_id": "C015",
+    "name": "客户015",
+    "city": "广州",
+    "segment": "企业",
+    "signup_date": "2025-03-15"
+  },
+  {
+    "customer_id": "C016",
+    "name": "客户016",
+    "city": "深圳",
+    "segment": "个人",
+    "signup_date": "2025-04-16"
+  },
+  {
+    "customer_id": "C017",
+    "name": "客户017",
+    "city": "杭州",
+    "segment": "会员",
+    "signup_date": "2025-05-17"
+  },
+  {
+    "customer_id": "C018",
+    "name": "客户018",
+    "city": "成都",
+    "segment": "企业",
+    "signup_date": "2025-06-18"
+  },
+  {
+    "customer_id": "C019",
+    "name": "客户019",
+    "city": "上海",
+    "segment": "个人",
+    "signup_date": "2025-07-19"
+  },
+  {
+    "customer_id": "C020",
+    "name": "客户020",
+    "city": "北京",
+    "segment": "会员",
+    "signup_date": "2025-08-20"
+  },
+  {
+    "customer_id": "C021",
+    "name": "客户021",
+    "city": "广州",
+    "segment": "企业",
+    "signup_date": "2025-09-21"
+  },
+  {
+    "customer_id": "C022",
+    "name": "客户022",
+    "city": "深圳",
+    "segment": "个人",
+    "signup_date": "2025-10-22"
+  },
+  {
+    "customer_id": "C023",
+    "name": "客户023",
+    "city": "杭州",
+    "segment": "会员",
+    "signup_date": "2025-11-23"
+  },
+  {
+    "customer_id": "C024",
+    "name": "客户024",
+    "city": "成都",
+    "segment": "企业",
+    "signup_date": "2025-12-24"
+  },
+  {
+    "customer_id": "C025",
+    "name": "客户025",
+    "city": "上海",
+    "segment": "个人",
+    "signup_date": "2025-01-25"
+  },
+  {
+    "customer_id": "C026",
+    "name": "客户026",
+    "city": "北京",
+    "segment": "会员",
+    "signup_date": "2025-02-26"
+  },
+  {
+    "customer_id": "C027",
+    "name": "客户027",
+    "city": "广州",
+    "segment": "企业",
+    "signup_date": "2025-03-27"
+  },
+  {
+    "customer_id": "C028",
+    "name": "客户028",
+    "city": "深圳",
+    "segment": "个人",
+    "signup_date": "2025-04-01"
+  },
+  {
+    "customer_id": "C029",
+    "name": "客户029",
+    "city": "杭州",
+    "segment": "会员",
+    "signup_date": "2025-05-02"
+  },
+  {
+    "customer_id": "C030",
+    "name": "客户030",
+    "city": "成都",
+    "segment": "企业",
+    "signup_date": "2025-06-03"
+  },
+  {
+    "customer_id": "C031",
+    "name": "客户031",
+    "city": "上海",
+    "segment": "个人",
+    "signup_date": "2025-07-04"
+  },
+  {
+    "customer_id": "C032",
+    "name": "客户032",
+    "city": "北京",
+    "segment": "会员",
+    "signup_date": "2025-08-05"
+  },
+  {
+    "customer_id": "C033",
+    "name": "客户033",
+    "city": "广州",
+    "segment": "企业",
+    "signup_date": "2025-09-06"
+  },
+  {
+    "customer_id": "C034",
+    "name": "客户034",
+    "city": "深圳",
+    "segment": "个人",
+    "signup_date": "2025-10-07"
+  },
+  {
+    "customer_id": "C035",
+    "name": "客户035",
+    "city": "杭州",
+    "segment": "会员",
+    "signup_date": "2025-11-08"
+  },
+  {
+    "customer_id": "C036",
+    "name": "客户036",
+    "city": "成都",
+    "segment": "企业",
+    "signup_date": "2025-12-09"
+  },
+  {
+    "customer_id": "C037",
+    "name": "客户037",
+    "city": "上海",
+    "segment": "个人",
+    "signup_date": "2025-01-10"
+  },
+  {
+    "customer_id": "C038",
+    "name": "客户038",
+    "city": "北京",
+    "segment": "会员",
+    "signup_date": "2025-02-11"
+  },
+  {
+    "customer_id": "C039",
+    "name": "客户039",
+    "city": "广州",
+    "segment": "企业",
+    "signup_date": "2025-03-12"
+  },
+  {
+    "customer_id": "C040",
+    "name": "客户040",
+    "city": "深圳",
+    "segment": "个人",
+    "signup_date": "2025-04-13"
+  },
+  {
+    "customer_id": "C041",
+    "name": "客户041",
+    "city": "杭州",
+    "segment": "会员",
+    "signup_date": "2025-05-14"
+  },
+  {
+    "customer_id": "C042",
+    "name": "客户042",
+    "city": "成都",
+    "segment": "企业",
+    "signup_date": "2025-06-15"
+  },
+  {
+    "customer_id": "C043",
+    "name": "客户043",
+    "city": "上海",
+    "segment": "个人",
+    "signup_date": "2025-07-16"
+  },
+  {
+    "customer_id": "C044",
+    "name": "客户044",
+    "city": "北京",
+    "segment": "会员",
+    "signup_date": "2025-08-17"
+  },
+  {
+    "customer_id": "C045",
+    "name": "客户045",
+    "city": "广州",
+    "segment": "企业",
+    "signup_date": "2025-09-18"
+  },
+  {
+    "customer_id": "C046",
+    "name": "客户046",
+    "city": "深圳",
+    "segment": "个人",
+    "signup_date": "2025-10-19"
+  },
+  {
+    "customer_id": "C047",
+    "name": "客户047",
+    "city": "杭州",
+    "segment": "会员",
+    "signup_date": "2025-11-20"
+  },
+  {
+    "customer_id": "C048",
+    "name": "客户048",
+    "city": "成都",
+    "segment": "企业",
+    "signup_date": "2025-12-21"
+  }
+]

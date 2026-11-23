@@ -1,0 +1,496 @@
+{
+  "repo": "https://github.com/CildCo/course-basics",
+  "contentHash": "0f0404e0e52e527b0539be0eeeeeaa799708c77289dda9a59cbbcc41d846c4ff",
+  "courses": [
+    {
+      "id": "ab-testing",
+      "title": "A/B 测试与实验分析",
+      "kind": "basics",
+      "path": "ab-testing",
+      "url": "https://github.com/CildCo/course-basics/tree/main/ab-testing"
+    },
+    {
+      "id": "agent-tools",
+      "title": "AI Agent 工具层实战",
+      "kind": "basics",
+      "path": "agent-tools",
+      "url": "https://github.com/CildCo/course-basics/tree/main/agent-tools"
+    },
+    {
+      "id": "algorithm-patterns",
+      "title": "算法题型与解题模式",
+      "kind": "basics",
+      "path": "algorithm-patterns",
+      "url": "https://github.com/CildCo/course-basics/tree/main/algorithm-patterns"
+    },
+    {
+      "id": "algorithms-advanced",
+      "title": "算法进阶：图与动态规划",
+      "kind": "basics",
+      "path": "algorithms-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/algorithms-advanced"
+    },
+    {
+      "id": "algorithms-basics",
+      "title": "数据结构与算法",
+      "kind": "basics",
+      "path": "algorithms-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/algorithms-basics"
+    },
+    {
+      "id": "backend-project-shortlink",
+      "title": "后端项目实战：短链接服务",
+      "kind": "basics",
+      "path": "backend-project-shortlink",
+      "url": "https://github.com/CildCo/course-basics/tree/main/backend-project-shortlink"
+    },
+    {
+      "id": "ci-cd-basics",
+      "title": "CI/CD 入门：从提交到发布",
+      "kind": "basics",
+      "path": "ci-cd-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/ci-cd-basics"
+    },
+    {
+      "id": "clean-code",
+      "title": "代码整洁与重构",
+      "kind": "basics",
+      "path": "clean-code",
+      "url": "https://github.com/CildCo/course-basics/tree/main/clean-code"
+    },
+    {
+      "id": "computer-network-basics",
+      "title": "计算机网络入门",
+      "kind": "basics",
+      "path": "computer-network-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/computer-network-basics"
+    },
+    {
+      "id": "computer-vision-advanced",
+      "title": "计算机视觉进阶",
+      "kind": "basics",
+      "path": "computer-vision-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/computer-vision-advanced"
+    },
+    {
+      "id": "data-etl",
+      "title": "Python 数据工程：ETL",
+      "kind": "basics",
+      "path": "data-etl",
+      "url": "https://github.com/CildCo/course-basics/tree/main/data-etl"
+    },
+    {
+      "id": "data-storytelling",
+      "title": "数据报告与讲故事",
+      "kind": "basics",
+      "path": "data-storytelling",
+      "url": "https://github.com/CildCo/course-basics/tree/main/data-storytelling"
+    },
+    {
+      "id": "data-validation",
+      "title": "数据质量与校验",
+      "kind": "basics",
+      "path": "data-validation",
+      "url": "https://github.com/CildCo/course-basics/tree/main/data-validation"
+    },
+    {
+      "id": "data-warehouse-basics",
+      "title": "数据仓库入门",
+      "kind": "basics",
+      "path": "data-warehouse-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/data-warehouse-basics"
+    },
+    {
+      "id": "database-design",
+      "title": "数据库设计入门",
+      "kind": "basics",
+      "path": "database-design",
+      "url": "https://github.com/CildCo/course-basics/tree/main/database-design"
+    },
+    {
+      "id": "dataviz-advanced",
+      "title": "数据可视化进阶",
+      "kind": "basics",
+      "path": "dataviz-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/dataviz-advanced"
+    },
+    {
+      "id": "deep-learning-pytorch",
+      "title": "深度学习与 PyTorch 入门",
+      "kind": "basics",
+      "path": "deep-learning-pytorch",
+      "url": "https://github.com/CildCo/course-basics/tree/main/deep-learning-pytorch"
+    },
+    {
+      "id": "design-patterns",
+      "title": "Python 设计模式",
+      "kind": "basics",
+      "path": "design-patterns",
+      "url": "https://github.com/CildCo/course-basics/tree/main/design-patterns"
+    },
+    {
+      "id": "docker-basics",
+      "title": "Docker 与容器",
+      "kind": "basics",
+      "path": "docker-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/docker-basics"
+    },
+    {
+      "id": "excel-python",
+      "title": "Excel 与 Python 自动化",
+      "kind": "basics",
+      "path": "excel-python",
+      "url": "https://github.com/CildCo/course-basics/tree/main/excel-python"
+    },
+    {
+      "id": "fastapi-advanced",
+      "title": "FastAPI 进阶：认证、数据库与测试",
+      "kind": "basics",
+      "path": "fastapi-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/fastapi-advanced"
+    },
+    {
+      "id": "fastapi-basics",
+      "title": "FastAPI 后端入门",
+      "kind": "basics",
+      "path": "fastapi-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/fastapi-basics"
+    },
+    {
+      "id": "feature-engineering",
+      "title": "特征工程与数据准备",
+      "kind": "basics",
+      "path": "feature-engineering",
+      "url": "https://github.com/CildCo/course-basics/tree/main/feature-engineering"
+    },
+    {
+      "id": "git-advanced",
+      "title": "Git 进阶：整理历史与定位问题",
+      "kind": "basics",
+      "path": "git-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/git-advanced"
+    },
+    {
+      "id": "git-cli",
+      "title": "Git 与命令行",
+      "kind": "basics",
+      "path": "git-cli",
+      "url": "https://github.com/CildCo/course-basics/tree/main/git-cli"
+    },
+    {
+      "id": "git-team",
+      "title": "Git 团队协作与远程仓库",
+      "kind": "basics",
+      "path": "git-team",
+      "url": "https://github.com/CildCo/course-basics/tree/main/git-team"
+    },
+    {
+      "id": "how-programs-run",
+      "title": "程序是怎么跑起来的",
+      "kind": "basics",
+      "path": "how-programs-run",
+      "url": "https://github.com/CildCo/course-basics/tree/main/how-programs-run"
+    },
+    {
+      "id": "http-api",
+      "title": "HTTP / API / JSON",
+      "kind": "basics",
+      "path": "http-api",
+      "url": "https://github.com/CildCo/course-basics/tree/main/http-api"
+    },
+    {
+      "id": "image-processing",
+      "title": "Python 图像处理入门",
+      "kind": "basics",
+      "path": "image-processing",
+      "url": "https://github.com/CildCo/course-basics/tree/main/image-processing"
+    },
+    {
+      "id": "javascript-basics",
+      "title": "JavaScript 入门",
+      "kind": "basics",
+      "path": "javascript-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/javascript-basics"
+    },
+    {
+      "id": "jupyter-basics",
+      "title": "Jupyter Notebook 入门",
+      "kind": "basics",
+      "path": "jupyter-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/jupyter-basics"
+    },
+    {
+      "id": "markdown-docs",
+      "title": "Markdown 与文档工程",
+      "kind": "basics",
+      "path": "markdown-docs",
+      "url": "https://github.com/CildCo/course-basics/tree/main/markdown-docs"
+    },
+    {
+      "id": "matplotlib-basics",
+      "title": "matplotlib 数据可视化",
+      "kind": "basics",
+      "path": "matplotlib-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/matplotlib-basics"
+    },
+    {
+      "id": "ml-advanced",
+      "title": "机器学习进阶：集成、调参与解释",
+      "kind": "basics",
+      "path": "ml-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/ml-advanced"
+    },
+    {
+      "id": "ml-basics",
+      "title": "机器学习入门",
+      "kind": "basics",
+      "path": "ml-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/ml-basics"
+    },
+    {
+      "id": "model-deployment",
+      "title": "模型部署：从 joblib 到 FastAPI",
+      "kind": "basics",
+      "path": "model-deployment",
+      "url": "https://github.com/CildCo/course-basics/tree/main/model-deployment"
+    },
+    {
+      "id": "nlp-basics",
+      "title": "自然语言处理入门",
+      "kind": "basics",
+      "path": "nlp-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/nlp-basics"
+    },
+    {
+      "id": "numpy-basics",
+      "title": "NumPy 基础",
+      "kind": "basics",
+      "path": "numpy-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/numpy-basics"
+    },
+    {
+      "id": "operating-system-basics",
+      "title": "操作系统入门",
+      "kind": "basics",
+      "path": "operating-system-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/operating-system-basics"
+    },
+    {
+      "id": "pandas-advanced",
+      "title": "pandas 进阶：多表、分组与性能",
+      "kind": "basics",
+      "path": "pandas-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/pandas-advanced"
+    },
+    {
+      "id": "pandas-basics",
+      "title": "pandas 入门",
+      "kind": "basics",
+      "path": "pandas-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/pandas-basics"
+    },
+    {
+      "id": "pandas-cleaning",
+      "title": "pandas 数据清洗实战",
+      "kind": "basics",
+      "path": "pandas-cleaning",
+      "url": "https://github.com/CildCo/course-basics/tree/main/pandas-cleaning"
+    },
+    {
+      "id": "pytest-advanced",
+      "title": "pytest 进阶：夹具、参数化与隔离",
+      "kind": "basics",
+      "path": "pytest-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/pytest-advanced"
+    },
+    {
+      "id": "python-advanced",
+      "title": "Python 进阶",
+      "kind": "basics",
+      "path": "python-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-advanced"
+    },
+    {
+      "id": "python-basics",
+      "title": "Python 入门",
+      "kind": "basics",
+      "path": "python-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-basics"
+    },
+    {
+      "id": "python-cli",
+      "title": "Python 命令行工具",
+      "kind": "basics",
+      "path": "python-cli",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-cli"
+    },
+    {
+      "id": "python-concurrency",
+      "title": "并发与异步实战",
+      "kind": "basics",
+      "path": "python-concurrency",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-concurrency"
+    },
+    {
+      "id": "python-metaprogramming",
+      "title": "Python 元编程与数据模型",
+      "kind": "basics",
+      "path": "python-metaprogramming",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-metaprogramming"
+    },
+    {
+      "id": "python-network",
+      "title": "Python 网络编程入门",
+      "kind": "basics",
+      "path": "python-network",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-network"
+    },
+    {
+      "id": "python-oop",
+      "title": "Python 面向对象进阶",
+      "kind": "basics",
+      "path": "python-oop",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-oop"
+    },
+    {
+      "id": "python-packaging",
+      "title": "Python 工程化：打包与发布",
+      "kind": "basics",
+      "path": "python-packaging",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-packaging"
+    },
+    {
+      "id": "python-performance",
+      "title": "Python 性能分析与优化",
+      "kind": "basics",
+      "path": "python-performance",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-performance"
+    },
+    {
+      "id": "python-stdlib",
+      "title": "Python 标准库实战",
+      "kind": "basics",
+      "path": "python-stdlib",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-stdlib"
+    },
+    {
+      "id": "python-testing",
+      "title": "调试、日志与 pytest",
+      "kind": "basics",
+      "path": "python-testing",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-testing"
+    },
+    {
+      "id": "python-typing",
+      "title": "Python 类型注解与工程化",
+      "kind": "basics",
+      "path": "python-typing",
+      "url": "https://github.com/CildCo/course-basics/tree/main/python-typing"
+    },
+    {
+      "id": "rag-retrieval",
+      "title": "RAG 检索与引用实战",
+      "kind": "basics",
+      "path": "rag-retrieval",
+      "url": "https://github.com/CildCo/course-basics/tree/main/rag-retrieval"
+    },
+    {
+      "id": "recommender-basics",
+      "title": "推荐系统入门",
+      "kind": "basics",
+      "path": "recommender-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/recommender-basics"
+    },
+    {
+      "id": "regex-text",
+      "title": "正则表达式与文本处理",
+      "kind": "basics",
+      "path": "regex-text",
+      "url": "https://github.com/CildCo/course-basics/tree/main/regex-text"
+    },
+    {
+      "id": "rest-api-design",
+      "title": "REST API 设计规范",
+      "kind": "basics",
+      "path": "rest-api-design",
+      "url": "https://github.com/CildCo/course-basics/tree/main/rest-api-design"
+    },
+    {
+      "id": "security-basics",
+      "title": "安全与数据保护基础",
+      "kind": "basics",
+      "path": "security-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/security-basics"
+    },
+    {
+      "id": "shell-basics",
+      "title": "Shell 命令行与脚本",
+      "kind": "basics",
+      "path": "shell-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/shell-basics"
+    },
+    {
+      "id": "sql-advanced",
+      "title": "SQL 进阶：窗口、索引与事务",
+      "kind": "basics",
+      "path": "sql-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/sql-advanced"
+    },
+    {
+      "id": "sql-basics",
+      "title": "SQL 入门",
+      "kind": "basics",
+      "path": "sql-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/sql-basics"
+    },
+    {
+      "id": "sqlalchemy-basics",
+      "title": "SQLAlchemy 与数据持久化",
+      "kind": "basics",
+      "path": "sqlalchemy-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/sqlalchemy-basics"
+    },
+    {
+      "id": "sqlite-advanced",
+      "title": "SQLite 进阶：索引、事务与全文检索",
+      "kind": "basics",
+      "path": "sqlite-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/sqlite-advanced"
+    },
+    {
+      "id": "stats-basics",
+      "title": "数据统计入门",
+      "kind": "basics",
+      "path": "stats-basics",
+      "url": "https://github.com/CildCo/course-basics/tree/main/stats-basics"
+    },
+    {
+      "id": "time-series",
+      "title": "Python 时间序列分析",
+      "kind": "basics",
+      "path": "time-series",
+      "url": "https://github.com/CildCo/course-basics/tree/main/time-series"
+    },
+    {
+      "id": "web-scraping",
+      "title": "网络数据采集入门",
+      "kind": "basics",
+      "path": "web-scraping",
+      "url": "https://github.com/CildCo/course-basics/tree/main/web-scraping"
+    },
+    {
+      "id": "web-scraping-advanced",
+      "title": "网络采集进阶：分页、容错与增量",
+      "kind": "basics",
+      "path": "web-scraping-advanced",
+      "url": "https://github.com/CildCo/course-basics/tree/main/web-scraping-advanced"
+    },
+    {
+      "id": "word-pdf-automation",
+      "title": "Word / PDF 自动化",
+      "kind": "basics",
+      "path": "word-pdf-automation",
+      "url": "https://github.com/CildCo/course-basics/tree/main/word-pdf-automation"
+    }
+  ]
+}

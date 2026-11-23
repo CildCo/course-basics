@@ -1,0 +1,28 @@
+{
+  "discount_cases": [
+    {
+      "name": "普通用户原价",
+      "amount": 100,
+      "is_new": false,
+      "expected": 100
+    },
+    {
+      "name": "新用户九折",
+      "amount": 100,
+      "is_new": true,
+      "expected": 90
+    },
+    {
+      "name": "新用户小额",
+      "amount": 20,
+      "is_new": true,
+      "expected": 18
+    },
+    {
+      "name": "普通用户大额",
+      "amount": 500,
+      "is_new": false,
+      "expected": 500
+    }
+  ]
+}

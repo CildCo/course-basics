@@ -1,0 +1,72 @@
+# course-basics
+
+- `ab-testing`：A/B 测试与实验分析
+- `agent-tools`：AI Agent 工具层实战
+- `algorithm-patterns`：算法题型与解题模式
+- `algorithms-advanced`：算法进阶：图与动态规划
+- `algorithms-basics`：数据结构与算法
+- `backend-project-shortlink`：后端项目实战：短链接服务
+- `ci-cd-basics`：CI/CD 入门：从提交到发布
+- `clean-code`：代码整洁与重构
+- `computer-network-basics`：计算机网络入门
+- `computer-vision-advanced`：计算机视觉进阶
+- `data-etl`：Python 数据工程：ETL
+- `data-storytelling`：数据报告与讲故事
+- `data-validation`：数据质量与校验
+- `data-warehouse-basics`：数据仓库入门
+- `database-design`：数据库设计入门
+- `dataviz-advanced`：数据可视化进阶
+- `deep-learning-pytorch`：深度学习与 PyTorch 入门
+- `design-patterns`：Python 设计模式
+- `docker-basics`：Docker 与容器
+- `excel-python`：Excel 与 Python 自动化
+- `fastapi-advanced`：FastAPI 进阶：认证、数据库与测试
+- `fastapi-basics`：FastAPI 后端入门
+- `feature-engineering`：特征工程与数据准备
+- `git-advanced`：Git 进阶：整理历史与定位问题
+- `git-cli`：Git 与命令行
+- `git-team`：Git 团队协作与远程仓库
+- `how-programs-run`：程序是怎么跑起来的
+- `http-api`：HTTP / API / JSON
+- `image-processing`：Python 图像处理入门
+- `javascript-basics`：JavaScript 入门
+- `jupyter-basics`：Jupyter Notebook 入门
+- `markdown-docs`：Markdown 与文档工程
+- `matplotlib-basics`：matplotlib 数据可视化
+- `ml-advanced`：机器学习进阶：集成、调参与解释
+- `ml-basics`：机器学习入门
+- `model-deployment`：模型部署：从 joblib 到 FastAPI
+- `nlp-basics`：自然语言处理入门
+- `numpy-basics`：NumPy 基础
+- `operating-system-basics`：操作系统入门
+- `pandas-advanced`：pandas 进阶：多表、分组与性能
+- `pandas-basics`：pandas 入门
+- `pandas-cleaning`：pandas 数据清洗实战
+- `pytest-advanced`：pytest 进阶：夹具、参数化与隔离
+- `python-advanced`：Python 进阶
+- `python-basics`：Python 入门
+- `python-cli`：Python 命令行工具
+- `python-concurrency`：并发与异步实战
+- `python-metaprogramming`：Python 元编程与数据模型
+- `python-network`：Python 网络编程入门
+- `python-oop`：Python 面向对象进阶
+- `python-packaging`：Python 工程化：打包与发布
+- `python-performance`：Python 性能分析与优化
+- `python-stdlib`：Python 标准库实战
+- `python-testing`：调试、日志与 pytest
+- `python-typing`：Python 类型注解与工程化
+- `rag-retrieval`：RAG 检索与引用实战
+- `recommender-basics`：推荐系统入门
+- `regex-text`：正则表达式与文本处理
+- `rest-api-design`：REST API 设计规范
+- `security-basics`：安全与数据保护基础
+- `shell-basics`：Shell 命令行与脚本
+- `sql-advanced`：SQL 进阶：窗口、索引与事务
+- `sql-basics`：SQL 入门
+- `sqlalchemy-basics`：SQLAlchemy 与数据持久化
+- `sqlite-advanced`：SQLite 进阶：索引、事务与全文检索
+- `stats-basics`：数据统计入门
+- `time-series`：Python 时间序列分析
+- `web-scraping`：网络数据采集入门
+- `web-scraping-advanced`：网络采集进阶：分页、容错与增量
+- `word-pdf-automation`：Word / PDF 自动化

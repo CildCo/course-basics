@@ -1,0 +1,108 @@
+{
+  "id": "data-storytelling",
+  "title": "数据报告与讲故事",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 6,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/data-storytelling-source.zip",
+  "backendPackage": "backend/uploads/packages/data-storytelling.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "6 节用 48 行销售明细讲结论先行、选图、标注层级、证据边界、一页排版和完整报告，最后一课输出 Markdown 报告与配图。",
+  "fileSize": 16519,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 一页报告的骨架：结论、证据、行动",
+      "chapter": "第1章 结论先行",
+      "summary": "把图表清单改写成结论、证据、行动三段式",
+      "durationMinutes": 16,
+      "objectives": [
+        "说清一页报告的三个组成部分",
+        "把图表清单改写成结论—证据—行动",
+        "用一张骨架图安排报告结构"
+      ],
+      "notebook": "lessons/01-report-skeleton.ipynb",
+      "source": "lesson01_report_skeleton/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 选图：趋势、对比、分布、关系分别用什么图",
+      "chapter": "第1章 结论先行",
+      "summary": "用同一份数据对比折线、柱状、直方和散点图",
+      "durationMinutes": 18,
+      "objectives": [
+        "按问题选择趋势、对比、分布、关系四类图",
+        "用同一份数据画出四种图并说出各自用途",
+        "避免用错图造成误读"
+      ],
+      "notebook": "lessons/02-chart-choice.ipynb",
+      "source": "lesson02_chart_choice/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 标注与视觉层级：让读者先看到重点",
+      "chapter": "第2章 让图说话",
+      "summary": "用降噪、单一强调色和直接标注安排阅读顺序",
+      "durationMinutes": 18,
+      "objectives": [
+        "建立背景色、普通色、强调色三种角色",
+        "用直接标注把重点放到读者眼前",
+        "补齐标题、副标题和数据来源"
+      ],
+      "notebook": "lessons/03-annotation.ipynb",
+      "source": "lesson03_annotation/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 从图表到结论：写清证据、范围和边界",
+      "chapter": "第2章 让图说话",
+      "summary": "用判断、证据、范围、边界四步写可核对的结论",
+      "durationMinutes": 18,
+      "objectives": [
+        "用数据写出可核对的结论",
+        "交代时间范围、口径和样本边界",
+        "区分相关与因果，避免过度解读"
+      ],
+      "notebook": "lessons/04-conclusion.ipynb",
+      "source": "lesson04_conclusion/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 排版：标题、摘要、图表、附录",
+      "chapter": "第3章 成稿",
+      "summary": "用 GridSpec 排出一页报告的阅读顺序和留白",
+      "durationMinutes": 18,
+      "objectives": [
+        "按标题、摘要、图表、附录安排阅读顺序",
+        "用 GridSpec 控制版面比例和留白",
+        "让标题和结论在 3 秒内被看到"
+      ],
+      "notebook": "lessons/05-layout.ipynb",
+      "source": "lesson05_layout/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 项目：一页销售分析报告",
+      "chapter": "第3章 成稿",
+      "summary": "从 48 行销售明细完成一页报告图和 Markdown 报告",
+      "durationMinutes": 24,
+      "objectives": [
+        "从数据中提炼三条可核对的结论",
+        "完成一页报告图和 Markdown 报告",
+        "写清证据、行动、范围与边界"
+      ],
+      "notebook": "lessons/06-project-sales-report.ipynb",
+      "source": "lesson06_project_sales_report/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}

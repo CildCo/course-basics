@@ -1,0 +1,164 @@
+{
+  "id": "pandas-cleaning",
+  "title": "pandas 数据清洗实战",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 10,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/pandas-cleaning-source.zip",
+  "backendPackage": "backend/uploads/packages/pandas-cleaning.zip",
+  "verifiedAt": "2026-10-24",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "10 节把一份带重复、缺失、混合日期、别名和异常值的订单表洗成可分析数据，最后产出清洗报告。",
+  "fileSize": 16543,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 脏数据检查清单",
+      "chapter": "第一章 检查与标准化",
+      "summary": "先看清数据有什么问题，再决定怎么洗",
+      "durationMinutes": 14,
+      "objectives": [
+        "查看行列、类型和缺失",
+        "检查重复订单号与取值分布",
+        "把问题列成检查清单"
+      ],
+      "notebook": "lessons/01-inspect.ipynb",
+      "source": "lesson01_inspect/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 列名、类型与单位统一",
+      "chapter": "第一章 检查与标准化",
+      "summary": "统一列名、数值类型和金额单位",
+      "durationMinutes": 14,
+      "objectives": [
+        "规范列名和前后空格",
+        "把数量和单价转成正确类型",
+        "新增金额列并核对单位"
+      ],
+      "notebook": "lessons/02-schema.ipynb",
+      "source": "lesson02_schema/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 缺失值判断与处理",
+      "chapter": "第一章 检查与标准化",
+      "summary": "区分缺失类型，选择填充或删除",
+      "durationMinutes": 14,
+      "objectives": [
+        "统计每列缺失比例",
+        "按业务含义分别填充",
+        "判断哪些缺失必须删除"
+      ],
+      "notebook": "lessons/03-missing.ipynb",
+      "source": "lesson03_missing/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 重复值与主键",
+      "chapter": "第一章 检查与标准化",
+      "summary": "找出完全重复和订单号重复的行",
+      "durationMinutes": 14,
+      "objectives": [
+        "用 duplicated 定位重复",
+        "区分完全重复和主键冲突",
+        "按规则保留最新一条"
+      ],
+      "notebook": "lessons/04-duplicates.ipynb",
+      "source": "lesson04_duplicates/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 字符串清洗与别名归一",
+      "chapter": "第二章 清洗",
+      "summary": "处理空格、大小写和多套写法",
+      "durationMinutes": 14,
+      "objectives": [
+        "去除首尾空格并统一大小写",
+        "用映射表归一区域和分类",
+        "检查归一前后的取值数量"
+      ],
+      "notebook": "lessons/05-strings.ipynb",
+      "source": "lesson05_strings/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 日期解析与错误值",
+      "chapter": "第二章 清洗",
+      "summary": "把四种日期写法和错误值转成时间类型",
+      "durationMinutes": 16,
+      "objectives": [
+        "识别混合日期格式",
+        "用 errors=coerce 找出错误值",
+        "提取年月并检查日期范围"
+      ],
+      "notebook": "lessons/06-dates.ipynb",
+      "source": "lesson06_dates/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 异常值与业务规则",
+      "chapter": "第二章 清洗",
+      "summary": "用统计和业务规则找出不合理数值",
+      "durationMinutes": 16,
+      "objectives": [
+        "用 describe 和分位数找异常",
+        "写数量和单价的有效范围",
+        "选择删除或按分类修正"
+      ],
+      "notebook": "lessons/07-outliers.ipynb",
+      "source": "lesson07_outliers/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 分组校验与交叉核对",
+      "chapter": "第二章 清洗",
+      "summary": "清洗前后按区域、分类和状态对账",
+      "durationMinutes": 16,
+      "objectives": [
+        "比较各分组行数变化",
+        "核对清洗前后的金额合计",
+        "解释差异来自哪些行"
+      ],
+      "notebook": "lessons/08-validate.ipynb",
+      "source": "lesson08_validate/main.py"
+    },
+    {
+      "id": "09",
+      "title": "第9课 把清洗步骤写成函数",
+      "chapter": "第三章 交付",
+      "summary": "把零散操作收进一个可复用函数",
+      "durationMinutes": 18,
+      "objectives": [
+        "按正确顺序组织清洗步骤",
+        "返回干净数据和统计信息",
+        "用断言检查主键和缺失"
+      ],
+      "notebook": "lessons/09-pipeline.ipynb",
+      "source": "lesson09_pipeline/main.py"
+    },
+    {
+      "id": "10",
+      "title": "第10课 清洗报告",
+      "chapter": "第三章 交付",
+      "summary": "输出前后对比、干净数据和结论",
+      "durationMinutes": 20,
+      "objectives": [
+        "生成清洗前后对比表",
+        "导出 clean_orders.csv",
+        "写一段可读的清洗结论"
+      ],
+      "notebook": "lessons/10-report.ipynb",
+      "source": "lesson10_report/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}

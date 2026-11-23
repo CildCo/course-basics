@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "description": "本地订单样例，仅用于课程中的工具查询练习",
+  "orders": [
+    {"order_id": "SO-1001", "customer": "晨光文具", "region": "华东", "status": "paid", "amount": 1280.0, "created_at": "2026-09-02", "items": 3},
+    {"order_id": "SO-1002", "customer": "云帆科技", "region": "华东", "status": "paid", "amount": 860.5, "created_at": "2026-09-03", "items": 2},
+    {"order_id": "SO-1003", "customer": "青禾书店", "region": "华东", "status": "paid", "amount": 2140.0, "created_at": "2026-09-05", "items": 5},
+    {"order_id": "SO-1004", "customer": "澄明设计", "region": "华东", "status": "paid", "amount": 640.0, "created_at": "2026-09-07", "items": 1},
+    {"order_id": "SO-1005", "customer": "木白家居", "region": "华东", "status": "paid", "amount": 1980.0, "created_at": "2026-09-09", "items": 4},
+    {"order_id": "SO-1006", "customer": "星野咖啡", "region": "华东", "status": "paid", "amount": 320.0, "created_at": "2026-09-11", "items": 1},
+    {"order_id": "SO-1007", "customer": "远山教育", "region": "华东", "status": "paid", "amount": 1520.0, "created_at": "2026-09-12", "items": 3},
+    {"order_id": "SO-1008", "customer": "简一办公", "region": "华东", "status": "paid", "amount": 990.0, "created_at": "2026-09-15", "items": 2},
+    {"order_id": "SO-1009", "customer": "海桐贸易", "region": "华东", "status": "pending", "amount": 1200.0, "created_at": "2026-09-16", "items": 3},
+    {"order_id": "SO-1010", "customer": "拾光影像", "region": "华东", "status": "pending", "amount": 450.0, "created_at": "2026-09-17", "items": 1},
+    {"order_id": "SO-1011", "customer": "南岸文创", "region": "华东", "status": "refunded", "amount": 760.0, "created_at": "2026-09-18", "items": 2},
+    {"order_id": "SO-1012", "customer": "北辰物流", "region": "华北", "status": "paid", "amount": 880.0, "created_at": "2026-09-04", "items": 2},
+    {"order_id": "SO-1013", "customer": "风行器械", "region": "华北", "status": "paid", "amount": 1340.0, "created_at": "2026-09-06", "items": 3},
+    {"order_id": "SO-1014", "customer": "合众咨询", "region": "华北", "status": "paid", "amount": 560.0, "created_at": "2026-09-08", "items": 1},
+    {"order_id": "SO-1015", "customer": "宏图建材", "region": "华北", "status": "paid", "amount": 2450.0, "created_at": "2026-09-10", "items": 6},
+    {"order_id": "SO-1016", "customer": "新页印刷", "region": "华北", "status": "pending", "amount": 300.0, "created_at": "2026-09-19", "items": 1},
+    {"order_id": "SO-1017", "customer": "南国果蔬", "region": "华南", "status": "paid", "amount": 720.0, "created_at": "2026-09-03", "items": 2},
+    {"order_id": "SO-1018", "customer": "澜庭酒店", "region": "华南", "status": "paid", "amount": 1680.0, "created_at": "2026-09-07", "items": 4},
+    {"order_id": "SO-1019", "customer": "微光电台", "region": "华南", "status": "paid", "amount": 450.0, "created_at": "2026-09-12", "items": 1},
+    {"order_id": "SO-1020", "customer": "和风茶业", "region": "华南", "status": "paid", "amount": 1100.0, "created_at": "2026-09-14", "items": 3},
+    {"order_id": "SO-1021", "customer": "山城机械", "region": "西南", "status": "paid", "amount": 2300.0, "created_at": "2026-09-05", "items": 5},
+    {"order_id": "SO-1022", "customer": "江源水务", "region": "西南", "status": "paid", "amount": 610.0, "created_at": "2026-09-09", "items": 2},
+    {"order_id": "SO-1023", "customer": "云岭农庄", "region": "西南", "status": "paid", "amount": 940.0, "created_at": "2026-09-13", "items": 2},
+    {"order_id": "SO-1024", "customer": "锦里文创", "region": "西南", "status": "paid", "amount": 1300.0, "created_at": "2026-09-16", "items": 3},
+    {"order_id": "SO-1025", "customer": "边城旅行", "region": "西南", "status": "refunded", "amount": 500.0, "created_at": "2026-09-20", "items": 1}
+  ]
+}

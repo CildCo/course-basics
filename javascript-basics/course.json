@@ -1,0 +1,162 @@
+{
+  "id": "javascript-basics",
+  "title": "JavaScript 入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "frontend",
+  "difficulty": "入门",
+  "language": "javascript",
+  "lessonCount": 10,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/javascript-basics-source.zip",
+  "backendPackage": "backend/uploads/packages/javascript-basics.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Node 24 / Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "10 节 JavaScript 入门课，代码通过 Node 运行并输出真实结果，只使用 fs、path、http、url、crypto 等内置模块。",
+  "fileSize": 7313,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 JavaScript 与 Node：第一个程序",
+      "chapter": "第一章 语法与函数",
+      "summary": "在 Node 里运行第一段 JavaScript，认识 console 和 process",
+      "durationMinutes": 10,
+      "objectives": [
+        "确认 Node.js 可用",
+        "用 console.log 输出结果",
+        "读取 process 的基本信息"
+      ],
+      "notebook": "lessons/01-first.ipynb",
+      "source": "lesson01_first/main.js"
+    },
+    {
+      "id": "02",
+      "title": "第2课 变量、类型与运算符",
+      "chapter": "第一章 语法与函数",
+      "summary": "用 let/const 保存数据，分清五种基础类型和常用运算符",
+      "durationMinutes": 12,
+      "objectives": [
+        "使用 let 和 const",
+        "区分基础类型与 typeof 结果",
+        "写模板字符串和运算符"
+      ],
+      "notebook": "lessons/02-types.ipynb",
+      "source": "lesson02_types/main.js"
+    },
+    {
+      "id": "03",
+      "title": "第3课 条件、循环与函数",
+      "chapter": "第一章 语法与函数",
+      "summary": "写分支、循环和函数，理解默认参数与闭包",
+      "durationMinutes": 16,
+      "objectives": [
+        "使用 if 和 switch",
+        "使用 for 和 while",
+        "定义函数并理解闭包"
+      ],
+      "notebook": "lessons/03-functions.ipynb",
+      "source": "lesson03_functions/main.js"
+    },
+    {
+      "id": "04",
+      "title": "第4课 数组与对象",
+      "chapter": "第二章 数据与异步",
+      "summary": "用 map/filter/reduce 处理数组，用解构和展开处理对象",
+      "durationMinutes": 16,
+      "objectives": [
+        "掌握数组常用方法",
+        "理解 sort 会修改原数组",
+        "使用解构、展开和可选链"
+      ],
+      "notebook": "lessons/04-arrays-objects.ipynb",
+      "source": "lesson04_arrays_objects/main.js"
+    },
+    {
+      "id": "05",
+      "title": "第5课 字符串、JSON 与模块",
+      "chapter": "第二章 数据与异步",
+      "summary": "清洗文本、转换 JSON，用 require 和 module.exports 拆分模块",
+      "durationMinutes": 14,
+      "objectives": [
+        "使用常用字符串方法",
+        "转换 JSON 字符串和对象",
+        "写一个可 require 的模块"
+      ],
+      "notebook": "lessons/05-json-modules.ipynb",
+      "source": "lesson05_json_modules/main.js"
+    },
+    {
+      "id": "06",
+      "title": "第6课 异步：回调、Promise、async/await",
+      "chapter": "第二章 数据与异步",
+      "summary": "从定时器回调走到 Promise 和 async/await，并学会并发等待",
+      "durationMinutes": 18,
+      "objectives": [
+        "理解异步执行顺序",
+        "使用 Promise 和 async/await",
+        "用 Promise.all 等待多个任务"
+      ],
+      "notebook": "lessons/06-async.ipynb",
+      "source": "lesson06_async/main.js"
+    },
+    {
+      "id": "07",
+      "title": "第7课 Node 文件读写",
+      "chapter": "第三章 Node 与小程序",
+      "summary": "用 fs/promises 读写文本和 JSON，并可靠清理临时文件",
+      "durationMinutes": 16,
+      "objectives": [
+        "读写文本文件",
+        "保存和读取 JSON 文件",
+        "用 try/finally 清理临时目录"
+      ],
+      "notebook": "lessons/07-files.ipynb",
+      "source": "lesson07_files/main.js"
+    },
+    {
+      "id": "08",
+      "title": "第8课 Node HTTP 服务",
+      "chapter": "第三章 Node 与小程序",
+      "summary": "启动本地 HTTP 服务，按路径返回文本和 JSON，并正确关闭",
+      "durationMinutes": 18,
+      "objectives": [
+        "创建 HTTP 服务",
+        "用 http.get 发起请求",
+        "处理 404 并关闭服务"
+      ],
+      "notebook": "lessons/08-http.ipynb",
+      "source": "lesson08_http/main.js"
+    },
+    {
+      "id": "09",
+      "title": "第9课 错误处理、测试与调试",
+      "chapter": "第三章 Node 与小程序",
+      "summary": "接住可预期的错误，写自定义错误和最小测试函数",
+      "durationMinutes": 16,
+      "objectives": [
+        "使用 try/catch/finally",
+        "定义自定义错误类型",
+        "用 assert 写最小测试"
+      ],
+      "notebook": "lessons/09-errors.ipynb",
+      "source": "lesson09_errors/main.js"
+    },
+    {
+      "id": "10",
+      "title": "第10课 小程序脚本导读",
+      "chapter": "第三章 Node 与小程序",
+      "summary": "用 Node 模拟 Page 和 setData，读懂小程序页面的数据结构",
+      "durationMinutes": 18,
+      "objectives": [
+        "看懂 Page 配置结构",
+        "理解 data 和事件处理",
+        "知道 setData 的作用"
+      ],
+      "notebook": "lessons/10-miniprogram.ipynb",
+      "source": "lesson10_miniprogram/main.js"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+打包不是把文件压成一个 zip，而是把项目整理成别人可以安装、可以导入、可以卸载的东西。
+Build a wheel once, install it anywhere.
+命令行工具还应该有一个稳定的入口，让用户记住的是 wordmeter，而不是某条长长的 python 路径。

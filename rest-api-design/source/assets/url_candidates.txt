@@ -1,0 +1,13 @@
+# 待检查的接口路径
+/api/getUserList
+/api/user/list
+/api/users/
+/api/users/123/getOrders
+/api/order_detail?id=123
+/api/orders/123/items
+/api/Orders
+/api/orders.json
+/api/user_profile
+/api/orders?action=cancel&id=123
+/api/v1/invoices/2026-001
+/api/reports/exportExcel

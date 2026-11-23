@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>青柠课堂 · 课程价格表</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">青柠课堂</a>
+    <nav class="top-nav"><a href="index.html">课程</a><a href="table.html">价格表</a></nav>
+  </header>
+  <main>
+    <h1>课程价格与排期</h1>
+    <p class="lead">表格里保留了合并单元格、活动价和备注行，方便练习不规则结构。</p>
+    <table id="price-table">
+      <thead>
+        <tr><th>课程</th><th>讲师</th><th>价格</th><th>课时</th><th>更新日期</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Python 数据分析实战</td><td>林可</td><td>¥199</td><td>24</td><td>2026-09-12</td></tr>
+        <tr><td>爬虫工程化：从脚本到管道</td><td>周航</td><td>¥299</td><td>18</td><td>2026-09-20</td></tr>
+        <tr><td>SQL 进阶：查询与优化</td><td>陈默</td><td>¥249</td><td>20</td><td>2026-08-30</td></tr>
+        <tr><td>可视化表达：让图表说人话</td><td>苏禾</td><td>¥159 起</td><td>16</td><td>2026-09-05</td></tr>
+        <tr><td>FastAPI 接口开发</td><td>何川</td><td>¥329</td><td>22</td><td>2026-10-01</td></tr>
+        <tr><td>机器学习入门</td><td>罗晴</td><td>¥399</td><td>30</td><td>2026-10-08</td></tr>
+        <tr><td>Python 自动化办公</td><td>方糖</td><td>¥129</td><td>14</td><td>2026-07-18</td></tr>
+        <tr><td>数据管道实战</td><td>周航</td><td>¥459</td><td>26</td><td>2026-10-12</td></tr>
+        <tr><td colspan="2">组合课：数据分析 + 可视化</td><td>¥299 起</td><td>40</td><td>2026-09-30</td></tr>
+        <tr><td>数据可视化进阶</td><td>苏禾</td><td>待定</td><td>18</td><td>2026-10-15</td></tr>
+        <tr class="note"><td colspan="5">备注：价格为活动价，开课后不支持退款。</td></tr>
+      </tbody>
+    </table>
+    <section id="irregular-cards">
+      <h2>课程卡片（字段不齐）</h2>
+      <article class="mini-card"><h3>Python 自动化办公</h3><p class="teacher">方糖</p><span class="price">￥129</span><span class="tag">办公</span></article>
+      <article class="mini-card"><h3>SQL 进阶：查询与优化</h3><p class="teacher">陈默</p><span class="tag">数据库</span></article>
+      <article class="mini-card"><h3>可视化表达：让图表说人话</h3><span class="price">159 元</span></article>
+      <article class="mini-card"><h3>数据管道实战</h3><p class="teacher">周航</p><span class="price">¥459/人</span><span class="tag">工程</span><span class="tag">进阶</span></article>
+    </section>
+  </main>
+  <footer class="site-footer">青柠课堂示例站点 · 仅用于本地采集练习</footer>
+</body>
+</html>

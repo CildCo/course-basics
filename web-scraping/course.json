@@ -1,0 +1,136 @@
+{
+  "id": "web-scraping",
+  "title": "网络数据采集入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/web-scraping-source.zip",
+  "backendPackage": "backend/uploads/packages/web-scraping.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节用本地示例书城讲 HTTP 请求、BeautifulSoup 解析、分页详情、限速重试和 CSV 汇总，全程不访问外网。",
+  "fileSize": 27165,
+  "includePaths": [
+    "assets/*"
+  ],
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 HTTP 与页面结构",
+      "chapter": "第一章 抓取与解析",
+      "summary": "启动本地示例站点，看清一次请求和响应的完整过程",
+      "durationMinutes": 16,
+      "objectives": [
+        "分清请求与响应的组成",
+        "读懂状态码、响应头和 HTML 结构",
+        "用标准库请求本地页面"
+      ],
+      "notebook": "lessons/01-http.ipynb",
+      "source": "lesson01_http/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 requests 抓页面",
+      "chapter": "第一章 抓取与解析",
+      "summary": "用 requests 发起带超时和请求头的请求，并处理错误状态",
+      "durationMinutes": 18,
+      "objectives": [
+        "用 requests 获取页面文本",
+        "设置 timeout 和请求头",
+        "用 raise_for_status 捕获 4xx 错误"
+      ],
+      "notebook": "lessons/02-requests.ipynb",
+      "source": "lesson02_requests/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 BeautifulSoup 解析",
+      "chapter": "第一章 抓取与解析",
+      "summary": "把 HTML 变成可查找的树，提取标题、链接和文本",
+      "durationMinutes": 16,
+      "objectives": [
+        "创建 BeautifulSoup 对象",
+        "用 find 和 find_all 提取字段",
+        "根据场景选择解析器"
+      ],
+      "notebook": "lessons/03-bs4.ipynb",
+      "source": "lesson03_bs4/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 CSS 选择器与表格",
+      "chapter": "第一章 抓取与解析",
+      "summary": "用 select 定位卡片和表格，输出结构化结果",
+      "durationMinutes": 16,
+      "objectives": [
+        "用 select 和 select_one 定位元素",
+        "批量抽取列表卡片字段",
+        "读取 HTML 表格的行和列"
+      ],
+      "notebook": "lessons/04-selectors.ipynb",
+      "source": "lesson04_selectors/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 分页与详情页",
+      "chapter": "第二章 翻页与整理",
+      "summary": "循环两页列表，进入详情页收集全部 12 本书",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 urljoin 拼接相对链接",
+        "按页收集详情页地址",
+        "进入详情页抽取完整字段"
+      ],
+      "notebook": "lessons/05-pagination.ipynb",
+      "source": "lesson05_pagination/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 限速、重试与 robots",
+      "chapter": "第二章 翻页与整理",
+      "summary": "读取 robots.txt，控制请求节奏，处理超时和错误",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 robotparser 读取站点规则",
+        "控制请求间隔，避免给服务器压力",
+        "处理超时、重试和 404"
+      ],
+      "notebook": "lessons/06-politeness.ipynb",
+      "source": "lesson06_politeness/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 数据清洗与保存",
+      "chapter": "第二章 翻页与整理",
+      "summary": "清洗价格和评分，按链接去重，排序后保存 CSV",
+      "durationMinutes": 20,
+      "objectives": [
+        "从混合格式文本中提取数字",
+        "按详情页地址去重",
+        "排序并写出 CSV 文件"
+      ],
+      "notebook": "lessons/07-clean-save.ipynb",
+      "source": "lesson07_clean_save/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 合规与采集小项目",
+      "chapter": "第三章 项目与边界",
+      "summary": "完整采集一次，输出 CSV 和统计报告，并写清合规边界",
+      "durationMinutes": 24,
+      "objectives": [
+        "串起请求、解析、清洗和保存流程",
+        "生成可复现的采集报告",
+        "说明公开数据采集的合规边界"
+      ],
+      "notebook": "lessons/08-project.ipynb",
+      "source": "lesson08_project/main.py"
+    }
+  ]
+}

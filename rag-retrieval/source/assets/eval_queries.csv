@@ -1,0 +1,25 @@
+id,query,relevant_doc,key_phrase,query_type
+Q01,云杉笔记支持哪些操作系统,02-quick-start,Windows 10,事实
+Q02,忘记密码怎么重置,04-faq,重置密码,事实
+Q03,团队版怎么收费,05-pricing,每人每月,事实
+Q04,退款多久能到账,06-refund-policy,7 个工作日,事实
+Q05,服务端数据怎么加密,07-security,AES-256,事实
+Q06,API 请求头怎么带令牌,08-api-guide,Bearer,事实
+Q07,索引重建时提示文件格式不支持,09-troubleshooting,unsupported format,事实
+Q08,2.5 版本更新了什么,10-release-notes,2.5,事实
+Q09,怎么导入 Markdown 文档,03-user-guide,导入,事实
+Q10,免费版有哪些限制,05-pricing,免费版,事实
+Q11,企业版支持单点登录吗,07-security,单点登录,事实
+Q12,接口每分钟最多调用多少次,08-api-guide,每分钟,事实
+Q13,发票怎么申请,05-pricing,发票,事实
+Q14,搜索不到文档内容,09-troubleshooting,检索,事实
+Q15,升级到 2.6 要注意什么,10-release-notes,2.6,事实
+Q16,忘了登录密码怎么办,04-faq,重置密码,同义改写
+Q17,买错了套餐能退钱吗,06-refund-policy,退款,同义改写
+Q18,多人协作编辑怎么处理冲突,03-user-guide,协同编辑,同义改写
+Q19,迁移电脑要复制哪个目录,02-quick-start,数据目录,同义改写
+Q20,怎么保证客户资料不外泄,07-security,客户文档,同义改写
+Q21,电脑换新了怎么搬资料,02-quick-start,迁移电脑,同义改写
+Q22,付款后怎么要报销凭证,05-pricing,发票,同义改写
+Q23,谁能删除整个工作区,07-security,所有者,同义改写
+Q24,搜索延迟超过两秒怎么办,09-troubleshooting,性能变慢,同义改写

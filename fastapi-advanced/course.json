@@ -1,0 +1,161 @@
+{
+  "id": "fastapi-advanced",
+  "title": "FastAPI 进阶：认证、数据库与测试",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "backend",
+  "difficulty": "高级",
+  "lessonCount": 10,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/fastapi-advanced-source.zip",
+  "backendPackage": "backend/uploads/packages/fastapi-advanced.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "10 节 FastAPI 进阶课，从分层、配置、Pydantic、SQLAlchemy 讲到依赖注入、PBKDF2、JWT、分页错误处理和 pytest 项目实战，全部离线可复现。",
+  "fileSize": 22948,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 从单文件到分层：routers、schemas、services、db",
+      "chapter": "第1章 项目结构",
+      "summary": "把路由、模型、业务和存储拆成四层",
+      "durationMinutes": 22,
+      "objectives": [
+        "看清单文件接口的问题",
+        "按职责拆分四个模块",
+        "用 TestClient 验证行为一致"
+      ],
+      "notebook": "lessons/01-layers.ipynb",
+      "source": "lesson01_layers/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 配置与环境变量：pydantic-settings 或标准库方案",
+      "chapter": "第1章 项目结构",
+      "summary": "用标准库实现配置读取、覆盖和校验",
+      "durationMinutes": 20,
+      "objectives": [
+        "从文件和环境变量读取配置",
+        "实现环境变量覆盖默认值",
+        "启动时校验并注入配置"
+      ],
+      "notebook": "lessons/02-settings.ipynb",
+      "source": "lesson02_settings/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 Pydantic 模型：请求、响应、校验与序列化",
+      "chapter": "第2章 数据与校验",
+      "summary": "分开请求模型和响应模型，处理校验与序列化",
+      "durationMinutes": 22,
+      "objectives": [
+        "用 Field 约束请求字段",
+        "编写字段级和模型级校验器",
+        "用 response_model 控制输出"
+      ],
+      "notebook": "lessons/03-pydantic.ipynb",
+      "source": "lesson03_pydantic/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 SQLite + SQLAlchemy：会话、模型与 CRUD",
+      "chapter": "第2章 数据与校验",
+      "summary": "建立模型、管理会话，完成增删改查",
+      "durationMinutes": 24,
+      "objectives": [
+        "定义声明式模型并建表",
+        "用 Session 提交和回滚",
+        "用 select 过滤排序计数"
+      ],
+      "notebook": "lessons/04-sqlalchemy.ipynb",
+      "source": "lesson04_sqlalchemy/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 依赖注入：把数据库会话和当前用户注入路由",
+      "chapter": "第2章 数据与校验",
+      "summary": "把数据库会话和当前用户注入路由",
+      "durationMinutes": 22,
+      "objectives": [
+        "用 yield 依赖管理会话",
+        "组合当前用户和权限依赖",
+        "用依赖覆盖替换实现"
+      ],
+      "notebook": "lessons/05-dependencies.ipynb",
+      "source": "lesson05_dependencies/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 密码哈希：PBKDF2 与盐（只用标准库 hashlib/secrets）",
+      "chapter": "第3章 认证与错误",
+      "summary": "用 PBKDF2 和独立盐保存密码",
+      "durationMinutes": 20,
+      "objectives": [
+        "用 secrets 生成盐",
+        "用 pbkdf2_hmac 计算摘要",
+        "恒定时间校验并识别升级"
+      ],
+      "notebook": "lessons/06-password.ipynb",
+      "source": "lesson06_password/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 JWT 登录与权限：PyJWT 签发、校验、过期",
+      "chapter": "第3章 认证与错误",
+      "summary": "签发、校验带过期时间的访问令牌",
+      "durationMinutes": 24,
+      "objectives": [
+        "用 PyJWT 签发访问令牌",
+        "校验签名、过期和载荷",
+        "用依赖实现角色权限"
+      ],
+      "notebook": "lessons/07-jwt.ipynb",
+      "source": "lesson07_jwt/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 分页、过滤与统一错误处理",
+      "chapter": "第3章 认证与错误",
+      "summary": "实现分页过滤，并统一错误响应结构",
+      "durationMinutes": 24,
+      "objectives": [
+        "计算 offset 和总页数",
+        "组合关键词分类排序过滤",
+        "用异常处理器统一错误"
+      ],
+      "notebook": "lessons/08-pagination-errors.ipynb",
+      "source": "lesson08_pagination/main.py"
+    },
+    {
+      "id": "09",
+      "title": "第9课 测试：TestClient、临时数据库、依赖覆盖",
+      "chapter": "第4章 测试与项目",
+      "summary": "用 TestClient、临时数据库和依赖覆盖写测试",
+      "durationMinutes": 24,
+      "objectives": [
+        "为每个测试建立独立数据库",
+        "用依赖覆盖替换 get_db",
+        "运行 pytest 并读懂结果"
+      ],
+      "notebook": "lessons/09-testing.ipynb",
+      "source": "lesson09_testing/main.py"
+    },
+    {
+      "id": "10",
+      "title": "第10课 项目：带注册登录的待办 API",
+      "chapter": "第4章 测试与项目",
+      "summary": "完成注册、登录和按用户隔离的待办接口",
+      "durationMinutes": 30,
+      "objectives": [
+        "组合分层配置和数据库",
+        "实现注册登录与权限隔离",
+        "用 pytest 验证核心流程"
+      ],
+      "notebook": "lessons/10-project.ipynb",
+      "source": "lesson10_project/main.py"
+    }
+  ]
+}

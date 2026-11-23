@@ -1,0 +1,136 @@
+{
+  "id": "excel-python",
+  "title": "Excel 与 Python 自动化",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "tools",
+  "difficulty": "入门",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/excel-python-source.zip",
+  "backendPackage": "backend/uploads/packages/excel-python.zip",
+  "verifiedAt": "2026-10-24",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节从读写工作簿到合并、拆分和格式化月报，最后产出一个可复用的报表脚本。",
+  "fileSize": 31549,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 工作簿、工作表、单元格",
+      "chapter": "第一章 读写与格式",
+      "summary": "先认清 Excel 的三层结构",
+      "durationMinutes": 12,
+      "objectives": [
+        "打开工作簿并列出工作表",
+        "读取单元格的值和坐标",
+        "查看工作表的行列范围"
+      ],
+      "notebook": "lessons/01-workbook.ipynb",
+      "source": "lesson01_workbook/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 pandas 读写 Excel",
+      "chapter": "第一章 读写与格式",
+      "summary": "用一张表的方式读写工作簿",
+      "durationMinutes": 14,
+      "objectives": [
+        "read_excel 读取指定工作表",
+        "选择列并控制数据类型",
+        "把结果写回新的工作簿"
+      ],
+      "notebook": "lessons/02-pandas-excel.ipynb",
+      "source": "lesson02_pandas_excel/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 openpyxl 打开与遍历",
+      "chapter": "第一章 读写与格式",
+      "summary": "逐行遍历单元格并做汇总",
+      "durationMinutes": 14,
+      "objectives": [
+        "用 iter_rows 读取数据区",
+        "跳过表头并转换类型",
+        "定位最大金额所在行"
+      ],
+      "notebook": "lessons/03-openpyxl.ipynb",
+      "source": "lesson03_openpyxl/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 写入与样式",
+      "chapter": "第一章 读写与格式",
+      "summary": "写出带表头样式、列宽和条件格式的表",
+      "durationMinutes": 18,
+      "objectives": [
+        "设置表头字体和填充",
+        "调整列宽与数字格式",
+        "用条件格式标出高金额"
+      ],
+      "notebook": "lessons/04-styles.ipynb",
+      "source": "lesson04_styles/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 公式、图表与冻结窗格",
+      "chapter": "第二章 批量处理",
+      "summary": "让报表会计算、会展示、好浏览",
+      "durationMinutes": 18,
+      "objectives": [
+        "写入 SUM 和乘法公式",
+        "创建柱状图并放到指定位置",
+        "冻结表头方便滚动查看"
+      ],
+      "notebook": "lessons/05-formula-chart.ipynb",
+      "source": "lesson05_formula_chart/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 批量合并工作簿",
+      "chapter": "第二章 批量处理",
+      "summary": "把多个月度文件合并成一张总表",
+      "durationMinutes": 16,
+      "objectives": [
+        "遍历目录读取多个工作簿",
+        "给数据加来源文件列",
+        "合并后按月份核对行数"
+      ],
+      "notebook": "lessons/06-merge.ipynb",
+      "source": "lesson06_merge/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 按月拆分与批量报表",
+      "chapter": "第二章 批量处理",
+      "summary": "按月份拆表，并为每月生成汇总页",
+      "durationMinutes": 16,
+      "objectives": [
+        "按月份分组拆分明细",
+        "每个工作簿写明细和汇总两页",
+        "批量检查生成的文件"
+      ],
+      "notebook": "lessons/07-split.ipynb",
+      "source": "lesson07_split/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 月度报表脚本",
+      "chapter": "第三章 报表",
+      "summary": "合成一个读多个工作簿、出格式化月报的脚本",
+      "durationMinutes": 22,
+      "objectives": [
+        "合并月度数据并计算汇总",
+        "写出带样式、公式和图表的月报",
+        "用 pandas 和 openpyxl 双重验收"
+      ],
+      "notebook": "lessons/08-report.ipynb",
+      "source": "lesson08_report/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}

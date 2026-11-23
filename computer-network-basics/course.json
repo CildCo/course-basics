@@ -1,0 +1,133 @@
+{
+  "id": "computer-network-basics",
+  "title": "计算机网络入门",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "computer-basics",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/computer-network-basics-source.zip",
+  "backendPackage": "backend/uploads/packages/computer-network-basics.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节计算机网络入门，从分层模型、IP 与 DNS 讲到 TCP/UDP、socket、HTTP 报文、HTTPS 证书和延迟排错，全部在本机回环地址上用标准库演示，不访问外网。",
+  "fileSize": 16128,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 分层模型：一次网页请求经过了什么",
+      "chapter": "第一章 分层与地址",
+      "summary": "从浏览器到服务器，把一次网页请求拆成四层来看",
+      "durationMinutes": 14,
+      "objectives": [
+        "说清分层模型解决什么问题",
+        "按顺序列出一网页请求经过的四层",
+        "用 Python 模拟一次封装与解封装"
+      ],
+      "notebook": "lessons/01.ipynb",
+      "source": "lesson01_layers/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 IP、端口与 DNS：名字怎么变成地址",
+      "chapter": "第一章 分层与地址",
+      "summary": "用 ipaddress 和本地解析理解地址、端口与域名查询",
+      "durationMinutes": 16,
+      "objectives": [
+        "读懂 IPv4 地址、子网和网段",
+        "区分 IP 与端口各自定位什么",
+        "跟完一次域名到地址的解析过程"
+      ],
+      "notebook": "lessons/02.ipynb",
+      "source": "lesson02_address_dns/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 TCP 与 UDP：可靠、有序、连接到底意味着什么",
+      "chapter": "第二章 传输层",
+      "summary": "对比两种传输协议的连接、可靠性与适用场景",
+      "durationMinutes": 16,
+      "objectives": [
+        "说清 TCP 的连接、可靠、有序分别靠什么",
+        "理解 UDP 为什么不需要握手",
+        "用 Python 分别跑一次 TCP 和 UDP 收发"
+      ],
+      "notebook": "lessons/03.ipynb",
+      "source": "lesson03_tcp_udp/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 Socket 编程：用 Python 发一个 TCP 请求",
+      "chapter": "第二章 传输层",
+      "summary": "手写 TCP 服务端与客户端，观察请求和响应的字节流",
+      "durationMinutes": 18,
+      "objectives": [
+        "记住 TCP 服务端和客户端各自的固定动作",
+        "用原始 socket 发送一个 HTTP 请求",
+        "理解字节流为什么没有消息边界"
+      ],
+      "notebook": "lessons/04.ipynb",
+      "source": "lesson04_socket/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 HTTP 报文：请求行、头部、状态码、正文",
+      "chapter": "第三章 应用层",
+      "summary": "构造请求、读取响应，拆开 HTTP 报文的每个部分",
+      "durationMinutes": 18,
+      "objectives": [
+        "拆开 HTTP 请求和响应的每个部分",
+        "用代码构造请求、读取状态码和头部",
+        "按状态码和 Content-Type 判断结果"
+      ],
+      "notebook": "lessons/05.ipynb",
+      "source": "lesson05_http_message/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 HTTPS 与证书：加密、身份与中间人",
+      "chapter": "第三章 应用层",
+      "summary": "用本地证书完成 TLS 握手，理解证书如何挡住中间人",
+      "durationMinutes": 18,
+      "objectives": [
+        "分清对称加密、非对称加密和证书各自的职责",
+        "用本地证书完成一次 TLS 握手",
+        "看懂域名校验失败为什么能挡住中间人"
+      ],
+      "notebook": "lessons/06.ipynb",
+      "source": "lesson06_https/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 延迟、带宽、吞吐：为什么“网速慢”有很多种",
+      "chapter": "第四章 性能与排错",
+      "summary": "拆解一次请求的耗时，分清延迟、带宽和吞吐",
+      "durationMinutes": 16,
+      "objectives": [
+        "分清延迟、带宽和吞吐",
+        "把一次请求的耗时拆成几段",
+        "用本地测量理解 RTT 和并发的作用"
+      ],
+      "notebook": "lessons/07.ipynb",
+      "source": "lesson07_latency/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 项目：本地 HTTP 客户端与服务器排错",
+      "chapter": "第四章 性能与排错",
+      "summary": "搭一个本地服务和体检脚本，输出可复用的排错报告",
+      "durationMinutes": 22,
+      "objectives": [
+        "搭建一个只在本机运行的 HTTP 实验服务",
+        "按地址、端口、请求、响应四步做体检",
+        "输出一份可复用的 JSON 排错报告"
+      ],
+      "notebook": "lessons/08.ipynb",
+      "source": "lesson08_project/main.py"
+    }
+  ]
+}

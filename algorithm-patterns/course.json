@@ -1,0 +1,133 @@
+{
+  "id": "algorithm-patterns",
+  "title": "算法题型与解题模式",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "algorithms",
+  "difficulty": "高级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/algorithm-patterns-source.zip",
+  "backendPackage": "backend/uploads/packages/algorithm-patterns.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节算法课：双指针、哈希、栈队列、二分、树图与动态规划，按题型练习，每题给暴力思路、优化、复杂度和边界测试。",
+  "fileSize": 19868,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 复杂度、题型识别与答题框架",
+      "chapter": "第一章 方法",
+      "summary": "用输入规模确定复杂度预算，按关键词识别题型，套用五步答题框架",
+      "durationMinutes": 22,
+      "objectives": [
+        "根据输入规模判断可接受的复杂度",
+        "按题面关键词识别常见题型",
+        "用五步框架写出第一版解法并自查边界"
+      ],
+      "notebook": "lessons/01.ipynb",
+      "source": "lesson01_framework/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 数组与双指针",
+      "chapter": "第一章 方法",
+      "summary": "用对撞指针、快慢指针和单调性证明解决数组题",
+      "durationMinutes": 24,
+      "objectives": [
+        "用对撞双指针解决有序数组求和",
+        "用快慢指针原地压缩数组",
+        "说明双指针每一步为什么不会漏解"
+      ],
+      "notebook": "lessons/02.ipynb",
+      "source": "lesson02_two_pointers/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 哈希与计数",
+      "chapter": "第二章 常见结构",
+      "summary": "用哈希表、集合和前缀和把查找与计数降到线性",
+      "durationMinutes": 24,
+      "objectives": [
+        "用哈希表把两数之和从平方降到线性",
+        "用集合扩展连续序列",
+        "用前缀和加哈希统计子数组"
+      ],
+      "notebook": "lessons/03.ipynb",
+      "source": "lesson03_hash_counting/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 栈与队列",
+      "chapter": "第二章 常见结构",
+      "summary": "用栈处理嵌套，用单调队列维护窗口最值",
+      "durationMinutes": 24,
+      "objectives": [
+        "用栈匹配括号并处理失配",
+        "用单调队列求滑动窗口最大值",
+        "分析双栈队列的摊还复杂度"
+      ],
+      "notebook": "lessons/04.ipynb",
+      "source": "lesson04_stack_queue/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 二分查找",
+      "chapter": "第二章 常见结构",
+      "summary": "写对二分边界，并在旋转数组和二分答案中使用",
+      "durationMinutes": 26,
+      "objectives": [
+        "写对 lower_bound 与 upper_bound",
+        "在旋转有序数组里定位最小值",
+        "用二分答案把最优化问题变成判定问题"
+      ],
+      "notebook": "lessons/05.ipynb",
+      "source": "lesson05_binary_search/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 树与递归",
+      "chapter": "第三章 树与图",
+      "summary": "用递归拆解树问题，验证二叉搜索树并求最近公共祖先",
+      "durationMinutes": 26,
+      "objectives": [
+        "把树问题拆成左右子问题",
+        "用上下界验证二叉搜索树",
+        "用递归返回最近公共祖先"
+      ],
+      "notebook": "lessons/06.ipynb",
+      "source": "lesson06_tree_recursion/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 图与 BFS/DFS",
+      "chapter": "第三章 树与图",
+      "summary": "用 BFS 求最短步数，用 DFS 和拓扑排序处理连通与环",
+      "durationMinutes": 28,
+      "objectives": [
+        "用邻接表表示图和网格",
+        "用 BFS 求无权图最短路径",
+        "用拓扑排序判断课程安排是否有环"
+      ],
+      "notebook": "lessons/07.ipynb",
+      "source": "lesson07_graph_search/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 动态规划与综合练习",
+      "chapter": "第四章 综合",
+      "summary": "从暴力递归推导动态规划，再用两道综合题完成一次完整练习",
+      "durationMinutes": 32,
+      "objectives": [
+        "从暴力递归推导状态与转移",
+        "用滚动变量压缩动态规划空间",
+        "用两道综合题完成一次完整练习并自评"
+      ],
+      "notebook": "lessons/08.ipynb",
+      "source": "lesson08_dp_practice/main.py"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {"id": 1, "title": "HTTP 权威指南", "author": "David Gourley", "year": 2012, "status": "borrowed", "tags": ["http", "network"]},
+  {"id": 2, "title": "RESTful Web APIs", "author": "Leonard Richardson", "year": 2013, "status": "available", "tags": ["rest", "api"]},
+  {"id": 3, "title": "设计数据密集型应用", "author": "Martin Kleppmann", "year": 2017, "status": "available", "tags": ["architecture", "data"]},
+  {"id": 4, "title": "Python 编程：从入门到实践", "author": "Eric Matthes", "year": 2020, "status": "borrowed", "tags": ["python"]},
+  {"id": 5, "title": "FastAPI 现代 Web 开发", "author": "Bill Lubanovic", "year": 2023, "status": "available", "tags": ["python", "fastapi"]},
+  {"id": 6, "title": "Web API 设计", "author": "Brenda Jin", "year": 2021, "status": "available", "tags": ["api", "design"]},
+  {"id": 7, "title": "计算机网络：自顶向下方法", "author": "James Kurose", "year": 2018, "status": "borrowed", "tags": ["network"]},
+  {"id": 8, "title": "代码整洁之道", "author": "Robert Martin", "year": 2010, "status": "available", "tags": ["engineering"]},
+  {"id": 9, "title": "Pydantic 数据校验实践", "author": "林一", "year": 2024, "status": "available", "tags": ["python", "pydantic"]},
+  {"id": 10, "title": "微服务 API 模式", "author": "Chris Richardson", "year": 2019, "status": "lost", "tags": ["microservice", "api"]},
+  {"id": 11, "title": "SQL 必知必会", "author": "Ben Forta", "year": 2015, "status": "available", "tags": ["database"]},
+  {"id": 12, "title": "测试驱动的接口开发", "author": "何雪", "year": 2022, "status": "borrowed", "tags": ["testing", "api"]}
+]

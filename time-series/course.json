@@ -1,0 +1,136 @@
+{
+  "id": "time-series",
+  "title": "Python 时间序列分析",
+  "kind": "basics",
+  "status": "published",
+  "categoryId": "data",
+  "difficulty": "中级",
+  "lessonCount": 8,
+  "sourceDir": "source",
+  "runCommand": "python run_all.py",
+  "pythonVersion": "3.11",
+  "package": "dist/time-series-source.zip",
+  "backendPackage": "backend/uploads/packages/time-series.zip",
+  "verifiedAt": "2026-10-25",
+  "verifiedEnv": "Python 3.11.9 / Windows 11",
+  "article": "",
+  "notes": "8 节用两年日销售数据讲时间索引、趋势、季节性、自相关和销售预测，图表和评估结果可复现。",
+  "fileSize": 16246,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "第1课 时间序列是什么",
+      "chapter": "第一章 结构与模式",
+      "summary": "理解时间顺序为什么不能随机打乱",
+      "durationMinutes": 14,
+      "objectives": [
+        "分清时间序列和普通表格",
+        "解释随机打乱破坏了什么",
+        "按时间顺序切分训练集和测试集"
+      ],
+      "notebook": "lessons/01-concepts.ipynb",
+      "source": "lesson01_concepts/main.py"
+    },
+    {
+      "id": "02",
+      "title": "第2课 时间索引与重采样",
+      "chapter": "第一章 结构与模式",
+      "summary": "建立 DatetimeIndex，补齐缺失日期并按周按月汇总",
+      "durationMinutes": 18,
+      "objectives": [
+        "把日期列变成 DatetimeIndex",
+        "用 reindex 补齐缺失日期",
+        "按周和按月重采样"
+      ],
+      "notebook": "lessons/02-index.ipynb",
+      "source": "lesson02_index/main.py"
+    },
+    {
+      "id": "03",
+      "title": "第3课 趋势与移动平均",
+      "chapter": "第一章 结构与模式",
+      "summary": "用移动平均和滚动标准差观察趋势与波动",
+      "durationMinutes": 16,
+      "objectives": [
+        "计算 7 日和 30 日移动平均",
+        "用滚动标准差衡量波动",
+        "解释窗口长度的影响"
+      ],
+      "notebook": "lessons/03-trend.ipynb",
+      "source": "lesson03_trend/main.py"
+    },
+    {
+      "id": "04",
+      "title": "第4课 季节性",
+      "chapter": "第一章 结构与模式",
+      "summary": "按月、按星期聚合，画出年度和周日季节曲线",
+      "durationMinutes": 18,
+      "objectives": [
+        "按月聚合观察年度季节性",
+        "按星期聚合观察周季节性",
+        "用交叉表同时看两个维度"
+      ],
+      "notebook": "lessons/04-seasonality.ipynb",
+      "source": "lesson04_seasonality/main.py"
+    },
+    {
+      "id": "05",
+      "title": "第5课 滞后特征与自相关",
+      "chapter": "第二章 特征与预测",
+      "summary": "构造 lag 特征，用相关系数和 ACF 图找周期",
+      "durationMinutes": 18,
+      "objectives": [
+        "构造滞后特征和差分",
+        "手算并解释自相关",
+        "从 ACF 图识别周期"
+      ],
+      "notebook": "lessons/05-lag.ipynb",
+      "source": "lesson05_lag/main.py"
+    },
+    {
+      "id": "06",
+      "title": "第6课 预测基线",
+      "chapter": "第二章 特征与预测",
+      "summary": "实现 naive 和 seasonal naive 基线并用 MAE/RMSE 评估",
+      "durationMinutes": 16,
+      "objectives": [
+        "按时间切分训练集和测试集",
+        "实现两个朴素基线",
+        "用 MAE 和 RMSE 比较预测"
+      ],
+      "notebook": "lessons/06-baseline.ipynb",
+      "source": "lesson06_baseline/main.py"
+    },
+    {
+      "id": "07",
+      "title": "第7课 用回归做预测",
+      "chapter": "第二章 特征与预测",
+      "summary": "用 lag、星期和月份特征训练回归并递归预测",
+      "durationMinutes": 20,
+      "objectives": [
+        "构造滞后和日历特征",
+        "训练线性回归并递归预测",
+        "与季节性基线对比"
+      ],
+      "notebook": "lessons/07-regression.ipynb",
+      "source": "lesson07_regression/main.py"
+    },
+    {
+      "id": "08",
+      "title": "第8课 销售预测项目",
+      "chapter": "第三章 项目",
+      "summary": "完成 90 天销售预测，输出指标、图表和结论",
+      "durationMinutes": 24,
+      "objectives": [
+        "完成端到端销售预测",
+        "比较线性回归、随机森林和基线",
+        "输出评估文件、图表和业务结论"
+      ],
+      "notebook": "lessons/08-project.ipynb",
+      "source": "lesson08_project/main.py"
+    }
+  ],
+  "includePaths": [
+    "assets/*"
+  ]
+}
