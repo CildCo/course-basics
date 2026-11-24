@@ -2,79 +2,9 @@
   "id": "jupyter-basics",
   "title": "Jupyter Notebook 入门",
   "kind": "basics",
-  "status": "published",
   "categoryId": "engineering",
   "difficulty": "入门",
-  "lessonCount": 4,
-  "sourceDir": "source",
   "runCommand": "python run_all.py",
-  "pythonVersion": "3.11",
-  "package": "dist/jupyter-basics-source.zip",
-  "backendPackage": "backend/uploads/packages/jupyter-basics.zip",
   "verifiedAt": "2026-10-25",
-  "verifiedEnv": "Python 3.11.9 / Windows 11",
-  "article": "",
-  "notes": "4 节从 ipynb 结构讲到 nbclient 执行和 nbconvert 导出，配套示例 Notebook，所有执行都在临时目录完成。",
-  "fileSize": 6600,
-  "includePaths": [
-    "assets/*"
-  ],
-  "lessons": [
-    {
-      "id": "01",
-      "title": "第1课 Notebook 是什么：ipynb 结构",
-      "chapter": "第一章 结构",
-      "summary": "把 ipynb 当 JSON 打开，认识单元格、元数据和输出",
-      "durationMinutes": 14,
-      "objectives": [
-        "理解 ipynb 就是 JSON 文件",
-        "区分 markdown 与 code 单元格",
-        "读懂 kernelspec 和输出字段"
-      ],
-      "notebook": "lessons/01-structure.ipynb",
-      "source": "lesson01_structure/main.py"
-    },
-    {
-      "id": "02",
-      "title": "第2课 创建与运行单元格",
-      "chapter": "第一章 结构",
-      "summary": "用 nbformat 新建 Notebook，用 nbclient 执行并读取输出",
-      "durationMinutes": 16,
-      "objectives": [
-        "用 nbformat 创建和保存 Notebook",
-        "用 nbclient 从命令行执行",
-        "分清源码与保存的输出"
-      ],
-      "notebook": "lessons/02-cells.ipynb",
-      "source": "lesson02_cells/main.py"
-    },
-    {
-      "id": "03",
-      "title": "第3课 魔法命令与导出",
-      "chapter": "第二章 运行与导出",
-      "summary": "认识常用 IPython 魔法命令，并用 nbconvert 导出 HTML",
-      "durationMinutes": 18,
-      "objectives": [
-        "使用 %timeit 和 %%writefile",
-        "用 ! 调用外部命令",
-        "用 nbconvert 导出 HTML 并检查文件"
-      ],
-      "notebook": "lessons/03-magic-export.ipynb",
-      "source": "lesson03_magic_export/main.py"
-    },
-    {
-      "id": "04",
-      "title": "第4课 把课程 Notebook 跑起来",
-      "chapter": "第二章 运行与导出",
-      "summary": "加载课程 Notebook，处理内核、依赖和目录三类常见错误",
-      "durationMinutes": 18,
-      "objectives": [
-        "检查 kernelspec 与可用内核",
-        "用 nbclient 执行课程 Notebook",
-        "定位内核、依赖和 cwd 问题"
-      ],
-      "notebook": "lessons/04-run-course.ipynb",
-      "source": "lesson04_run_course/main.py"
-    }
-  ]
+  "verifiedEnv": "Python 3.11.9 / Windows 11"
 }

@@ -84,7 +84,7 @@ for path in sorted(image_dir.glob("*.png")):
         original = handle.convert("RGB")
     cleaned = clean_background(original)
     ready = fit_canvas(cleaned, 600)
-    ready = add_watermark(ready, "码袋子 · 商品图")
+    ready = add_watermark(ready, "示例商品图")
     target = ready_dir / f"{path.stem}_ready.png"
     ready.save(target)
     records.append(

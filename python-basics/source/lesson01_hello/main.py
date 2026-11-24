@@ -1,7 +1,7 @@
 print("你好，Python")
 
 
-name = "小居"
+name = "小李"
 print("欢迎你，", name)
 print("1 + 2 =", 1 + 2)
 

@@ -61,7 +61,7 @@ ensure_docker()
 
 import urllib.request
 
-name = "maidai-nginx-" + SUFFIX
+name = "demo-nginx-" + SUFFIX
 try:
     started = run([
         "docker", "run", "-d", "--rm", "--name", name,

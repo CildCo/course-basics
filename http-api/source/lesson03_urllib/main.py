@@ -48,10 +48,10 @@ class Handler(BaseHTTPRequestHandler):
 server, thread = serve(Handler)
 try:
     print(request(server, "/items?limit=2"))
-    print(request(server, "/items", method="POST", data={"name": "小居"}))
+    print(request(server, "/items", method="POST", data={"name": "小李"}))
 finally:
     stop(server)
 
 
-payload = {"name": "小居", "days": 3}
+payload = {"name": "小李", "days": 3}
 print(json.dumps(payload, ensure_ascii=False))

@@ -20,7 +20,7 @@ print(path.read_text(encoding="utf-8"))
 
 import json
 
-data = {"name": "小居", "days": 3, "topics": ["变量", "列表"]}
+data = {"name": "小李", "days": 3, "topics": ["变量", "列表"]}
 json_path = output / "demo.json"
 json_path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
 loaded = json.loads(json_path.read_text(encoding="utf-8"))

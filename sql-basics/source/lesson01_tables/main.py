@@ -36,5 +36,5 @@ show(conn, "PRAGMA table_info(sales)")
 
 
 conn.execute("CREATE TABLE demo (id INTEGER PRIMARY KEY, name TEXT)")
-conn.execute("INSERT INTO demo (name) VALUES ('小居')")
+conn.execute("INSERT INTO demo (name) VALUES ('小李')")
 show(conn, "SELECT * FROM demo")

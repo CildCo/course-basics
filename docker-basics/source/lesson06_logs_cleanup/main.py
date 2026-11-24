@@ -59,7 +59,7 @@ SUFFIX = f"{os.getpid()}-{uuid.uuid4().hex[:6]}"
 ensure_docker()
 
 
-name = "maidai-logs-" + SUFFIX
+name = "demo-logs-" + SUFFIX
 try:
     started = run([
         "docker", "run", "-d", "--name", name, "busybox:latest", "sh", "-c",
@@ -81,7 +81,7 @@ finally:
 run(["docker", "system", "df"])
 
 
-run(["docker", "image", "inspect", "maidai-not-exist:0.0.1"])
+run(["docker", "image", "inspect", "demo-not-exist:0.0.1"])
 print("退出码非 0 说明本机没有这个镜像；先检查名字和标签，再决定是否拉取。")
 
 
@@ -93,7 +93,7 @@ sock.listen(5)
 port = sock.getsockname()[1]
 print("先用 Python 占住本机端口:", port)
 
-name = "maidai-port-" + SUFFIX
+name = "demo-port-" + SUFFIX
 try:
     conflict = run([
         "docker", "run", "-d", "--name", name,

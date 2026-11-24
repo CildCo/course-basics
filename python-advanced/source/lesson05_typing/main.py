@@ -1,7 +1,7 @@
 def greet(name: str, times: int = 1) -> str:
     return ("你好，" + name + "！") * times
 
-print(greet("小居", 2))
+print(greet("小李", 2))
 
 
 from typing import Optional
@@ -9,8 +9,8 @@ from typing import Optional
 def find_score(name: str, scores: dict[str, int]) -> Optional[int]:
     return scores.get(name)
 
-print(find_score("小居", {"小居": 88}))
-print(find_score("小明", {"小居": 88}))
+print(find_score("小李", {"小李": 88}))
+print(find_score("小明", {"小李": 88}))
 
 
 from dataclasses import dataclass
@@ -32,6 +32,6 @@ class Team:
     name: str
     members: list[str] = field(default_factory=list)
 
-team = Team("码袋子")
-team.members.append("小居")
+team = Team("示例课程")
+team.members.append("小李")
 print(team)

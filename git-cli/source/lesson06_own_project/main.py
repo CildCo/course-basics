@@ -29,7 +29,7 @@ def git(*args, check=True):
     return subprocess.run(["git", *args], cwd=project, capture_output=True, text=True, encoding="utf-8", errors="replace", check=check)
 
 git("init")
-git("config", "user.name", "小居")
+git("config", "user.name", "小李")
 git("config", "user.email", "learner@example.com")
 git("add", ".")
 git("commit", "-m", "initial project")

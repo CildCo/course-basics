@@ -1,4 +1,4 @@
-name = "小居"
+name = "小李"
 age = 3
 price = 9.9
 is_learning = True

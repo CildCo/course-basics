@@ -10,7 +10,7 @@ def summarize(rows):
     scores = [row["score"] for row in rows]
     return {"count": len(scores), "average": round(sum(scores) / len(scores), 1), "max": max(scores)}
 
-print(summarize([{"name": "小居", "score": 88}, {"name": "小明", "score": 95}]))
+print(summarize([{"name": "小李", "score": 88}, {"name": "小明", "score": 95}]))
 
 
 import argparse
@@ -39,5 +39,5 @@ def main(argv=None):
 output = Path("output")
 output.mkdir(exist_ok=True)
 path = output / "scores.csv"
-path.write_text("name,score\n小居,88\n小明,95\n小红,59\n", encoding="utf-8")
+path.write_text("name,score\n小李,88\n小明,95\n小红,59\n", encoding="utf-8")
 print("退出码：", main([str(path), "--min", "60"]))

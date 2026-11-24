@@ -1,4 +1,4 @@
-name = "小居"
+name = "小李"
 days = 12
 print(f"{name} 的 Python 课已经更新到 {days} 节")
 

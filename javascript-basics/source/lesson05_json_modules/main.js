@@ -38,6 +38,6 @@
 
 
 {
-  const data = { name: "小居", run: () => {}, score: NaN, note: undefined };
+  const data = { name: "小李", run: () => {}, score: NaN, note: undefined };
   console.log(JSON.stringify(data));
 }

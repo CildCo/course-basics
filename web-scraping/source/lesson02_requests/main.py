@@ -43,7 +43,7 @@ url = base_url + "/index.html"
 response = requests.get(
     url,
     timeout=5,
-    headers={"User-Agent": "MaidaiCourseBot/1.0"},
+    headers={"User-Agent": "CourseDemoBot/1.0"},
 )
 print("状态码：", response.status_code)
 print("编码：", response.encoding)

@@ -4,8 +4,8 @@ print(numbers.index(30))
 print(30 in numbers)
 
 
-scores = {"小居": 88, "小明": 95}
-print(scores["小居"])
+scores = {"小李": 88, "小明": 95}
+print(scores["小李"])
 print(scores.get("小红", "没有记录"))
 print("小明" in scores)
 

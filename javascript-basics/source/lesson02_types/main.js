@@ -7,7 +7,7 @@
 
 
 {
-  const title = "码袋子";
+  const title = "示例课程";
   const lessons = 10;
   const passed = true;
   const nothing = null;

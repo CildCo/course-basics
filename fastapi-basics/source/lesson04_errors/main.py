@@ -41,7 +41,7 @@ def get_task(task_id: int):
 @app.get("/tasks/{task_id}/internal", response_model=Task)
 def get_internal_record(task_id: int):
     task = TASKS[task_id]
-    return TaskRecord(**task.model_dump(), internal_note="负责人：小居")
+    return TaskRecord(**task.model_dump(), internal_note="负责人：小李")
 
 
 @app.delete("/tasks/{task_id}", status_code=status.HTTP_204_NO_CONTENT)

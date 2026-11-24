@@ -2,7 +2,7 @@
 set -euo pipefail
 
 set -e
-NAME="码袋子"
+NAME="示例课程"
 COUNT=3
 CODE="shell-basics"
 echo "欢迎来到 $NAME，共 $COUNT 课"

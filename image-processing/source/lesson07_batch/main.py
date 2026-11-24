@@ -76,7 +76,7 @@ watermark_dir.mkdir(parents=True, exist_ok=True)
 for path in sorted(batch_dir.glob("*.png")):
     with PILImage.open(path) as handle:
         picture = handle.convert("RGB")
-    marked = add_watermark(picture, "码袋子 · 示例")
+    marked = add_watermark(picture, "示例课程")
     marked.save(watermark_dir / path.name)
     print(path.name, "已加水印")
 

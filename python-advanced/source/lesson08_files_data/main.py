@@ -12,7 +12,7 @@ print(path.read_text(encoding="utf-8"))
 
 import json
 
-data = {"name": "小居", "days": 3, "topics": ["变量", "列表"]}
+data = {"name": "小李", "days": 3, "topics": ["变量", "列表"]}
 json_path = output / "data.json"
 json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 loaded = json.loads(json_path.read_text(encoding="utf-8"))
@@ -25,7 +25,7 @@ csv_path = output / "scores.csv"
 with csv_path.open("w", encoding="utf-8", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(["name", "score"])
-    writer.writerow(["小居", 88])
+    writer.writerow(["小李", 88])
     writer.writerow(["小明", 95])
 
 with csv_path.open(encoding="utf-8", newline="") as file:

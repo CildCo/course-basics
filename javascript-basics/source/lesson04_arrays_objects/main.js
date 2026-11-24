@@ -27,7 +27,7 @@
 
 
 {
-  const user = { name: "小居", profile: { city: "杭州" } };
+  const user = { name: "小李", profile: { city: "杭州" } };
   const guest = { name: "访客" };
   console.log(user.profile?.city);
   console.log(guest.profile?.city ?? "未填写");

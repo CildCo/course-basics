@@ -25,5 +25,5 @@ def insertion_sort(items):
 print(insertion_sort([5, 2, 4, 1, 3]))
 
 
-records = [{"name": "小居", "score": 88}, {"name": "小明", "score": 95}]
+records = [{"name": "小李", "score": 88}, {"name": "小明", "score": 95}]
 print(sorted(records, key=lambda row: row["score"], reverse=True))

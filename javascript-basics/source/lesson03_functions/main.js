@@ -44,8 +44,8 @@
   function greet(name, prefix = "同学") {
     return `你好，${prefix}${name}`;
   }
-  console.log(greet("小居"));
-  console.log(greet("小居", "老师"));
+  console.log(greet("小李"));
+  console.log(greet("小李", "老师"));
 }
 
 

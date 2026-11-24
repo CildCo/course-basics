@@ -75,7 +75,7 @@ print(dockerfile)
 print("构建上下文:", sorted(path.name for path in demo_dir.iterdir()))
 
 
-image = "maidai-demo:1.0"
+image = "demo-demo:1.0"
 try:
     build = run([
         "docker", "build", "-t", image, "output/docker-demo",
@@ -87,4 +87,4 @@ finally:
     run(["docker", "rmi", "-f", image])
 
 
-run(["docker", "images", "--filter", "reference=maidai-demo"])
+run(["docker", "images", "--filter", "reference=demo-demo"])

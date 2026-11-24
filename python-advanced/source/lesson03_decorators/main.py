@@ -2,7 +2,7 @@ def greet(name):
     return f"你好，{name}"
 
 say = greet
-print(say("小居"))
+print(say("小李"))
 print(greet.__name__)
 
 

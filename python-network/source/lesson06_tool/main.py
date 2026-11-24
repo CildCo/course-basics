@@ -19,7 +19,7 @@ def port_open(port):
         return False
 
 
-payload = ("码袋子网络小工具示例\n" * 40).encode("utf-8")
+payload = ("网络小工具示例\n" * 40).encode("utf-8")
 
 
 class FileHandler(BaseHTTPRequestHandler):

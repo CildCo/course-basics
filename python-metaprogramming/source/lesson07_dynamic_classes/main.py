@@ -83,7 +83,7 @@ class CsvSerializer:
 
 
 print("已注册:", serializers.names())
-print("JSON:", serializers.create("json", indent=None).encode({"name": "码袋子"}))
+print("JSON:", serializers.create("json", indent=None).encode({"name": "示例课程"}))
 print("CSV:")
 print(serializers.create("csv").encode([["name", "score"], ["Ada", 95]]))
 

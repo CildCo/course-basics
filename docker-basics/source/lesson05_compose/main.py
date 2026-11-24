@@ -78,7 +78,7 @@ compose_rel = Path("output") / "compose-demo" / "compose.yaml"
 print("文件位置:", compose_rel.as_posix())
 
 
-project = "maidai-compose-" + SUFFIX
+project = "demo-compose-" + SUFFIX
 base = ["docker", "compose", "-p", project, "-f", str(compose_rel)]
 try:
     up = run(base + ["up", "-d"])

@@ -1,7 +1,7 @@
 def greet(name):
     return f"你好，{name}"
 
-message = greet("小居")
+message = greet("小李")
 print(message)
 
 

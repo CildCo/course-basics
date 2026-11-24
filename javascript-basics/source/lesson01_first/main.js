@@ -20,7 +20,7 @@
 
 
 {
-  const name = "小居";
+  const name = "小李";
   const goal = "学会写小程序脚本";
   console.log(name + "的目标：" + goal);
 }

@@ -8,7 +8,7 @@ async def greet(name, delay):
     return f"hello {name}"
 
 async def main():
-    result = await greet("码袋子", 0.2)
+    result = await greet("示例课程", 0.2)
     print(result)
 
 asyncio.run(main())

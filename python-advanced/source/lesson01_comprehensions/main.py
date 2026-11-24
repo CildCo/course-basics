@@ -8,7 +8,7 @@ unique = {word.lower() for word in ["Python", "python", "Pandas"]}
 print(unique)
 
 
-names = ["小居", "小明", "小红"]
+names = ["小李", "小明", "小红"]
 scores = [88, 95, 79]
 for name, score in zip(names, scores):
     print(name, score)

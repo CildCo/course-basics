@@ -63,7 +63,7 @@ run(["docker", "run", "--rm", "busybox:latest", "echo", "hello from container"])
 
 
 run([
-    "docker", "run", "--rm", "--name", "maidai-busybox-" + SUFFIX,
+    "docker", "run", "--rm", "--name", "demo-busybox-" + SUFFIX,
     "busybox:latest", "sh", "-c",
     'echo "container=$(hostname)"; echo "pid=$$"; ls /',
 ])

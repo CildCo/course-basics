@@ -22,7 +22,7 @@ nb.metadata["kernelspec"] = {
     "language": "python",
 }
 nb.cells.append(new_markdown_cell("## 新建的 Notebook\n\n这一格是说明文字。"))
-nb.cells.append(new_code_cell("name = '码袋子'\nprint('你好，', name)"))
+nb.cells.append(new_code_cell("name = '示例课程'\nprint('你好，', name)"))
 nb.cells.append(new_code_cell("print('1 + 1 =', 1 + 1)"))
 nbformat.validate(nb)
 

@@ -43,7 +43,7 @@ class RedactFilter(logging.Filter):
         return True
 
 
-logger = logging.getLogger("maidai.demo")
+logger = logging.getLogger("demo.demo")
 logger.setLevel(logging.INFO)
 logger.handlers.clear()
 
